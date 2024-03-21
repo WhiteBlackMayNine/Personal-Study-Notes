@@ -1,0 +1,165 @@
+
+- 基础控件
+	- UGUI画布
+		- 创建
+			- 第一种
+				- 在 Hierarchy 当中通过右键->UI，找到相应的UI控件
+			- 第二种
+				- 通过工具栏 GameOb ject->UI,，找到相应的UI控件
+		- Canvas画布
+			- 概念
+				- Canvas是画布，是所有UI控件的根类，也可以看作所有UI控件的父物体，所有UI 控件都必须在Canvas上面绘制。它是一个带有Canvas组件的游戏物体 
+		- 总结
+			- UGUI画布也称为Canvas，UGUI是所有控件的父类 
+			- 所有UGUI控件都必须绘制在画布上面
+			- 当创建UGUI控件工程当中没有Canvas的时候会自动创建 Canvas与EventSystem
+	- UGUI基础插件
+		- Text
+			- 概念
+				- Text控件是用来显示文本的文本控件
+				- Text的属性可以在Inspector当中通过Text组件进行设置，也可以在代码 当中进行动态设置
+			- 给Canvas挂载脚本UGUISetting
+				- ![[脚本UGUISetting.png]]
+		- Image
+			- 作用
+				- Image控件主要是用来显示图片，显示图片的格式是 Sprite
+			- ImageType
+				- simple
+					- 显示单个会拉伸
+				- Tilled
+					- 平铺显示，图片按照原始显示
+				- Sliced
+					- 按照九宫格显示，拉伸区域只会在九宫格中间
+				- Filled
+					- 填充显示，可以根据不同的填充方式模拟技能冷却的效果
+		- RawImage RawImag
+			- 作用
+				- 显示图片，但格式为Texture，此外RawImage可以控制行列
+		- Button
+			- 按钮点击功能
+		- Transition
+			- 作用
+				- 设置按钮在不同状态间的过渡效果
+			- 方式
+				- None
+					- 无过渡效果
+				- Color Tint
+					- 设置不同状态不同颜色来过渡
+				- Sprite Swap
+					- 设置不同图片来过渡不同状态
+				- Animation
+					- 设置不同动画过渡不同状态
+		- Slider
+			- 滑动条
+		- ScrollBar
+			- 滚动条
+			- 包含了滑块 Handle
+		- Toggle
+			- 单选框
+			- 可以用来创建开关按钮
+		- InputField
+			- 接收用户的输入
+			- 可以用于创建各种输入框，包括常见的文本输入框和密码输入框等
+			- 从菜单中选择 "Component > UI > Input Field“
+		- Panel
+			- 功能相当于控件的容器，里面可以存放其他控件
+			- 使用Panel控件可以整体移动和处理一组控件 
+			- 一个功能完备的UI界面往往会使用多个Panel控件
+		-  RectTransform
+			- 作用
+				- 计算UI的大小，能够实现基本的布局和层级控制
+			- 专有名字
+				- Pos X,Pos Y
+					- Pivot与Anchor的距离
+				- Pivot
+					- 中轴，中心点
+						- 用于旋转、放大
+				- Anchor
+					- 锚点
+						- 可以理解为父级和子级的相对位置（但本质上并不是）
+							- 父对象让子对象定位用的
+							- 移动锚点时候的范围就是父对象的宽和高
+						- 位置作用
+							- 在一起
+								- 图片的大小不会随着父对象的大小改变而改变；图片的中心点，距离锚点的距离不会改变
+							- 四个都分开
+								- 父对象大小会改变以让子对象的大小改变并且让子对象的四个点和这四个锚点的距离一致
+							- 上下分开，左右不分开 / 左右分开，上下不分开
+								- 父对象大小会改变以让子对象的高改变并且让子对象的四个点和这四个锚点（可看作两个）的距离一致
+				- Width&Height
+					- 宽与高，相对于锚点
+				- Left,Right,Top,Bottom
+					- 左右上下
+
+- UGUI进阶
+	- Canvas 三种模式
+		- 渲染模式
+			- 设置
+				- 通过 RenderMode 来设置
+			- 种类
+				- Screen Spare - Overlay
+					- 不需要UI摄像机，Canvas 画布将会一直出现在摄像机的最前面
+					- 画布将呈现在摄像机最前面，其他所有物体都会被遮挡到，即使没有主摄像机，画布也会显示出来
+				- Screen Spare - Camera
+					- 需要一个UI Camera ，支持UI前方显示3D模型和粒子系统
+					- 可以设置 Plane Distance 为 Canvas 与摄像机的距离，三维物体处于 Canvas 与摄像机之间的物体将会被显示出来，Canvas 后面的将会被覆盖
+				-  World Space
+					- UI控件称为3D场景当作的一部分
+					- 可以进行旋转、平移、缩放等
+	- 布局组件
+		- 种类
+			- Horizontal Layout Group 水平布局
+			- Vertical Layout Group 垂直布局
+			- Grid Layout Group 网格布局
+	- 拉动效果
+		- ScrollView滚动视图
+			- ScrollRect组件
+				- 概念
+					- ScrollView滑动视图当中起滑动功能的级件为ScrollRect，通过ScrollRect可以设置跟滑动相关的属性
+				- 属性
+					- Content:
+						- 可滑动的区域 
+					- Horizontal，Vertical
+						- 水平竖直方向是否可滑动
+					- Movement Type
+						- 滑动方式，包括 (无限制滑动，弹力限制，无弹力限制
+					- Elasticity
+						- 回弹的弹力大小
+					- Inertia
+						- 惯性
+					- Deceleration Rate
+						- 减速的速率
+					- Scroll Sensitivity
+						- 滑动的灵敏度
+					- Horizontal Scrollbar
+						- 横向滑动条
+					- Vertical Scrollbar
+						- 竖向滑动条
+				- 其他常用属性
+					- normalizedPosition
+						- 滚动视图所处的位置，值的范围为(0,0)至(1，1)
+					- verticalNormalizedPosition
+						- 滚动视图竖直方向上的位置，取值范围为0~1
+					- horizontalNormalizedPosition
+						- 滚动视图水平方向上所处的位置，取值范围为0~1
+				- 自定义滑动视图
+	- 回调事件
+		- EventSystem组件
+			- 概念
+				- EventSystem对象下有三个组件
+					- EventSystem
+						- 要用于负责处理输入，射线投射以及发送事件
+					- StandalonelnputModule
+						- 继承自BaselnputModule
+					- TouchInputModule
+						- 继承自BaselnputModule
+					- BaselnputModule
+						- 是一个基类模块，负责发送输入事件 (点击，拖拽，选中)到具体对象
+				- 一个场景当中只能有一个EventSystem，并且需要BaselnputModule组件才能协助工作
+		- 回调方法
+			- 输入模块 StandaloneModule 和 TouchInputModule 两个组件会检测到用户的一些输入事件，并且以事件的方式通知目标对象
+			- 实现这些回调方法需要实现相应的接口
+				- 常用的回调事件如下所示
+					- ![[UGUI回调方法名.png]]
+
+

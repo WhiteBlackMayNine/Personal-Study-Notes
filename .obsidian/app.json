@@ -1,0 +1,9 @@
+{
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "杂物",
+  "readableLineLength": false,
+  "livePreview": true,
+  "promptDelete": false,
+  "newFileLocation": "current",
+  "showUnsupportedFiles": false
+}
