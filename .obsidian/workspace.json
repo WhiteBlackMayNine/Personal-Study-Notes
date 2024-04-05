@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f554a4050c76f413",
+        "id": "0c514b535c426b50",
         "type": "tabs",
         "children": [
           {
-            "id": "342d82de9cbfb658",
+            "id": "1e9aa5c9b3433535",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "模板/唐老师.md",
+                "file": "Unity/Unity 小知识点.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,29 +21,33 @@
             }
           },
           {
-            "id": "23a6f880220a7324",
+            "id": "ab6ce078a12fb884",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "其他/任务管理面板.md"
+                "file": "Unity/唐老狮/Unity核心/角色控制器.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
               }
             }
           },
           {
-            "id": "078ccb446708b68f",
+            "id": "54f3c5fb6706c371",
             "type": "leaf",
-            "pinned": true,
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "其他/任务管理面板.md"
-              },
-              "pinned": true
+                "file": "CSharp/唐老狮/入门/运算符/条件运算符.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -57,7 +61,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "04aff1d40dab9896",
+            "id": "24fc073f59d77e10",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "5c2965ebf9d54e67",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -67,12 +79,12 @@
             }
           },
           {
-            "id": "87efbcd1e5ef5f53",
+            "id": "80addee003776602",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "角色控制器",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,20 +92,13 @@
                 "sortOrder": "alphabetical"
               }
             }
-          },
-          {
-            "id": "24fc073f59d77e10",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 285.5
+    "width": 321.5
   },
   "right": {
     "id": "a0b52c73937c69e1",
@@ -109,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "其他/任务管理面板.md",
+                "file": "CSharp/唐老狮/入门/运算符/条件运算符.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "其他/任务管理面板.md",
+                "file": "CSharp/唐老狮/入门/运算符/条件运算符.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,82 +157,78 @@
             }
           },
           {
-            "id": "50229f35b7e1e6da",
+            "id": "532f68c8215c0797",
             "type": "leaf",
             "state": {
-              "type": "outline",
-              "state": {
-                "file": "其他/任务管理面板.md"
-              }
+              "type": "quiet-outline",
+              "state": {}
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 237.5
+    "width": 214.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
       "workspaces:管理工作区布局": false,
       "daily-notes:打开/创建今天的日记": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "23a6f880220a7324",
+  "active": "54f3c5fb6706c371",
   "lastOpenFiles": [
-    "C与C++/数组.md",
-    "C与C++/头文件.md",
-    "C与C++/文件操作.md",
-    "C与C++/引用.md",
-    "C与C++/转义字符.md",
-    "C与C++/指针.md",
-    "C与C++/C++必写框架.md",
-    "C与C++/数据类型.md",
-    "C与C++/其他.md",
-    "C与C++/类和对象.md",
-    "C与C++/结构体.md",
-    "C与C++/函数语句、操作符、运算符、关键字.md",
-    "C与C++/函数.md",
-    "C与C++/程序内存分区类型.md",
-    "C与C++/程序流程结构.md",
-    "C与C++/标识符命名.md",
-    "其他/标签层级一览.md",
-    "模板/唐老师.md",
-    "Unity/唐老狮/Unity核心/认识模型的制作流程.md",
-    "模板/笔试.md",
-    "模板/面试.md",
-    "模板/视频.md",
-    "模板/算法.md",
-    "模板/随记.md",
+    "Unity/唐老狮/Unity核心/角色控制器.md",
+    "CSharp/唐老狮/入门/运算符/条件运算符.md",
+    "Unity/鬼佬/随记.md",
+    "Unity/唐老狮/Unity入门/脚本基础/Inspector 窗口可编辑的变量.md",
+    "CSharp/唐老狮/进阶/反射和特性/特性.md",
+    "Unity/唐老狮/Unity基础/物理系统/射线检测.md",
     "Unity/Unity 小知识点.md",
-    "其他/任务管理面板.md",
-    "杂物/四元数计算 练习题 - CameraMove2..cs",
-    "杂物/四元数计算 练习题 - Bullet.cs",
-    "杂物/四元数计算 练习题 - Airplane.cs",
-    "杂物/WWW协程简单示例.png",
-    "杂物/WWW基本使用.png",
-    "杂物/WWW常用属性2 1.png",
-    "杂物/WWW常用属性2.png",
-    "杂物/WWW常用属性.png",
-    "杂物/Vector3类方法2.png",
-    "杂物/Vector3类方法1.png",
-    "杂物/Unity基础——11四元数计算.pdf",
-    "杂物/Unity基础——10四元数常用方法.pdf",
-    "杂物/Unity基础——9四元数是什么.pdf",
-    "杂物/Unity基础——8为何使用四元数.pdf",
-    "杂物/Unity基础——7向量插值运算.pdf",
-    "杂物/Unity基础——6向量叉乘.pdf",
-    "杂物/Unity基础——5向量点乘.pdf",
-    "杂物/UGUI回调方法名.png",
-    "杂物/Trigger事件语法1.png",
-    "杂物/Transform组件方法1.png",
+    "Unity/唐老狮/Unity核心/动画基础/Animator动画状态机/代码控制动画状态机切换.md",
+    "Unity/SiKi/Unity常用API/SceneManager.md",
+    "杂物/No21_SceneManager.cs",
+    "Unity/SiKi/Unity常用API/Resources.md",
+    "杂物/No20_Resources.cs",
+    "Unity/SiKi/Unity常用API/Collider.md",
+    "杂物/No19_Collider.cs",
+    "Unity/SiKi/Unity常用API/PrintDebug.md",
+    "Unity/SiKi/Unity常用API/Random.md",
+    "Unity/SiKi/Unity常用API/OnMouseEventFunction.md",
+    "Unity/SiKi/Unity常用API/MonoBehavior.md",
+    "Unity/SiKi/Unity常用API/Mathf.md",
+    "Unity/SiKi/Unity常用API/Invoke.md",
+    "Unity/SiKi/Unity常用API/Input.md",
+    "Unity/SiKi/Unity常用API/GameObject.md",
+    "Unity/SiKi/Unity常用API/Coroutine.md",
+    "Unity/SiKi/Unity常用API/Component.md",
+    "Unity/SiKi/Unity常用API/赋值顺序.md",
+    "Unity/SiKi/Unity常用API/AudioSource.md",
+    "杂物/No18_AudioSource.cs",
+    "Unity/SiKi/Unity常用API/Animator.md",
+    "Unity/SiKi/Unity常用API/Vector2.md",
+    "Unity/SiKi/Unity常用API/Transform.md",
+    "杂物/No17_Rigidbody.cs",
+    "杂物/No16_Invoke.cs",
+    "杂物/No15_Coroutine.cs",
+    "杂物/No14_OnMouseEventFunction.cs",
+    "杂物/No13_Random.cs",
+    "杂物/No12_Mathf.cs",
+    "杂物/生命周期函数.jpg",
+    "杂物/学习信息素养.png",
+    "杂物/面试问题_1.png",
+    "杂物/面试机巧_1.png",
+    "杂物/面试官关注点.jpg",
+    "杂物/如何准备简历及面试 1.jpg",
+    "杂物/如何准备简历及面试.jpg",
+    "杂物/游鲨上海游戏公司.jpg",
+    "杂物/游鲨广州游戏公司.jpg",
+    "杂物/游鲨北京游戏公司.jpg",
     "未命名.canvas",
     "未命名 3.canvas",
     "未命名 2.canvas",

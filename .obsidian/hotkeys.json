@@ -14,5 +14,30 @@
       ],
       "key": "-"
     }
+  ],
+  "command-palette:open": [],
+  "obsidian-better-command-palette:open-better-commmand-palette": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "P"
+    }
+  ],
+  "obsidian-another-quick-switcher:search-command_star-search": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "O"
+    }
+  ],
+  "obsidian-hover-editor:open-current-file-in-new-popover": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Y"
+    }
   ]
 }

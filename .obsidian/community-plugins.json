@@ -4,5 +4,12 @@
   "pkmer",
   "calendar",
   "obsidian-excalidraw-plugin",
-  "obsidian-kanban"
+  "obsidian-kanban",
+  "cm-editor-syntax-highlight-obsidian",
+  "obsidian-another-quick-switcher",
+  "file-explorer-note-count",
+  "obsidian-hover-editor",
+  "obsidian-better-command-palette",
+  "obsidian-quiet-outline",
+  "customizable-menu"
 ]

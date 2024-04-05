@@ -106,11 +106,12 @@ created: 2024-03-23
 - new 一个 Gameobject 就是在创建一个空物体
 - `GameObject obj = new GameObject("TEXT");`
 	- TEXT为文本内容，可以为空（引号需要删除）
-### 为对象添加脚本（优先使用泛型）
+### 为对象添加脚本
 
 - `obj.AddComponent<Text>();`
 	- Text 为脚本名字
 	- 通过返回值可以得到加入的脚本信息，来进行一些处理
+- **优先使用泛型
 ### 得到脚本
 
 - 与继承 Mono 的类得到脚本的方法一样
@@ -122,5 +123,17 @@ created: 2024-03-23
 
 - 失活 false ，激活 ture
 	- `obj.SetActive(false);`
+### 当前游戏物体的状态
+
+- `gameobject.activeInHierarchy
+- `gameobject.activeSelf`
+
+
+## 备注
+
+- 如果设置的对象为挂载脚本的对象，那么可以不获取对象
+- 直接使用 `gameObject.`的方法
+	- 如`gameObject.SetActive(true)`
+	- 也可以加上 `this`
 
 ---

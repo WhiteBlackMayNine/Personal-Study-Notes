@@ -6,7 +6,7 @@ tags:
 ---
 
 ---
-
+知识点
 
 ## Unity中打印信息的两种方式
 
@@ -162,13 +162,11 @@ tags:
 	- 这样写时错的
 		-  刚刚执行了异步加载的 执行代码 资源还没有加载完毕 这样用 是不对的
 		- 一定要等加载结束过后 才能使用
-
 ## 场景转换
 
 - `DontDestroyonLoad(this.game0bject);
 	- 该脚本依附的对象 过场景时 不会被 移除DontDestroyonLoad(this.game0bject);
 - [[场景异步加载]]
-
 ## 物理系统碰撞检测
 
 ### 必要条件
@@ -181,7 +179,6 @@ tags:
 - 触发看起来不会产生碰撞但是可以通过函数监听触发
 - 碰撞检测主要用于实体物体之间产生物理效果时使用
 - [[刚体]] [[刚体加力]] [[物理材质]] [[碰撞器]] [[碰撞检测函数]]
-
 ## 重要知识点：关于层级 ^bc8e6a
 
 - 通过名字得到层级编号 `LayerMask.NameToLayer`
@@ -218,7 +215,6 @@ tags:
 		// 再次进行检测，这次排除了"不要检测的层级"
 		hitColliders = Physics.OverlapBox(center, halfSize, transform.rotation, layerMask);
 		```
-
 ## Unity 基础总结
 
 - 向量和四元数
@@ -230,10 +226,22 @@ tags:
 	- 交互功能必备
 - 资源场景的同步异步加载
 	- 所有功能必备
+## Unity 核心总结
 
-
+- ![[Unity核心.xmind]]
+- ![[Unity核心—总结.pdf]]
 ## 对象间的父子关系
 
 - 在 Hierarchy 中将一个对象拖动到另一个对象上而形成的树形结构
 - **子对象会随着父对象的变化而变化**
 - **子对象的 Inspector 窗口中 Transform 信息是相对父对象的**
+## 值类型赋值相关
+
+- 用属性和方法返回的结构体是不能修改其字段的
+- 直接访问公有的结构体是可以修改其字段的
+- 本质上就是值类型的浅拷贝和深拷贝，导致内存空间不同
+## `[RequireComponent]
+
+- 确保在将脚本附加到游戏对象时，该对象已经包含了脚本所需的特定组件
+	- `[RequireComponent( typeof ( CharacterController ) ) ]`
+

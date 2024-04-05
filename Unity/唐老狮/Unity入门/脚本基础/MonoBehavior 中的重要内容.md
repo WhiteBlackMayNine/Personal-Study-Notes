@@ -26,7 +26,6 @@ created: 2024-03-23
 ### 获取脚本是否激活
 
 - `this.enabled = ture` 激活
-
 ## 重要方法
 
 ### 得到依附对象上挂载的其它脚本
@@ -35,7 +34,7 @@ created: 2024-03-23
 ##### 根据脚本名获取
 
 - `lesson l = this.GetComponent("lesson") as lesson;`
-#####根据Type获取
+##### 根据Type获取
 
 - `lesson l = this.GetComponent(typrof(lesson)) as lesson;`
 ##### 根据泛型获取 
@@ -49,7 +48,7 @@ created: 2024-03-23
 ##### 得到子对象挂载的脚本
 
 - （默认也会找自己身上是否挂载脚本）
-- `lesson l = this.GetComponentInChildren<Lesson3 Test>(true);print(l);
+- `lesson l = this.GetComponentInChildren< Lesson3 Test >(true);print(l);
 	- 注
 		- 函数是有一个参数的 默认不传 是false 意思就是 如果子对象失活 是不会去找这个对象上是有某个脚本的
 		- 如果传true 即使 失活 也会找
@@ -79,7 +78,7 @@ created: 2024-03-23
 ## `this`
 
 - 我自己
-	- 即这个物体本身
+	- 即这个脚本
 
 ---
 
