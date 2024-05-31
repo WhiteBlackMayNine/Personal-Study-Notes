@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0c514b535c426b50",
+        "id": "adc5fec10871b66b",
         "type": "tabs",
         "children": [
           {
-            "id": "1e9aa5c9b3433535",
+            "id": "bcd9138630519a7b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unity/Unity 小知识点.md",
+                "file": "CSharp/唐老狮/进阶/委托和事件/委托.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,25 +21,12 @@
             }
           },
           {
-            "id": "ab6ce078a12fb884",
+            "id": "2ca51253aa0738e8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unity/唐老狮/Unity核心/角色控制器.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "54f3c5fb6706c371",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CSharp/唐老狮/入门/运算符/条件运算符.md",
+                "file": "其他/番剧.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -47,7 +34,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -84,7 +71,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "角色控制器",
+                "query": "角色连招",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +81,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -114,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CSharp/唐老狮/入门/运算符/条件运算符.md",
+                "file": "其他/番剧.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CSharp/唐老狮/入门/运算符/条件运算符.md",
+                "file": "其他/番剧.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -181,44 +168,46 @@
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "54f3c5fb6706c371",
+  "active": "80addee003776602",
   "lastOpenFiles": [
-    "Unity/唐老狮/Unity核心/角色控制器.md",
-    "CSharp/唐老狮/入门/运算符/条件运算符.md",
-    "Unity/鬼佬/随记.md",
-    "Unity/唐老狮/Unity入门/脚本基础/Inspector 窗口可编辑的变量.md",
-    "CSharp/唐老狮/进阶/反射和特性/特性.md",
-    "Unity/唐老狮/Unity基础/物理系统/射线检测.md",
-    "Unity/Unity 小知识点.md",
+    "算法/排序/冒泡排序.md",
+    "其他/番剧.md",
+    "CSharp/唐老狮/进阶/常用泛型数据结构类/List.md",
+    "CSharp/唐老狮/进阶/常用泛型数据结构类/List排序.md",
+    "CSharp/唐老狮/进阶/简单数据结构类/Queue.md",
+    "CSharp/唐老狮/进阶/委托和事件/委托.md",
+    "CSharp/唐老狮/进阶/常用泛型数据结构类/Dictionary.md",
+    "Unity/Unity 知识点.md",
+    "算法/解题.md",
+    "CSharp/唐老狮/Csharp 小知识点.md",
+    "算法/排序/归并排序.md",
+    "算法/排序/堆排序.md",
+    "其他/MarkDown超级教程 Obsidian版 2022.1.12.md",
+    "Unity/ARPG/移动相关.md",
+    "其他/明日方舟模组.md",
+    "Unity/唐老狮/Unity核心/模型导入相关/Materials材质纹理页签.md",
+    "Unity/VipSkill/P1 课程/Unity3D/入门/动画系统.md",
     "Unity/唐老狮/Unity核心/动画基础/Animator动画状态机/代码控制动画状态机切换.md",
-    "Unity/SiKi/Unity常用API/SceneManager.md",
+    "Unity/唐老狮/Unity核心/3D动画相关/动画2D混合.md",
+    "Unity/唐老狮/Unity核心/3D动画相关/动画分层和遮罩.md",
+    "Unity/唐老狮/Unity核心/3D动画相关/状态机行为脚本.md",
+    "Unity/唐老狮/Unity核心/3D动画相关/动画子状态机.md",
+    "Unity/唐老狮/Unity核心/3D动画相关/动画目标匹配.md",
+    "Unity/唐老狮/Unity核心/3D动画相关/动画1D混合.md",
+    "Unity/唐老狮/Unity核心/3D动画相关/3D动画的使用.md",
+    "Unity/唐老狮/Unity核心/动画基础/Animator动画状态机/有限状态机概念.md",
+    "Unity/ARPG",
+    "杂物/Unity右键菜单添加.png",
+    "杂物/角色连招.png",
+    "杂物/CharacterMovementControlBase.cs",
+    "Unity/Unity 代码/鬼佬",
+    "杂物/TP_CameraControl.cs",
+    "杂物/GameInputManager.cs",
+    "杂物/CameraCollider.cs",
+    "Unity/Unity 代码",
     "杂物/No21_SceneManager.cs",
-    "Unity/SiKi/Unity常用API/Resources.md",
     "杂物/No20_Resources.cs",
-    "Unity/SiKi/Unity常用API/Collider.md",
     "杂物/No19_Collider.cs",
-    "Unity/SiKi/Unity常用API/PrintDebug.md",
-    "Unity/SiKi/Unity常用API/Random.md",
-    "Unity/SiKi/Unity常用API/OnMouseEventFunction.md",
-    "Unity/SiKi/Unity常用API/MonoBehavior.md",
-    "Unity/SiKi/Unity常用API/Mathf.md",
-    "Unity/SiKi/Unity常用API/Invoke.md",
-    "Unity/SiKi/Unity常用API/Input.md",
-    "Unity/SiKi/Unity常用API/GameObject.md",
-    "Unity/SiKi/Unity常用API/Coroutine.md",
-    "Unity/SiKi/Unity常用API/Component.md",
-    "Unity/SiKi/Unity常用API/赋值顺序.md",
-    "Unity/SiKi/Unity常用API/AudioSource.md",
-    "杂物/No18_AudioSource.cs",
-    "Unity/SiKi/Unity常用API/Animator.md",
-    "Unity/SiKi/Unity常用API/Vector2.md",
-    "Unity/SiKi/Unity常用API/Transform.md",
-    "杂物/No17_Rigidbody.cs",
-    "杂物/No16_Invoke.cs",
-    "杂物/No15_Coroutine.cs",
-    "杂物/No14_OnMouseEventFunction.cs",
-    "杂物/No13_Random.cs",
-    "杂物/No12_Mathf.cs",
     "杂物/生命周期函数.jpg",
     "杂物/学习信息素养.png",
     "杂物/面试问题_1.png",
@@ -227,8 +216,6 @@
     "杂物/如何准备简历及面试 1.jpg",
     "杂物/如何准备简历及面试.jpg",
     "杂物/游鲨上海游戏公司.jpg",
-    "杂物/游鲨广州游戏公司.jpg",
-    "杂物/游鲨北京游戏公司.jpg",
     "未命名.canvas",
     "未命名 3.canvas",
     "未命名 2.canvas",

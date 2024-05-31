@@ -63,6 +63,14 @@ created: 2024-03-22
 	- `foreach(KeyValuePair<键得类型,值的类型> item in dt){ }`
 - 迭代器遍历
 
+## 获取与指定键关联的值
+
+- `.TryGetValue`
+	- **安全地尝试获取字典中的元素**
+	- 当字典中存在指定的键时，该方法会将与该键关联的值赋给一个输出参数，并返回 `true`
+	- 如果字典中不存在该键，则只返回 `false`，而不会抛出异常
+- `.TryGetValue(eventName,out var eventHelp)
+
 ---
 # 源代码
 

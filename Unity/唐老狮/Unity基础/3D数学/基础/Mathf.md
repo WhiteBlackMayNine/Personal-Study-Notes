@@ -71,28 +71,65 @@ created: 2024-03-23
 - `Mathf.Sign(数值)`
 	- 正数返回 1
 	- 负数返回 -1
-## Mathf中的常用方法（一般不停计算
+## Mathf中的常用方法
 
+- 一般不停计算
 ### 插值运算`Lerp
 
 - 得到的值 = 开始的值 + （结束的值 - 开始的值）* 时间
 	- `result = start + ( end -start ) * t
-### Lerp函数公式
+#### Lerp函数公式
 
 - `result = Mathf.Lerp(start, end, t);
 	- t为插值系数，取值范围为 0~1 
-### 插值运算用法一
+#### 插值运算用法一
 
 - 每帧改变`start`的值
 	- 变化速度先快后慢，位置无限接近，**但是不会得到`end`位置
 	- 变速运动
-### 插值运算用法二
+#### 插值运算用法二
 
 - 每帧改变`t`的值
 	- 变化速度匀速，位置每帧接近，当`t >= 1`时，得到结果
 	- `time += Time.delataTime;`
 	- 匀速直线运动
 - 插值系数 甚至可以写为`Time.delataTime * Speed`
+### 平滑地改变角度值
+
+- `Mathf.SmoothDampAngle(current, target, onUpdate, smoothTime,maxSpeed,deltaTime);`
+- [[Unity 知识点#^42a029|使用场景]]
+#### 参数说明
+
+- -`current`
+	- 当前的起始角度值
+- `target`
+	- 期望达到的目标角度值
+- `onUpdate`
+	- 是一个可传入的回调函数
+	- 它在每一帧更新时被调用，并接收插值结果作为参数
+- `smoothTime`
+	- 完成平滑过渡所需的时间
+- `maxSpeed`
+	- 在`smoothTime`内允许的最大变化速度
+	- 其默认值为`Mathf.Infinity`，即没有速度限制
+- `deltaTime`
+	- 自上一帧以来的时间差
+	- 通常使用`Time.deltaTime`即可
+### 限制范围
+
+- `Mathf.Clamp(value,min,max)
+	- 想要限制的数值  设定的最小值 最大值
+	- 这个方法会确保`value`不会小于`min`也不会大于`max`
+	- 如果`value`超出了这个范围，`Mathf.Clamp`会返回边界值；如果`value`在范围内，则返回`value`本身
+### 四象限反正切值
+
+- `Mathf.Atan2(x,y)
+	- 参数：入两个点的坐标值  
+	- 返回值：一个介于`[-π， π]`的弧度值
+		- 代表从正X轴到点(x, y)的逆时针角度
+- 说人话：**计算两点之间的角度**
+	- **极其重要 十分常用**
+- [[Unity 知识点#^114e25|作用补充]]
 
 ### 注意
 
