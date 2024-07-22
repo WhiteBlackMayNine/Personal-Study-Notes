@@ -36,14 +36,14 @@
       }
     },
     {
-      "query": "Web前端",
+      "query": "",
       "color": {
         "a": 1,
-        "rgb": 5431473
+        "rgb": 5419488
       }
     }
   ],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
@@ -53,6 +53,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.4505081176757797,
+  "scale": 0.27138669184955616,
   "close": false
 }

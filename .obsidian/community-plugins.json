@@ -1,15 +1,15 @@
 [
-  "obsidian-auto-link-title",
   "obsidian-outliner",
   "pkmer",
   "calendar",
   "obsidian-excalidraw-plugin",
   "obsidian-kanban",
   "cm-editor-syntax-highlight-obsidian",
-  "obsidian-another-quick-switcher",
-  "file-explorer-note-count",
-  "obsidian-hover-editor",
   "obsidian-better-command-palette",
   "obsidian-quiet-outline",
-  "customizable-menu"
+  "obsidian-another-quick-switcher",
+  "obsidian-auto-link-title",
+  "customizable-menu",
+  "obsidian-hover-editor",
+  "file-explorer-note-count"
 ]

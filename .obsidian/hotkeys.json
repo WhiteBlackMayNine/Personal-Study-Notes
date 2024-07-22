@@ -31,13 +31,5 @@
       ],
       "key": "O"
     }
-  ],
-  "obsidian-hover-editor:open-current-file-in-new-popover": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Y"
-    }
   ]
 }
