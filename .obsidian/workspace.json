@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4c29e5c88ca8e3b0",
+            "id": "c19809120e8dd675",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "唐老师/Unity 知识点.md",
+                "file": "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput/行为执行模式.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,46 +21,19 @@
             }
           },
           {
-            "id": "add693eb4a43544f",
+            "id": "f07308f85a3fa0c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "唐老师/Unity 四部曲/Unity 核心/Unity 核心总结.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2738bcf1eccd50c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "唐老师/Unity 四部曲/Unity 核心/2D相关/2D物理系统/2D效应器/区域效应器.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2e00c65f3a2de2de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "其他/番剧.md",
+                "file": "唐老师/CShatp 四部曲/CSharp 进阶/委托和事件/匿名函数.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,7 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 240.5
+    "width": 288.5
   },
   "right": {
     "id": "a0b52c73937c69e1",
@@ -127,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "唐老师/Unity 四部曲/Unity 核心/2D相关/2D物理系统/2D效应器/区域效应器.md",
+                "file": "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput/行为执行模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "唐老师/Unity 四部曲/Unity 核心/2D相关/2D物理系统/2D效应器/区域效应器.md",
+                "file": "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput/行为执行模式.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "唐老师/Unity 四部曲/Unity 核心/2D相关/2D物理系统/2D效应器/区域效应器.md"
+                "file": "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput/行为执行模式.md"
               }
             }
           }
@@ -204,54 +177,54 @@
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "5c2965ebf9d54e67",
+  "active": "c19809120e8dd675",
   "lastOpenFiles": [
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/2D物理系统/2D效应器",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/2D物理系统/恒定力.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/2D物理系统/2D效应器/区域效应器.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/2D物理系统/物理材质.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/2D物理系统/碰撞器.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/2D物理系统/刚体.md",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput/认识PlayerInput.md",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput/行为执行模式.md",
     "其他/模板/Unity.md",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/输入动作配置文件/生成CSharp代码.md",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/InputAction类.md",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/输入动作配置文件/输入配置文件.md",
+    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 概述.md",
+    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 的应用/单例模式化的获取数据.md",
+    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 的应用/数据带来的多态行为.md",
+    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 的应用/复用数据.md",
+    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 的应用/配置数据.md",
+    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/让其真正意义上的持久.md",
+    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 的应用",
+    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/非持久数据.md",
+    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/数据文件的使用.md",
+    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/数据文件的创建.md",
+    "其他/杂物/InputAction.png",
+    "唐老师/CShatp 四部曲/CSharp 进阶/委托和事件/匿名函数.md",
+    "唐老师/CShatp 四部曲/CSharp 进阶/委托和事件/Lambad表达式.md",
+    "Unity/ARPG/CharacterComboDataSO.md",
     "唐老师/Unity 四部曲/Unity 核心/Unity 核心总结.md",
-    "唐老师/Unity 四部曲/Unity 入门/核心系统/物理系统/刚体加力.md",
-    "唐老师/学习路线（建议）.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/Sprite/SpriteRenderer 精灵渲染器.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/Sprite/SpriteMask 精灵遮罩.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/Sprite/SpriteCreator 精灵创造者.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/Sprite/SpriteAtlas 精灵图集.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/Sprite/SortingGroup 排序分组.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/Sprite/Sprite Editor/Single图片编辑.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/Sprite/Sprite Editor/Polygon图片编辑.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/Sprite/Sprite Editor/Multiple图片编辑.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/图片导入设置/纹理高级设置.md",
-    "其他/番剧.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/图片导入设置/纹理形状设置.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/图片导入设置/纹理平台打包相关设置.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/图片导入设置/纹理类型设置.md",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/图片导入设置/图片导入概述.md",
-    "其他/模板/周报.md",
-    "其他/模板/兔八哥 处世哲学.md",
+    "唐老师/Unity 知识点.md",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/代码检测输入/其它输入.md",
+    "其他/MarkDown超级教程 Obsidian版 2022.1.12.md",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/代码检测输入/手柄输入.md",
+    "其他/杂物/手柄图片.png",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/代码检测输入/键盘输入.md",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/代码检测输入/鼠标输入.md",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/代码检测输入/触屏输入.md",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/概述与导入",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/补充知识点/改建练习",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/补充知识点",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInputManager",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/输入动作配置文件",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/InputAction类",
+    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/代码检测输入",
+    "其他/杂物/Unity进阶之Addressables.xmind",
+    "其他/杂物/序列帧 Animation 修改帧率.png",
+    "其他/杂物/瓦片拓展包新增笔刷_拓展笔刷.png",
+    "其他/杂物/瓦片地图拓展包新增笔刷一览.png",
+    "其他/杂物/瓦片地图拓展包新增笔刷.png",
+    "其他/杂物/瓦片地图拓展包新增瓦片.png",
+    "其他/杂物/瓦片调色板窗口面板工具相关.png",
     "其他/杂物/Single图片编辑.png",
-    "唐老师/Unity 四部曲/Unity 核心/2D相关/Sprite/Sprite Editor",
-    "其他/杂物/Unity 基础总结.xmind",
-    "其他/杂物/Unity 入门总结.xmind",
-    "其他/杂物/CSharp 核心总结.xmind",
-    "其他/杂物/CSharp 基础总结.xmind",
-    "其他/杂物/CSharp 进阶总结.xmind",
-    "其他/杂物/CSharp 入门总结.xmind",
-    "其他/杂物/C#入门 1.xmind",
-    "其他/杂物/C#入门.xmind",
     "其他/杂物/图片导入概述参数相关.png",
-    "唐老师/Unity 四部曲/Unity 核心/2D动画/Spine 骨骼动画",
-    "其他/杂物/大学规划课-大学误区.png",
-    "其他/杂物/大学规划课-重要程度.png",
-    "其他/杂物/大学规划课-关于双学院.png",
-    "其他/杂物/大学规划课-关于考研.png",
-    "其他/杂物/大学规划课-读研误区.png",
-    "其他/杂物/大学规划课-研究生学历.png",
-    "其他/杂物/大学规划课-大学竞赛.png",
-    "其他/杂物/大学规划课-实习.png",
     "未命名.canvas",
     "未命名 3.canvas",
     "未命名 2.canvas",

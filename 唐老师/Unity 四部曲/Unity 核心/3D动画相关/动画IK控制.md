@@ -13,7 +13,7 @@ created: 2024-03-30
 ---
 # 知识点
 
-## 什么是IK？
+## 什么是IK
 
 ### 正向动力学
 
@@ -36,7 +36,8 @@ created: 2024-03-30
  - IK Pass 必须勾选
 ### 继承MonoBehavior的类中
  
- - Unity定义了一个IK回调函数:OnAnimatorIK
+ - Unity定义了一个IK回调函数
+	 - OnAnimatorIK
  - 我们可以在该函数中调用Unity提供的IK相关API来控制IK
 ### Animator中的IK相关API
 
