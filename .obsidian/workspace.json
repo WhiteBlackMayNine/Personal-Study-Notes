@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "63193a18be4a38c2",
+        "id": "c0f5a7d07c66db72",
         "type": "tabs",
         "children": [
           {
-            "id": "c19809120e8dd675",
+            "id": "0cb32e4768fb6007",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput/行为执行模式.md",
+                "file": "Projects/ARPG/相机/CameraCollider.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,12 +21,25 @@
             }
           },
           {
-            "id": "f07308f85a3fa0c9",
+            "id": "643bac40ed1d6ede",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "唐老师/CShatp 四部曲/CSharp 进阶/委托和事件/匿名函数.md",
+                "file": "Projects/ARPG/相机/TP_CameraControl.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "805a38d5f3da3203",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Resources/唐老师/009 Unity 知识点.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -55,7 +68,7 @@
             }
           },
           {
-            "id": "5c2965ebf9d54e67",
+            "id": "c7510e15f93d5e21",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -65,7 +78,18 @@
             }
           },
           {
-            "id": "80addee003776602",
+            "id": "becaa09cc2f5b3cf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c4d348eff1fa2fe1",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -84,7 +108,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 288.5
+    "width": 300.5
   },
   "right": {
     "id": "a0b52c73937c69e1",
@@ -95,55 +119,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "67a06a1091d09c3a",
+            "id": "91c3f21e4d7f6ae3",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput/行为执行模式.md",
+                "file": "Projects/ARPG/相机/CameraCollider.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "00481293481bd5a2",
+            "id": "5a6c608ed512ed1c",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput/行为执行模式.md",
+                "file": "Projects/ARPG/相机/CameraCollider.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "9a2c9e2d634a5a02",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
-            "id": "edcebf2b914aacbb",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "532f68c8215c0797",
+            "id": "a9605505c6b8ad9c",
             "type": "leaf",
             "state": {
               "type": "quiet-outline",
@@ -151,84 +156,101 @@
             }
           },
           {
-            "id": "af7697821f841baa",
+            "id": "2b4af3fd708e4f40",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "file-properties",
               "state": {
-                "file": "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput/行为执行模式.md"
+                "file": "Projects/ARPG/相机/CameraCollider.md"
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
+      },
+      {
+        "id": "7baddb7cecae5189",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3aa935ee7399a1a2",
+            "type": "leaf",
+            "state": {
+              "type": "thino_view",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 217.5
+    "width": 307.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-memos:Thino": false,
+      "pkmer:Open Pkmer Market": false,
       "graph:查看关系图谱": false,
-      "templates:插入模板": false,
       "workspaces:管理工作区布局": false,
       "daily-notes:打开/创建今天的日记": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "pkmer:Open Pkmer Market": false
+      "canvas:新建白板": false,
+      "command-palette:打开命令面板": false,
+      "templates:插入模板": false
     }
   },
-  "active": "c19809120e8dd675",
+  "active": "0cb32e4768fb6007",
   "lastOpenFiles": [
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput/认识PlayerInput.md",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput/行为执行模式.md",
-    "其他/模板/Unity.md",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/输入动作配置文件/生成CSharp代码.md",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/InputAction类.md",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/输入动作配置文件/输入配置文件.md",
-    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 概述.md",
-    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 的应用/单例模式化的获取数据.md",
-    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 的应用/数据带来的多态行为.md",
-    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 的应用/复用数据.md",
-    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 的应用/配置数据.md",
-    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/让其真正意义上的持久.md",
-    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 的应用",
-    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/非持久数据.md",
-    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/数据文件的使用.md",
-    "唐老师/Unity 四部曲/Unity 进阶/ScriptableObject/数据文件的创建.md",
-    "其他/杂物/InputAction.png",
-    "唐老师/CShatp 四部曲/CSharp 进阶/委托和事件/匿名函数.md",
-    "唐老师/CShatp 四部曲/CSharp 进阶/委托和事件/Lambad表达式.md",
-    "Unity/ARPG/CharacterComboDataSO.md",
-    "唐老师/Unity 四部曲/Unity 核心/Unity 核心总结.md",
-    "唐老师/Unity 知识点.md",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/代码检测输入/其它输入.md",
-    "其他/MarkDown超级教程 Obsidian版 2022.1.12.md",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/代码检测输入/手柄输入.md",
-    "其他/杂物/手柄图片.png",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/代码检测输入/键盘输入.md",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/代码检测输入/鼠标输入.md",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/代码检测输入/触屏输入.md",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/概述与导入",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/补充知识点/改建练习",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/补充知识点",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInputManager",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/PlayerInput",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/输入动作配置文件",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/InputAction类",
-    "唐老师/Unity 四部曲/Unity 进阶/输入系统InputSystem/代码检测输入",
-    "其他/杂物/Unity进阶之Addressables.xmind",
-    "其他/杂物/序列帧 Animation 修改帧率.png",
-    "其他/杂物/瓦片拓展包新增笔刷_拓展笔刷.png",
-    "其他/杂物/瓦片地图拓展包新增笔刷一览.png",
-    "其他/杂物/瓦片地图拓展包新增笔刷.png",
-    "其他/杂物/瓦片地图拓展包新增瓦片.png",
-    "其他/杂物/瓦片调色板窗口面板工具相关.png",
-    "其他/杂物/Single图片编辑.png",
-    "其他/杂物/图片导入概述参数相关.png",
+    "Projects/ARPG/相机/TP_CameraControl.md",
+    "Projects/ARPG/相机/CameraCollider.md",
+    "Projects/ARPG/声音播放/PoolSound.md",
+    "Projects/ARPG/声音播放/PoolItemBase.md",
+    "Projects/ARPG/声音播放/AssestSoundSO.md",
+    "Projects/ARPG/更新说明.md",
+    "Resources/唐老师/009 Unity 知识点.md",
+    "Resources/唐老师/008 Csharp 小知识点.md",
+    "Resources/唐老师/学习路线（建议）.md",
+    "Buffer/其他/杂物/ARPG相机碰撞数据.png",
+    "Buffer/其他/杂物/CameraCollider 摄像机.png",
+    "Projects/ARPG/相机/相机相关总结.md",
+    "Projects/ARPG/声音播放/声音播放总结.md",
+    "Buffer/其他/模板/笔试.md",
+    "Buffer/其他/模板/面试.md",
+    "Buffer/其他/模板/视频.md",
+    "Buffer/其他/模板/算法.md",
+    "Buffer/其他/模板/周报.md",
+    "Buffer/其他/模板/兔八哥 处世哲学.md",
+    "Buffer/其他/随记/2024-08-10.md",
+    "Resources/面试 + 笔试/Unity底层如何处理Csharp.md",
+    "Projects/ARPG/移动",
+    "Projects/ARPG/相机",
+    "Projects/ARPG/声音播放",
+    "README.md",
+    "Projects/ARPG/AnimationID.md",
+    "Resources/唐老师/002 Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 总结.md",
+    "Buffer/其他/杂物/脚本生命周期.png",
+    "Buffer/其他/杂物/键盘输入常用方法1.png",
+    "Resources/唐老师/002 Unity 四部曲/Unity 基础/物理系统/范围检测.md",
+    "Buffer/其他/MarkDown语法/MarkDown超级教程 Obsidian版 2022.1.12.md",
+    "Resources/唐老师/002 Unity 四部曲/Unity 基础/物理系统/射线检测.md",
+    "Area/效应理论/锅底效应.md",
+    "Buffer/其他/MarkDown语法",
+    "Excalidraw",
+    "Buffer/Excalidraw",
+    "未命名 1.canvas",
     "未命名.canvas",
+    "Buffer",
+    "Area/Unity/勇士传说",
+    "Area/Unity",
+    "Area/Unity/僵尸围城",
+    "Buffer/其他/杂物/视频播放 常用操作系统对视频格式的支持.png",
+    "Buffer/其他/杂物/InputSystem 改键 UI 工程图片.png",
+    "Buffer/其他/杂物/改键UI.png",
+    "Buffer/其他/杂物/InputDebug 窗口参数.png",
+    "Buffer/其他/杂物/Lambad表达式进化.png",
+    "Buffer/其他/杂物/UGUI配合InputSystem参数相关.png",
     "未命名 3.canvas",
     "未命名 2.canvas",
-    "未命名 1.canvas",
     "Git 与 Github/未命名.canvas",
     "看板/未命名.canvas",
     "CSharp/唐老狮/核心/面向对象/未命名.canvas"

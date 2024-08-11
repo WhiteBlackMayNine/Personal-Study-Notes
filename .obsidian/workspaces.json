@@ -6,20 +6,15 @@
         "type": "split",
         "children": [
           {
-            "id": "0c514b535c426b50",
+            "id": "c0f5a7d07c66db72",
             "type": "tabs",
             "children": [
               {
-                "id": "55a7bf2708bd0bd9",
+                "id": "e2c2a3721f079832",
                 "type": "leaf",
                 "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Unity/VipSkill/P2 课程/底层基础支持（一）/基础场景与 UI.md",
-                    "mode": "source",
-                    "backlinks": false,
-                    "source": false
-                  }
+                  "type": "empty",
+                  "state": {}
                 }
               }
             ]
@@ -44,7 +39,7 @@
                 }
               },
               {
-                "id": "5c2965ebf9d54e67",
+                "id": "c7510e15f93d5e21",
                 "type": "leaf",
                 "state": {
                   "type": "file-explorer",
@@ -54,7 +49,18 @@
                 }
               },
               {
-                "id": "80addee003776602",
+                "id": "becaa09cc2f5b3cf",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "c4d348eff1fa2fe1",
                 "type": "leaf",
                 "state": {
                   "type": "search",
@@ -73,7 +79,7 @@
           }
         ],
         "direction": "horizontal",
-        "width": 240.5
+        "width": 300.5
       },
       "right": {
         "id": "a0b52c73937c69e1",
@@ -84,80 +90,86 @@
             "type": "tabs",
             "children": [
               {
-                "id": "67a06a1091d09c3a",
+                "id": "91c3f21e4d7f6ae3",
                 "type": "leaf",
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "Unity/VipSkill/P2 课程/底层基础支持（一）/基础场景与 UI.md",
+                    "file": "Resources/唐老师/002 Unity 四部曲/Unity 进阶/ScriptableObject/数据文件的创建.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
                     "showSearch": false,
                     "searchQuery": "",
                     "backlinkCollapsed": false,
-                    "unlinkedCollapsed": false
+                    "unlinkedCollapsed": true
                   }
                 }
               },
               {
-                "id": "00481293481bd5a2",
+                "id": "5a6c608ed512ed1c",
                 "type": "leaf",
                 "state": {
                   "type": "outgoing-link",
                   "state": {
-                    "file": "Unity/VipSkill/P2 课程/底层基础支持（一）/基础场景与 UI.md",
+                    "file": "Resources/唐老师/002 Unity 四部曲/Unity 进阶/ScriptableObject/数据文件的创建.md",
                     "linksCollapsed": false,
                     "unlinkedCollapsed": true
                   }
                 }
               },
               {
-                "id": "9a2c9e2d634a5a02",
-                "type": "leaf",
-                "state": {
-                  "type": "calendar",
-                  "state": {}
-                }
-              },
-              {
-                "id": "edcebf2b914aacbb",
-                "type": "leaf",
-                "state": {
-                  "type": "tag",
-                  "state": {
-                    "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
-                }
-              },
-              {
-                "id": "532f68c8215c0797",
+                "id": "a9605505c6b8ad9c",
                 "type": "leaf",
                 "state": {
                   "type": "quiet-outline",
                   "state": {}
                 }
+              },
+              {
+                "id": "341792242234f57b",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "Resources/唐老师/002 Unity 四部曲/Unity 进阶/ScriptableObject/数据文件的创建.md"
+                  }
+                }
               }
-            ],
-            "currentTab": 4
+            ]
+          },
+          {
+            "id": "7baddb7cecae5189",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3aa935ee7399a1a2",
+                "type": "leaf",
+                "state": {
+                  "type": "thino_view",
+                  "state": {}
+                }
+              }
+            ]
           }
         ],
         "direction": "horizontal",
-        "width": 214.5
+        "width": 307.5
       },
       "left-ribbon": {
         "hiddenItems": {
+          "obsidian-memos:Thino": false,
+          "pkmer:Open Pkmer Market": false,
           "graph:查看关系图谱": false,
-          "templates:插入模板": false,
           "workspaces:管理工作区布局": false,
           "daily-notes:打开/创建今天的日记": false,
           "obsidian-excalidraw-plugin:新建绘图文件": false,
-          "pkmer:Open Pkmer Market": false
+          "canvas:新建白板": false,
+          "command-palette:打开命令面板": false
         }
       },
-      "active": "55a7bf2708bd0bd9",
-      "mtime": "2024-06-20T21:24:59+08:00"
+      "active": "c7510e15f93d5e21",
+      "mtime": "2024-08-10T21:30:03+08:00"
     }
   },
   "active": "日常"

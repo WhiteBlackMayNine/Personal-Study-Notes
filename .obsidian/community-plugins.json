@@ -2,14 +2,19 @@
   "obsidian-outliner",
   "pkmer",
   "calendar",
-  "obsidian-excalidraw-plugin",
   "obsidian-kanban",
   "cm-editor-syntax-highlight-obsidian",
   "obsidian-better-command-palette",
   "obsidian-quiet-outline",
-  "obsidian-another-quick-switcher",
-  "obsidian-auto-link-title",
   "customizable-menu",
   "obsidian-hover-editor",
-  "file-explorer-note-count"
+  "file-explorer-note-count",
+  "obsidian-another-quick-switcher",
+  "obsidian-memos",
+  "obsidian-style-settings",
+  "obsidian-excalidraw-plugin",
+  "better-export-pdf",
+  "obsidian-advanced-uri",
+  "cmdr",
+  "obsidian-hider"
 ]
