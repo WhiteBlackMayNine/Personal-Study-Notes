@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Combo", menuName = "Create/Character/Combo", order = 0)]
 public class CharacterComboSO : ScriptableObject
 {
-    [SerializeField]private List<CharacterComboDataSO> _allComboData = new List<CharacterComboDataSO>();
+    [SerializeField] private List<CharacterComboDataSO> _allComboData = new List<CharacterComboDataSO>();
 
     #region 函数相关
 
@@ -16,29 +16,28 @@ public class CharacterComboSO : ScriptableObject
     /// <returns></returns>
     public string TryGetOneComboAction(int index)
     {
-        if(_allComboData.Count == 0)
+        if (_allComboData.Count == 0)
         {
             return null;
         }
 
         return _allComboData[index].ComboName;
-
     }
-    
+
     /// <summary>
     /// 获取受击动画
     /// </summary>
     /// <param name="index"></param>
     /// <param name="hitName"></param>
     /// <returns></returns>
-    public string TryGetOneHitAction(int index,int hitName)
+    public string TryGetOneHitAction(int index, int hitName)
     {
         if (_allComboData.Count == 0)
         {
             return null;
         }
 
-        if(_allComboData[index].GetComboMaxHitandParryCount() == 0)
+        if (_allComboData[index].GetComboMaxHitandParryCount() == 0)
         {
             return null;
         }
@@ -64,7 +63,7 @@ public class CharacterComboSO : ScriptableObject
             return null;
         }
 
-        return _allComboData[index].ComboHitName[parryName];
+        return _allComboData[index].ComboParryName[parryName];
     }
 
     /// <summary>
@@ -74,7 +73,7 @@ public class CharacterComboSO : ScriptableObject
     /// <returns></returns>
     public float TryGetComboDamage(int index)
     {
-        if(_allComboData.Count == 0)
+        if (_allComboData.Count == 0)
         {
             return 0f;
         }
@@ -123,7 +122,8 @@ public class CharacterComboSO : ScriptableObject
     /// 获取连招数量
     /// </summary>
     /// <returns></returns>
-    public float TryGetComboMaxCount() => _allComboData.Count;
+
+    public int TryGetComboMaxCount() => _allComboData.Count;
 
     #endregion
 }

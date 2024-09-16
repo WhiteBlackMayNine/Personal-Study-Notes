@@ -14,7 +14,7 @@ namespace Movement
 
         private float _rotationAngle;
         private Transform _mainCamera;
-        private float _angleVelocity = 0f;
+        private float _angleVelocity = 0f;//.SmoothDampAngle 需要，就去写一个
         [SerializeField, Header("角色旋转")] private float _smoothTime;
 
         #endregion
@@ -35,8 +35,9 @@ namespace Movement
         #region 脚步声
 
         private float _nextFootTime;
-        [SerializeField,Header("脚步声")] private float _slowFootTime;
+        [SerializeField, Header("脚步声")] private float _slowFootTime;
         [SerializeField] private float _fastFootTime;
+        [SerializeField] private float _walkFootTime;
 
         #endregion
 
@@ -68,6 +69,8 @@ namespace Movement
 
         #region 函数相关
 
+        #region 控制角色的旋转
+
         /// <summary>
         /// 控制角色的旋转
         /// </summary>
@@ -89,17 +92,19 @@ namespace Movement
             {
                 //角色以Y轴为基准去旋转的
                 this.transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(this.transform.eulerAngles.y,
-                    _rotationAngle, ref _angleVelocity, _smoothTime) ;
+                    _rotationAngle, ref _angleVelocity, _smoothTime);
 
                 //相当于Z轴经过 以Y轴为基准的旋转后 重新赋值 ，得到目标的移动朝向，也就是要移动的方向
-                _characterTargetDirection = Quaternion.Euler(0, _rotationAngle,0) * Vector3.forward;
+                _characterTargetDirection = Quaternion.Euler(0, _rotationAngle, 0) * Vector3.forward;
             }
 
             _animator.SetFloat(AnimationID.DetalAngleID, DevelopmentToos.GetDeltaAngle(this.transform,
                 _characterTargetDirection.normalized));
-
         }
 
+        #endregion
+
+        #region 更新动画
 
         /// <summary>
         /// 更新动画
@@ -147,16 +152,16 @@ namespace Movement
                     }
                 }
 
-                _animator.SetFloat(AnimationID.MovementID, (_animator.GetBool(AnimationID.RunID) ? 2f : 
-                    GameInputManager.MainInstance.Movement.sqrMagnitude), 
-                    0.25f,Time.deltaTime);
+                _animator.SetFloat(AnimationID.MovementID, (_animator.GetBool(AnimationID.RunID) ? 2f :
+                    GameInputManager.MainInstance.Movement.sqrMagnitude),
+                    0.25f, Time.deltaTime);
                 SetCharacterFootSound();
             }
             else
             {
                 _animator.SetFloat(AnimationID.MovementID, 0f, 0.25f, Time.deltaTime);
 
-                if(_animator.GetFloat(AnimationID.MovementID) < 0.2f)
+                if (_animator.GetFloat(AnimationID.MovementID) < 0.2f)
                 {
                     _animator.SetBool(AnimationID.RunID, false);
                     _animator.SetBool(AnimationID.WalkID, false);
@@ -164,25 +169,40 @@ namespace Movement
             }
         }
 
+        #endregion
+
+        #region 播放脚步声
+
         /// <summary>
         /// 播放脚步声
         /// </summary>
         private void PlayFootSound()
         {
             GamePoolManager.MainInstance.TryGetOnePoolItem("FOOTSound", this.transform.position, Quaternion.identity);
-            _nextFootTime = (_animator.GetFloat(AnimationID.MovementID) > 1.1f) ? _fastFootTime : _slowFootTime;
+            if (_animator.GetBool(AnimationID.WalkID))
+            {
+                _nextFootTime = _walkFootTime;
+            }
+            else
+            {
+                _nextFootTime = (_animator.GetFloat(AnimationID.MovementID) > 1.1f) ? _fastFootTime : _slowFootTime;
+            }
         }
+
+        #endregion
+
+        #region 设置角色脚步声
 
         /// <summary>
         /// 设置角色脚步声
         /// </summary>
         private void SetCharacterFootSound()
         {
-            if(_characterIsGround && _animator.AnimationAtTag("Motion") && 
+            if (_characterIsGround && _animator.AnimationAtTag("Motion") &&
                 _animator.GetFloat(AnimationID.MovementID) > 0.5f)
             {
                 _nextFootTime -= Time.deltaTime;
-                if(_nextFootTime < 0f)
+                if (_nextFootTime < 0f)
                 {
                     PlayFootSound();
                 }
@@ -192,6 +212,8 @@ namespace Movement
                 _nextFootTime = 0f;
             }
         }
+
+        #endregion
 
         #endregion
     }

@@ -9,6 +9,8 @@ namespace Movement
     [RequireComponent(typeof(CharacterController))]
     public abstract class CharacterMoveBase : MonoBehaviour
     {
+        #region 变量相关
+
         protected CharacterController _characterController;
         protected Animator _animator;
         protected Vector3 _moveDirection;//角色移动方向
@@ -43,6 +45,8 @@ namespace Movement
 
         #endregion
 
+        #endregion
+
         #region 生命周期函数
 
         protected virtual void Awake()
@@ -70,21 +74,22 @@ namespace Movement
             UpdateCharacterMoveDirecion(_animator.deltaPosition);
         }
 
-        //private void OnEnable()
-        //{
-        //    GameEventManager.MainInstance.AddEventListening<bool>("激活重力", EnableCharacterGravity);
-        //}
+        private void OnEnable()
+        {
+            GameEventManager.MainInstance.AddEventListening<bool>("激活重力", EnableCharacterGravity);
+        }
 
-        //private void OnDisable()
-        //{
-        //    GameEventManager.MainInstance.RemoveEvent<bool>("激活重力", EnableCharacterGravity);
-        //}
+        private void OnDisable()
+        {
+            GameEventManager.MainInstance.RemoveEvent<bool>("激活重力", EnableCharacterGravity);
+        }
 
         #endregion
 
         #region 地面检测相关函数
 
-        //编辑模式下的绘图函数
+        #region 绘图函数
+
         private void OnDrawGizmos()
         {
             //这个就是检测的中心点
@@ -92,6 +97,10 @@ namespace Movement
                 - _detectionPositionOffset, this.transform.position.z);
             Gizmos.DrawWireSphere(detectionPosition, _detectionRang);
         }
+
+        #endregion
+
+        #region 地面检测
 
         /// <summary>
         /// 进行地面检测
@@ -107,6 +116,10 @@ namespace Movement
             return Physics.CheckSphere(detecttionPostion, _detectionRang, _whatIsGround, QueryTriggerInteraction.Ignore);
         }
 
+        #endregion
+
+        #region 坡道检测
+
         /// <summary>
         /// 进行坡道检测
         /// </summary>
@@ -115,17 +128,21 @@ namespace Movement
         private Vector3 SlopReserDirection(Vector3 moveDirection)
         {
             //进行射线检测
-            if (Physics.Raycast(transform.position + (transform.up * .5f),Vector3.down, out var hit,
+            if (Physics.Raycast(transform.position + (transform.up * .5f), Vector3.down, out var hit,
              _characterController.height * .85f, _whatIsGround, QueryTriggerInteraction.Ignore))
             {
                 if (Vector3.Dot(Vector3.up, hit.normal) != 0)
                 //点积等于0，说明两个向量是垂直的，只要不是0那么就不垂直   浮点值不会完全相等，只会无限接近
                 {
-                    return moveDirection = Vector3.ProjectOnPlane(vector: moveDirection, hit.normal);
+                    return moveDirection = Vector3.ProjectOnPlane(moveDirection, hit.normal);
                 }
             }
             return moveDirection;
         }
+
+        #endregion
+
+        #region 更新角色移动方向
 
         /// <summary>
         /// 更新角色移动方向
@@ -135,12 +152,18 @@ namespace Movement
         {
             //先进行坡道检测，获取处理后的角色移动方向
             _moveDirection = SlopReserDirection(dirction);
-            _characterController.Move(_moveDirection * Time.deltaTime);//用于更新角色的Y轴  也就是垂直降落相关
+
+            //用于移动角色根位置 如果动画不去移动根位置（勾选了 Root Transform Position(XZ) 的 Bake Into Pose）
+            _characterController.Move(_moveDirection * Time.deltaTime);
         }
 
         #endregion
 
+        #endregion
+
         #region 重力相关函数
+
+        #region 激活重力
 
         /// <summary>
         /// 激活重力
@@ -152,6 +175,10 @@ namespace Movement
             //如果启用(true)重力，那么就将角色垂直速度设置为-2 ，如果不启用(false)则为0f
             _characterVerticalVelocity = (enable) ? -2f : 0f;
         }
+
+        #endregion
+
+        #region 设置角色重力
 
         /// <summary>
         /// 设置角色重力
@@ -198,6 +225,10 @@ namespace Movement
             }
         }
 
+        #endregion
+
+        #region 更新角色重力
+
         /// <summary>
         /// 更新角色重力
         /// </summary>
@@ -213,6 +244,8 @@ namespace Movement
             _characterVerticalDirection.Set(0, _characterVerticalVelocity, 0);
             _characterController.Move(_characterVerticalDirection * Time.deltaTime);
         }
+
+        #endregion
 
         #endregion
 

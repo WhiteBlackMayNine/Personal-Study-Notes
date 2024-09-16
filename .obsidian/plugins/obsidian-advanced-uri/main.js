@@ -3685,7 +3685,11 @@ var Handlers = class {
         workspaces.saveWorkspace(active);
         new import_obsidian7.Notice(`Saved current workspace to ${active}`);
       }
-      if (parameters.workspace != void 0) {
+      if (parameters.clipboard && parameters.clipboard != "false") {
+        this.tools.copyURI({
+          workspace: workspaces.activeWorkspace
+        });
+      } else if (parameters.workspace != void 0) {
         workspaces.loadWorkspace(parameters.workspace);
       }
       this.plugin.success(parameters);
@@ -3726,7 +3730,7 @@ var Handlers = class {
             editor.setValue("");
           }
         }
-      } else if (parameters.line != void 0 || parameters.column != void 0) {
+      } else if (parameters.line != void 0 || parameters.column != void 0 || parameters.offset != void 0) {
         await this.plugin.open({
           file: parameters.filepath,
           mode: "source",
@@ -3740,6 +3744,10 @@ var Handlers = class {
           parameters
         });
       }
+    } else if (parameters.openmode || parameters.viewmode) {
+      await this.plugin.open({
+        parameters
+      });
     }
     if (parameters.commandid) {
       this.app.commands.executeCommandById(parameters.commandid);
@@ -3748,12 +3756,21 @@ var Handlers = class {
       for (const command in rawCommands) {
         if (rawCommands[command].name === parameters.commandname) {
           if (rawCommands[command].callback) {
-            rawCommands[command].callback();
+            await rawCommands[command].callback();
           } else {
             rawCommands[command].checkCallback(false);
           }
           break;
         }
+      }
+    }
+    if (parameters.confirm && parameters.confirm != "false") {
+      await new Promise((r) => setTimeout(r, 750));
+      const button = document.querySelector(
+        ".mod-cta:not([style*='display: none'])"
+      );
+      if (button.click instanceof Function) {
+        button.click();
       }
     }
     this.plugin.success(parameters);
@@ -3793,7 +3810,7 @@ var Handlers = class {
             editor.setValue("");
           }
         }
-      } else if (parameters.line != void 0 || parameters.column != void 0) {
+      } else if (parameters.line != void 0 || parameters.column != void 0 || parameters.offset != void 0) {
         await this.plugin.open({
           file: parameters.filepath,
           mode: "source",
@@ -3979,7 +3996,7 @@ var Handlers = class {
         setting: this.plugin.settings.openFileWithoutWriteInNewPane,
         parameters
       });
-      if (parameters.line != void 0 || parameters.column != void 0) {
+      if (parameters.line != void 0 || parameters.column != void 0 || parameters.offset != void 0) {
         await this.plugin.setCursorInLine(parameters);
       }
     }
@@ -4470,8 +4487,8 @@ var Tools = class {
     }
     return await this.writeUIDToFile(file, v4_default());
   }
-  async generateURI(parameters, doubleEncode) {
-    const prefix = "obsidian://advanced-uri";
+  async generateURI(parameters) {
+    const prefix = "obsidian://adv-uri";
     let suffix = "";
     const file = this.app.vault.getAbstractFileByPath(parameters.filepath);
     if (this.settings.includeVaultName) {
@@ -4508,14 +4525,12 @@ var Tools = class {
         )}`;
       }
     }
-    if (doubleEncode) {
-      return prefix + encodeURI(suffix);
-    } else {
-      return prefix + suffix;
-    }
+    if (suffix.endsWith("%20"))
+      suffix += "&";
+    return prefix + suffix;
   }
   async copyURI(parameters) {
-    const uri = await this.generateURI(parameters, true);
+    const uri = await this.generateURI(parameters);
     await copyText(uri);
     new import_obsidian12.Notice("Advanced URI copied to your clipboard");
   }
@@ -4694,76 +4709,17 @@ var AdvancedURI = class extends import_obsidian14.Plugin {
       }
     });
     this.registerObsidianProtocolHandler("advanced-uri", async (e) => {
-      var _a, _b, _c;
       const parameters = e;
-      let createdDailyNote = false;
       for (const parameter in parameters) {
         parameters[parameter] = decodeURIComponent(
           parameters[parameter]
         );
       }
-      this.lastParameters = { ...parameters };
-      if (parameters.uid) {
-        const res = (_a = this.tools.getFileFromUID(parameters.uid)) == null ? void 0 : _a.path;
-        if (res != void 0) {
-          parameters.filepath = res;
-          parameters.uid = void 0;
-        }
-      } else if (parameters.filename) {
-        let file = this.app.metadataCache.getFirstLinkpathDest(
-          parameters.filename,
-          ""
-        );
-        if (!file) {
-          file = this.app.vault.getMarkdownFiles().find(
-            (file2) => {
-              var _a2;
-              return (_a2 = (0, import_obsidian14.parseFrontMatterAliases)(
-                this.app.metadataCache.getFileCache(file2).frontmatter
-              )) == null ? void 0 : _a2.includes(parameters.filename);
-            }
-          );
-        }
-        const parentFolder = this.app.fileManager.getNewFileParent(
-          (_b = this.app.workspace.getActiveFile()) == null ? void 0 : _b.path
-        );
-        const parentFolderPath = parentFolder.isRoot() ? "" : parentFolder.path + "/";
-        parameters.filepath = (_c = file == null ? void 0 : file.path) != null ? _c : parentFolderPath + (0, import_obsidian14.normalizePath)(parameters.filename);
-      }
-      if (parameters.filepath) {
-        parameters.filepath = (0, import_obsidian14.normalizePath)(parameters.filepath);
-        const index = parameters.filepath.lastIndexOf(".");
-        const extension = parameters.filepath.substring(
-          index < 0 ? parameters.filepath.length : index
-        );
-        if (extension === "") {
-          parameters.filepath = parameters.filepath + ".md";
-        }
-      } else if (parameters.daily === "true") {
-        if (!(0, import_obsidian_daily_notes_interface2.appHasDailyNotesPluginLoaded)()) {
-          new import_obsidian14.Notice("Daily notes plugin is not loaded");
-          return;
-        }
-        const moment = window.moment(Date.now());
-        const allDailyNotes = (0, import_obsidian_daily_notes_interface2.getAllDailyNotes)();
-        let dailyNote = (0, import_obsidian_daily_notes_interface2.getDailyNote)(moment, allDailyNotes);
-        if (!dailyNote) {
-          if (parameters.exists === "true") {
-            parameters.filepath = await getDailyNotePath(moment);
-          } else {
-            dailyNote = await (0, import_obsidian_daily_notes_interface2.createDailyNote)(moment);
-            await new Promise((r) => setTimeout(r, 500));
-            createdDailyNote = true;
-          }
-        }
-        if (dailyNote !== void 0) {
-          parameters.filepath = dailyNote.path;
-        }
-      }
-      if (parameters.clipboard === "true") {
-        parameters.data = await navigator.clipboard.readText();
-      }
-      this.chooseHandler(parameters, createdDailyNote);
+      this.onUriCall(parameters);
+    });
+    this.registerObsidianProtocolHandler("adv-uri", async (e) => {
+      const parameters = e;
+      this.onUriCall(parameters);
     });
     this.registerObsidianProtocolHandler(
       "hook-get-advanced-uri",
@@ -4799,6 +4755,72 @@ var AdvancedURI = class extends import_obsidian14.Plugin {
         });
       })
     );
+  }
+  async onUriCall(parameters) {
+    var _a, _b, _c;
+    let createdDailyNote = false;
+    this.lastParameters = { ...parameters };
+    if (parameters.uid) {
+      const res = (_a = this.tools.getFileFromUID(parameters.uid)) == null ? void 0 : _a.path;
+      if (res != void 0) {
+        parameters.filepath = res;
+        parameters.uid = void 0;
+      }
+    } else if (parameters.filename) {
+      let file = this.app.metadataCache.getFirstLinkpathDest(
+        parameters.filename,
+        ""
+      );
+      if (!file) {
+        file = this.app.vault.getMarkdownFiles().find(
+          (file2) => {
+            var _a2;
+            return (_a2 = (0, import_obsidian14.parseFrontMatterAliases)(
+              this.app.metadataCache.getFileCache(file2).frontmatter
+            )) == null ? void 0 : _a2.includes(parameters.filename);
+          }
+        );
+      }
+      const parentFolder = this.app.fileManager.getNewFileParent(
+        (_b = this.app.workspace.getActiveFile()) == null ? void 0 : _b.path
+      );
+      const parentFolderPath = parentFolder.isRoot() ? "" : parentFolder.path + "/";
+      parameters.filepath = (_c = file == null ? void 0 : file.path) != null ? _c : parentFolderPath + (0, import_obsidian14.normalizePath)(parameters.filename);
+    }
+    if (parameters.filepath) {
+      parameters.filepath = (0, import_obsidian14.normalizePath)(parameters.filepath);
+      const index = parameters.filepath.lastIndexOf(".");
+      const extension = parameters.filepath.substring(
+        index < 0 ? parameters.filepath.length : index
+      );
+      if (extension === "") {
+        parameters.filepath = parameters.filepath + ".md";
+      }
+    } else if (parameters.daily === "true") {
+      if (!(0, import_obsidian_daily_notes_interface2.appHasDailyNotesPluginLoaded)()) {
+        new import_obsidian14.Notice("Daily notes plugin is not loaded");
+        return;
+      }
+      const moment = window.moment(Date.now());
+      const allDailyNotes = (0, import_obsidian_daily_notes_interface2.getAllDailyNotes)();
+      let dailyNote = (0, import_obsidian_daily_notes_interface2.getDailyNote)(moment, allDailyNotes);
+      if (!dailyNote) {
+        if (parameters.exists === "true") {
+          parameters.filepath = await getDailyNotePath(moment);
+        } else {
+          dailyNote = await (0, import_obsidian_daily_notes_interface2.createDailyNote)(moment);
+          await new Promise((r) => setTimeout(r, 500));
+          createdDailyNote = true;
+        }
+      }
+      if (dailyNote !== void 0) {
+        parameters.filepath = dailyNote.path;
+      }
+    }
+    if (parameters.clipboard === "true") {
+      parameters.data = await navigator.clipboard.readText();
+    }
+    this.chooseHandler(parameters, createdDailyNote);
   }
   async chooseHandler(parameters, createdDailyNote) {
     if (parameters["enable-plugin"] || parameters["disable-plugin"]) {
@@ -4849,8 +4871,7 @@ var AdvancedURI = class extends import_obsidian14.Plugin {
     const options = {
       title: stripMD(file.name),
       advanceduri: await this.tools.generateURI(
-        { filepath: file.path },
-        false
+        { filepath: file.path }
       ),
       urlkey: "advanceduri",
       fileuri: getFileUri(this.app, file)
@@ -4985,7 +5006,7 @@ var AdvancedURI = class extends import_obsidian14.Plugin {
         setting: this.settings.openFileOnWriteInNewPane,
         parameters
       });
-      if (parameters.line != void 0 || parameters.column != void 0) {
+      if (parameters.line != void 0 || parameters.column != void 0 || parameters.offset != void 0) {
         await this.setCursorInLine(parameters);
       }
     }
@@ -4997,6 +5018,8 @@ var AdvancedURI = class extends import_obsidian14.Plugin {
     supportPopover,
     mode
   }) {
+    var _a;
+    let leaf;
     if (parameters.openmode == "popover" && (supportPopover != null ? supportPopover : true)) {
       const hoverEditor = this.app.plugins.plugins["obsidian-hover-editor"];
       if (!hoverEditor) {
@@ -5005,18 +5028,12 @@ var AdvancedURI = class extends import_obsidian14.Plugin {
         );
         this.failure(parameters);
       }
-      const leaf = hoverEditor.spawnPopover(void 0, () => {
-        this.app.workspace.setActiveLeaf(leaf, { focus: true });
+      await new Promise((resolve) => {
+        leaf = hoverEditor.spawnPopover(void 0, () => {
+          this.app.workspace.setActiveLeaf(leaf, { focus: true });
+          resolve();
+        });
       });
-      let tFile;
-      if (file instanceof import_obsidian14.TFile) {
-        tFile = file;
-      } else {
-        tFile = this.app.vault.getAbstractFileByPath(
-          (0, import_obsidian14.getLinkpath)(file)
-        );
-      }
-      await leaf.openFile(tFile);
     } else {
       let openMode = setting;
       if (parameters.newpane !== void 0) {
@@ -5038,25 +5055,51 @@ var AdvancedURI = class extends import_obsidian14.Plugin {
       if (import_obsidian14.Platform.isMobileApp && openMode == "window") {
         openMode = true;
       }
-      let fileIsAlreadyOpened = false;
-      if (isBoolean(openMode)) {
-        this.app.workspace.iterateAllLeaves((leaf) => {
-          var _a;
-          if (((_a = leaf.view.file) == null ? void 0 : _a.path) === parameters.filepath) {
-            if (fileIsAlreadyOpened && leaf.width == 0)
-              return;
-            fileIsAlreadyOpened = true;
-            this.app.workspace.setActiveLeaf(leaf, { focus: true });
-          }
-        });
+      if (file != void 0) {
+        let fileIsAlreadyOpened = false;
+        if (isBoolean(openMode)) {
+          this.app.workspace.iterateAllLeaves((existingLeaf) => {
+            var _a2;
+            if (((_a2 = existingLeaf.view.file) == null ? void 0 : _a2.path) === parameters.filepath) {
+              if (fileIsAlreadyOpened && existingLeaf.width == 0)
+                return;
+              fileIsAlreadyOpened = true;
+              this.app.workspace.setActiveLeaf(existingLeaf, {
+                focus: true
+              });
+              leaf = existingLeaf;
+            }
+          });
+        }
       }
-      return this.app.workspace.openLinkText(
-        file instanceof import_obsidian14.TFile ? file.path : file,
+      if (!leaf) {
+        leaf = this.app.workspace.getLeaf(openMode);
+        this.app.workspace.setActiveLeaf(leaf, { focus: true });
+      }
+    }
+    if (file instanceof import_obsidian14.TFile) {
+      await leaf.openFile(file);
+    } else if (file != void 0) {
+      await this.app.workspace.openLinkText(
+        file,
         "/",
-        fileIsAlreadyOpened ? false : openMode,
+        false,
         mode != void 0 ? { state: { mode } } : getViewStateFromMode(parameters)
       );
     }
+    if (leaf.view instanceof import_obsidian14.MarkdownView) {
+      const viewState = leaf.getViewState();
+      if (mode != void 0) {
+        viewState.state.mode = mode;
+      } else {
+        viewState.state = {
+          ...viewState.state,
+          ...(_a = getViewStateFromMode(parameters)) == null ? void 0 : _a.state
+        };
+      }
+      await leaf.setViewState(viewState);
+    }
+    return leaf;
   }
   async setCursor(parameters) {
     const view = this.app.workspace.getActiveViewOfType(import_obsidian14.MarkdownView);
@@ -5090,14 +5133,28 @@ var AdvancedURI = class extends import_obsidian14.Plugin {
     const rawColumn = parameters.column ? Number(parameters.column) : void 0;
     viewState.state.mode = "source";
     await view.leaf.setViewState(viewState);
-    const line = rawLine != void 0 ? Math.min(rawLine - 1, view.editor.lineCount() - 1) : view.editor.getCursor().line;
-    const maxColumn = view.editor.getLine(line).length - 1;
-    const column = Math.min(rawColumn - 1, maxColumn);
+    let line, column;
+    if (parameters.offset != void 0) {
+      const pos = view.editor.offsetToPos(Number(parameters.offset));
+      line = pos.line;
+      column = pos.ch;
+    } else {
+      line = rawLine != void 0 ? Math.min(rawLine - 1, view.editor.lineCount() - 1) : view.editor.getCursor().line;
+      const maxColumn = view.editor.getLine(line).length - 1;
+      column = Math.min(rawColumn - 1, maxColumn);
+    }
     view.editor.focus();
     view.editor.setCursor({
       line,
-      ch: column != null ? column : maxColumn
+      ch: column
     });
+    view.editor.scrollIntoView(
+      {
+        from: { line, ch: column },
+        to: { line, ch: column }
+      },
+      true
+    );
     await new Promise((resolve) => setTimeout(resolve, 10));
     if (parameters.viewmode == "preview") {
       viewState.state.mode = "preview";

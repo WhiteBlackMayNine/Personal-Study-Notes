@@ -1,49 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assest;
 
-public enum SoundType//声音类型，为了更好的管理多种声音
+
+public interface IPoolItem
 {
-    ATK,//攻击
-    HIT,//受击
-    BLOCK,//格挡
-    FOOT//脚步声
+    void Spawn();
+    void Recycl();
 }
-
-public class PoolSound : PoolItemBase
+public abstract class PoolItemBase : MonoBehaviour, IPoolItem
 {
-    private AudioSource _audioSource;
-    [SerializeField] private SoundType _type;
-    [SerializeField] private AssestSoundSO _soundAssest;
-
-    private void Awake()
+    private void OnEnable()
     {
-        _audioSource = GetComponent<AudioSource>();
+        Spawn();
     }
 
-    public override void Spawn()
+    private void OnDisable()
     {
-        //当自身被激活时，播放声音
-        //播放声音后会开始倒计时，0.3s 后自身会被隐藏
-        PlaySound();
+        Recycl();
     }
 
-    private void PlaySound()//播放声音 根据不同的声音类型来播放不同的声音
+    public virtual void Recycl()
     {
-        _audioSource.clip = _soundAssest.GetAudioClip(_type);
-        _audioSource.Play();
-        StartRecycl();
+
     }
 
-    private void StartRecycl() // 回收函数
+    public virtual void Spawn()
     {
-        GameTimeManager.MainInstance.TryGetTimer(0.3f, DisableSelf);
-    }
 
-    private void DisableSelf()
-    {
-        _audioSource.Stop();
-        this.gameObject.SetActive(false);//隐藏掉
     }
 }

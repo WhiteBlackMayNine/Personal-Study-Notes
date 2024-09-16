@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using System;
 using GGG.Tool;
 using GGG.Tool.Singleton;
+using UnityEngine;
 
-public class GameEventManager : Singleton<GameEventManager>
+public class GameEventManager : SingletonNonMono<GameEventManager>
 {
 
     private Dictionary<string, IEventHelp> _eventCenter = new Dictionary<string, IEventHelp>();
@@ -416,6 +417,6 @@ public class GameEventManager : Singleton<GameEventManager>
     }
 
     #endregion
-   
+
 }
 

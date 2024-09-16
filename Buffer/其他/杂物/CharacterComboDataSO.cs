@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "ComboData",menuName = "Create/Character/ComboData" ,order = 0)]
+[CreateAssetMenu(fileName = "ComboData", menuName = "Create/Character/ComboData", order = 0)]
 public class CharacterComboDataSO : ScriptableObject
 {
     #region 变量相关
@@ -24,6 +24,6 @@ public class CharacterComboDataSO : ScriptableObject
 
     #endregion
 
-    public float GetComboMaxHitandParryCount ()=> _comboHitName.Length;
+    public float GetComboMaxHitandParryCount() => _comboHitName.Length;
 
 }

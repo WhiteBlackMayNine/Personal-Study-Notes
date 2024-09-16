@@ -33,7 +33,8 @@ public class CameraCollider : MonoBehaviour
 
     private void Start()
     {
-        //相机会根据TP_CameraControl中的偏移量为参照物 归一化 使得相机初始位置在后面而不是前面（Z需要在0以下）
+        //相机会根据TP_CameraControl中的偏移量为参照物 归一化
+        //使得相机初始位置在后面而不是前面（Z需要在0以下）
         _originPosition = this.transform.localPosition.normalized;
         _originOffset = _maxDistanceOffset.y;
     }
@@ -51,7 +52,6 @@ public class CameraCollider : MonoBehaviour
     {
         //需要转换为世界坐标  因为前面获取的是本地坐标
         Vector3 _distanceDistance = this.transform.TransformPoint(_originPosition * _detectionDistance);
-
         //进行射线检测
         if (Physics.Linecast(this.transform.position, _distanceDistance, out var hit, _whatIsWall,
             QueryTriggerInteraction.Ignore))
@@ -63,9 +63,11 @@ public class CameraCollider : MonoBehaviour
         {
             _originOffset = _maxDistanceOffset.y;
         }
-
-        _mainCamera.localPosition = Vector3.Lerp(_mainCamera.localPosition, _originPosition * (_originOffset - 1),
-            _colliderSomoothTime);
+        if (!(_originOffset == _maxDistanceOffset.x))
+        {
+            _mainCamera.localPosition = Vector3.Lerp(_mainCamera.localPosition, _originPosition * (_originOffset - 0.1f),
+                _colliderSomoothTime);
+        }
     }
 
     #endregion 

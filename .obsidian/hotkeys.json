@@ -30,5 +30,14 @@
       ],
       "key": "O"
     }
+  ],
+  "insert-template": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "Numpad1"
+    }
   ]
 }

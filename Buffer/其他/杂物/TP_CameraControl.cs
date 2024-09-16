@@ -49,10 +49,7 @@ public class TP_CameraControl : MonoBehaviour
 
     private void OnDisable()
     {
-        if (!GameEventManager.MainInstance)
-        {
-            GameEventManager.MainInstance.RemoveEvent<Transform, float>("设置相机位置", SetFinishTarget);
-        }
+        GameEventManager.MainInstance.RemoveEvent<Transform, float>("设置相机位置", SetFinishTarget);
     }
 
     private void LateUpdate()
@@ -77,7 +74,6 @@ public class TP_CameraControl : MonoBehaviour
 
         //上下看，获取鼠标的Y轴，左右则是鼠标的X轴
         _input.x -= GameInputManager.MainInstance.CameraLook.y;
-
         //限制一下范围
         _input.x = Mathf.Clamp(_input.x, _cameraVerticalMaxAnagle.x, _cameraVerticalMaxAnagle.y);
     }
@@ -109,7 +105,7 @@ public class TP_CameraControl : MonoBehaviour
         //var newPosition = _lookTarget.position + (-transform.forward * _positionOffset);
         //加了处决看着敌人的功能用下面的 没加就用上面的
         var newPosition = ((((_isFinish) ? _currentLookTarget.position + _currentLookTarget.up * 0.7f :
-            _currentLookTarget.position) + (-transform.forward * _positionOffset)));
+        _currentLookTarget.position) + (-transform.forward * _positionOffset)));
         this.transform.position = Vector3.Lerp(this.transform.position, newPosition, _positionSmoothTime);
     }
 

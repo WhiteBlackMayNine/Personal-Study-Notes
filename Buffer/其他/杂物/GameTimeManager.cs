@@ -16,6 +16,8 @@ public class GameTimeManager : Singleton<GameTimeManager>
     //_workeringTimer需要动态地添加、删除和访问游戏计时器对象 因此使用 List
     #endregion
 
+    #region 生命周期函数
+
     private void Start()
     {
         InitTimerManager();
@@ -26,6 +28,10 @@ public class GameTimeManager : Singleton<GameTimeManager>
         UpdateWorkingTimer();
     }
 
+    #endregion
+
+    #region 函数相关
+
     #region 初始化计时器
 
     /// <summary>
@@ -33,11 +39,15 @@ public class GameTimeManager : Singleton<GameTimeManager>
     /// </summary>
     private void InitTimerManager()
     {
-        for(int i = 0;i < _initMaxTimerCount; i++)
+        for (int i = 0; i < _initMaxTimerCount; i++)
         {
             CreatTimer();
         }
     }
+
+    #endregion
+
+    #region 创建计时器对象
 
     /// <summary>
     /// 创建计时器对象
@@ -60,9 +70,9 @@ public class GameTimeManager : Singleton<GameTimeManager>
     /// </summary>
     /// <param name="time"></param>
     /// <param name="task"></param>
-    public void TryGetTimer(float time,Action task)
+    public void TryGetTimer(float time, Action task)
     {
-        if(_notWorkerTimer.Count == 0)
+        if (_notWorkerTimer.Count == 0)
         {
             //如果空闲计时器的数量为0 即没有一个空闲计时器可供使用
 
@@ -97,7 +107,7 @@ public class GameTimeManager : Singleton<GameTimeManager>
     /// </summary>
     private void UpdateWorkingTimer()
     {
-        if(_workeringTimer.Count == 0)
+        if (_workeringTimer.Count == 0)
         {
             //如果工作中的计时器数量为0 那么就没有更新信息的必要  
             //毕竟都是空闲的
@@ -105,9 +115,9 @@ public class GameTimeManager : Singleton<GameTimeManager>
             return;
         }
 
-        for(int i = 0; i< _workeringTimer.Count; i++)
+        for (int i = 0; i < _workeringTimer.Count; i++)
         {
-            if(_workeringTimer[i].GetTimerState() == TimerState.WORKING)
+            if (_workeringTimer[i].GetTimerState() == TimerState.WORKING)
             {
                 //对当前队列的第i个计时器的状态进行比较  如果为 工作中
 
@@ -127,6 +137,8 @@ public class GameTimeManager : Singleton<GameTimeManager>
             }
         }
     }
+
+    #endregion
 
     #endregion
 

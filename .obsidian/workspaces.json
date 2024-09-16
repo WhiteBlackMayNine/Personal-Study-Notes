@@ -6,11 +6,11 @@
         "type": "split",
         "children": [
           {
-            "id": "c0f5a7d07c66db72",
+            "id": "c80f945912424f11",
             "type": "tabs",
             "children": [
               {
-                "id": "e2c2a3721f079832",
+                "id": "1ed1622db9f4024d",
                 "type": "leaf",
                 "state": {
                   "type": "empty",
@@ -65,7 +65,7 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "",
+                    "query": "类和对象",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -73,13 +73,21 @@
                     "sortOrder": "alphabetical"
                   }
                 }
+              },
+              {
+                "id": "41e6f3133228cb05",
+                "type": "leaf",
+                "state": {
+                  "type": "book-explorer-view",
+                  "state": {}
+                }
               }
             ],
             "currentTab": 1
           }
         ],
         "direction": "horizontal",
-        "width": 300.5
+        "width": 301.5
       },
       "right": {
         "id": "a0b52c73937c69e1",
@@ -88,6 +96,7 @@
           {
             "id": "449558b51f27bbb3",
             "type": "tabs",
+            "dimension": 35.2306182531894,
             "children": [
               {
                 "id": "91c3f21e4d7f6ae3",
@@ -95,7 +104,6 @@
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "Resources/唐老师/002 Unity 四部曲/Unity 进阶/ScriptableObject/数据文件的创建.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -112,7 +120,230 @@
                 "state": {
                   "type": "outgoing-link",
                   "state": {
-                    "file": "Resources/唐老师/002 Unity 四部曲/Unity 进阶/ScriptableObject/数据文件的创建.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "e7c71beae6f6dc41",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {}
+                }
+              },
+              {
+                "id": "676af546d78f23b0",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  }
+                }
+              }
+            ],
+            "currentTab": 2
+          },
+          {
+            "id": "5a114dab30af4997",
+            "type": "tabs",
+            "dimension": 30.42198233562316,
+            "children": [
+              {
+                "id": "db9ac2ef713afc84",
+                "type": "leaf",
+                "state": {
+                  "type": "quiet-outline",
+                  "state": {}
+                }
+              }
+            ]
+          },
+          {
+            "id": "7baddb7cecae5189",
+            "type": "tabs",
+            "dimension": 34.34739941118744,
+            "children": [
+              {
+                "id": "3aa935ee7399a1a2",
+                "type": "leaf",
+                "state": {
+                  "type": "thino_view",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 311.5
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "obsidian-memos:Thino": false,
+          "pkmer:Open Pkmer Market": false,
+          "graph:查看关系图谱": false,
+          "templates:插入模板": false,
+          "workspaces:管理工作区布局": false,
+          "daily-notes:打开/创建今天的日记": false,
+          "obsidian-excalidraw-plugin:新建绘图文件": false,
+          "canvas:新建白板": false,
+          "command-palette:打开命令面板": false,
+          "obsidian-booknote-plugin:书库": false
+        }
+      },
+      "active": "676af546d78f23b0",
+      "mtime": "2024-08-12T22:30:01+08:00"
+    },
+    "读书笔记": {
+      "main": {
+        "id": "01f8bd7a61f29514",
+        "type": "split",
+        "children": [
+          {
+            "id": "d7eab05b3de66a8d",
+            "type": "tabs",
+            "dimension": 65.36189069423929,
+            "children": [
+              {
+                "id": "23577c17dd2a594f",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "book-view",
+                  "state": {},
+                  "pinned": true
+                }
+              }
+            ]
+          },
+          {
+            "id": "2343fdfcb0c0d904",
+            "type": "tabs",
+            "dimension": 34.638109305760715,
+            "children": [
+              {
+                "id": "0d2c16f72ebfe2e5",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Archives/读书笔记/学会提问.md",
+                    "mode": "source",
+                    "backlinks": false,
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "21739b33aa06af79",
+        "type": "split",
+        "children": [
+          {
+            "id": "522630b57863bf72",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "24fc073f59d77e10",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              },
+              {
+                "id": "c7510e15f93d5e21",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "becaa09cc2f5b3cf",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "eb921b9101e75e34",
+                "type": "leaf",
+                "state": {
+                  "type": "book-explorer-view",
+                  "state": {}
+                }
+              },
+              {
+                "id": "c4d348eff1fa2fe1",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300.5,
+        "collapsed": true
+      },
+      "right": {
+        "id": "a0b52c73937c69e1",
+        "type": "split",
+        "children": [
+          {
+            "id": "449558b51f27bbb3",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "91c3f21e4d7f6ae3",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Archives/读书笔记/学会提问.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "5a6c608ed512ed1c",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "Archives/读书笔记/学会提问.md",
                     "linksCollapsed": false,
                     "unlinkedCollapsed": true
                   }
@@ -127,16 +358,29 @@
                 }
               },
               {
-                "id": "341792242234f57b",
+                "id": "2b4af3fd708e4f40",
                 "type": "leaf",
                 "state": {
                   "type": "file-properties",
                   "state": {
-                    "file": "Resources/唐老师/002 Unity 四部曲/Unity 进阶/ScriptableObject/数据文件的创建.md"
+                    "file": "Archives/读书笔记/学会提问.md"
+                  }
+                }
+              },
+              {
+                "id": "676af546d78f23b0",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
                   }
                 }
               }
-            ]
+            ],
+            "currentTab": 2
           },
           {
             "id": "7baddb7cecae5189",
@@ -154,7 +398,8 @@
           }
         ],
         "direction": "horizontal",
-        "width": 307.5
+        "width": 307.5,
+        "collapsed": true
       },
       "left-ribbon": {
         "hiddenItems": {
@@ -165,11 +410,13 @@
           "daily-notes:打开/创建今天的日记": false,
           "obsidian-excalidraw-plugin:新建绘图文件": false,
           "canvas:新建白板": false,
-          "command-palette:打开命令面板": false
+          "command-palette:打开命令面板": false,
+          "templates:插入模板": false,
+          "obsidian-booknote-plugin:书库": false
         }
       },
-      "active": "c7510e15f93d5e21",
-      "mtime": "2024-08-10T21:30:03+08:00"
+      "active": "a9605505c6b8ad9c",
+      "mtime": "2024-08-12T09:35:03+08:00"
     }
   },
   "active": "日常"

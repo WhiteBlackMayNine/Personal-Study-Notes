@@ -4,42 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c0f5a7d07c66db72",
+        "id": "e8359cb381ac7554",
         "type": "tabs",
         "children": [
           {
-            "id": "0cb32e4768fb6007",
+            "id": "665663474b487135",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/ARPG/相机/CameraCollider.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "643bac40ed1d6ede",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/ARPG/相机/TP_CameraControl.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "805a38d5f3da3203",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Resources/唐老师/009 Unity 知识点.md",
+                "file": "Buffer/其他/随记/2024-09-15.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -102,13 +76,21 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "41e6f3133228cb05",
+            "type": "leaf",
+            "state": {
+              "type": "book-explorer-view",
+              "state": {}
+            }
           }
         ],
         "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 301.5
   },
   "right": {
     "id": "a0b52c73937c69e1",
@@ -117,6 +99,7 @@
       {
         "id": "449558b51f27bbb3",
         "type": "tabs",
+        "dimension": 27.870461236506376,
         "children": [
           {
             "id": "91c3f21e4d7f6ae3",
@@ -124,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/ARPG/相机/CameraCollider.md",
+                "file": "Buffer/其他/随记/2024-09-15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,27 +124,31 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/ARPG/相机/CameraCollider.md",
+                "file": "Buffer/其他/随记/2024-09-15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "a9605505c6b8ad9c",
-            "type": "leaf",
-            "state": {
-              "type": "quiet-outline",
-              "state": {}
-            }
-          },
-          {
-            "id": "2b4af3fd708e4f40",
+            "id": "e00fbf6cf82b83dc",
             "type": "leaf",
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Projects/ARPG/相机/CameraCollider.md"
+                "file": "Buffer/其他/随记/2024-09-15.md"
+              }
+            }
+          },
+          {
+            "id": "676af546d78f23b0",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -169,8 +156,24 @@
         "currentTab": 2
       },
       {
+        "id": "5a114dab30af4997",
+        "type": "tabs",
+        "dimension": 33.46418056918547,
+        "children": [
+          {
+            "id": "db9ac2ef713afc84",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
         "id": "7baddb7cecae5189",
         "type": "tabs",
+        "dimension": 38.66535819430815,
         "children": [
           {
             "id": "3aa935ee7399a1a2",
@@ -184,11 +187,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 307.5
+    "width": 311.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "obsidian-memos:Thino": false,
+      "templates:插入模板": false,
       "pkmer:Open Pkmer Market": false,
       "graph:查看关系图谱": false,
       "workspaces:管理工作区布局": false,
@@ -196,59 +200,60 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "canvas:新建白板": false,
       "command-palette:打开命令面板": false,
-      "templates:插入模板": false
+      "obsidian-booknote-plugin:书库": false
     }
   },
-  "active": "0cb32e4768fb6007",
+  "active": "c7510e15f93d5e21",
   "lastOpenFiles": [
-    "Projects/ARPG/相机/TP_CameraControl.md",
-    "Projects/ARPG/相机/CameraCollider.md",
-    "Projects/ARPG/声音播放/PoolSound.md",
-    "Projects/ARPG/声音播放/PoolItemBase.md",
-    "Projects/ARPG/声音播放/AssestSoundSO.md",
-    "Projects/ARPG/更新说明.md",
-    "Resources/唐老师/009 Unity 知识点.md",
-    "Resources/唐老师/008 Csharp 小知识点.md",
-    "Resources/唐老师/学习路线（建议）.md",
-    "Buffer/其他/杂物/ARPG相机碰撞数据.png",
-    "Buffer/其他/杂物/CameraCollider 摄像机.png",
-    "Projects/ARPG/相机/相机相关总结.md",
-    "Projects/ARPG/声音播放/声音播放总结.md",
-    "Buffer/其他/模板/笔试.md",
-    "Buffer/其他/模板/面试.md",
-    "Buffer/其他/模板/视频.md",
-    "Buffer/其他/模板/算法.md",
-    "Buffer/其他/模板/周报.md",
-    "Buffer/其他/模板/兔八哥 处世哲学.md",
-    "Buffer/其他/随记/2024-08-10.md",
-    "Resources/面试 + 笔试/Unity底层如何处理Csharp.md",
-    "Projects/ARPG/移动",
-    "Projects/ARPG/相机",
-    "Projects/ARPG/声音播放",
     "README.md",
-    "Projects/ARPG/AnimationID.md",
-    "Resources/唐老师/002 Unity 四部曲/Unity 进阶/ScriptableObject/ScriptableObject 总结.md",
-    "Buffer/其他/杂物/脚本生命周期.png",
-    "Buffer/其他/杂物/键盘输入常用方法1.png",
-    "Resources/唐老师/002 Unity 四部曲/Unity 基础/物理系统/范围检测.md",
-    "Buffer/其他/MarkDown语法/MarkDown超级教程 Obsidian版 2022.1.12.md",
-    "Resources/唐老师/002 Unity 四部曲/Unity 基础/物理系统/射线检测.md",
-    "Area/效应理论/锅底效应.md",
-    "Buffer/其他/MarkDown语法",
-    "Excalidraw",
-    "Buffer/Excalidraw",
+    "Buffer/其他/随记/2024-09-15.md",
+    "Resources/005 编程/算法/解题.md",
+    "Archives/读书笔记/books-data/打造第二大脑 [美][蒂亚戈福特].pdf.md",
+    "Buffer/其他/随记/2024-09-11.md",
+    "Buffer/其他/随记/2024-09-07.md",
+    "Buffer/其他/随记/2024-08-21.md",
+    "Buffer/其他/随记/2024-08-18.md",
+    "Buffer/其他/随记/2024-08-14.md",
+    "Buffer/其他/随记/2024-08-13.md",
+    "Buffer/其他/随记/2024-08-12.md",
+    "Buffer/其他/随记/2024-08-10.md",
+    "Buffer/Excalidraw/Drawing 2024-09-15 23.43.11.excalidraw.md",
+    "Buffer/Excalidraw/font/chinese.ttf",
+    "Buffer/Excalidraw/font",
+    "Buffer/Excalidraw/新建文件夹",
+    "Buffer/Excalidraw/Drawing 2024-08-27 19.57.07.excalidraw.md",
+    "Resources/005 编程/C与C++/转义字符.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/XML/2 实践小项目/3 打包总结.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/XML/2 实践小项目/2 存储和读取功能实现.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/XML/2 实践小项目/1 需求分析+Xml数据管理类创建.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/XML/2 实践小项目/必备知识点/1 XML序列化.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/XML/2 实践小项目/必备知识点/4 让Dictionary支持序列化反序列化.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/XML/2 实践小项目/必备知识点",
+    "Resources/唐老狮/003 Unity 数据持久化/XML/未命名",
+    "Resources/001 唐老狮/003 Unity 数据持久化/XML/2 实践小项目/必备知识点/3 IXmlSerializable接口.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/XML/2 实践小项目/必备知识点/2 XML反序列化.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/XML/1 基础知识点/10 总结.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/XML/1 基础知识点/9 CSharp存储XML文件练习题.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/XML/1 基础知识点/8 CSharp存储XML文件.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/XML/1 基础知识点/7 CSharp读取XML文件练习题.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/Playerprefs/1 基础知识点/必备知识点",
+    "Resources/001 唐老狮/003 Unity 数据持久化/二进制/2 实践小项目/知识点补充",
+    "Resources/001 唐老狮/009 Unity移动平台相关/02 Android/4 Android端 知识点总结",
+    "Resources/001 唐老狮/009 Unity移动平台相关/02 Android/3 进阶知识点/3 Android SDK接入",
+    "Resources/001 唐老狮/009 Unity移动平台相关/02 Android/3 进阶知识点/2 Kotlin语言 拓展知识",
+    "Resources/唐老狮/002 Unity 四部曲/03 Unity 核心/未命名.canvas",
+    "Buffer/其他/杂物/Unity入门 音效系统 音频源和音频监听脚本 参数讲解图片——2.png",
+    "Buffer/其他/杂物/Unity入门 音效系统 音频源和音频监听脚本 参数讲解图片.png",
+    "Buffer/其他/杂物/Unity入门 音效系统 导入音频文件 选择之后Inspector 窗口.png",
+    "Buffer/其他/杂物/音频导入参数2.png",
+    "Buffer/其他/杂物/音频导入参数1.png",
+    "Buffer/其他/杂物/M_Studio 麦扣老师 20-野猪 - 受伤及死亡的逻辑和动画 Animator窗口连线逻辑.png",
+    "Buffer/其他/杂物/M_Studio 麦扣老师 20-野猪 - 受伤及死亡的逻辑和动画 Physics2D 取消勾选.png",
+    "Buffer/其他/杂物/M_Studio 麦扣老师 16-三段攻击动画的实现 攻击动画的碰撞器不会随着玩家翻转而翻转.png",
+    "Buffer/其他/杂物/M_Stuidio 麦扣老师 20-野猪 - 受伤及死亡的逻辑和动画 如何在一个动画里面添加函数事件.png",
+    "Buffer/其他/杂物/M_Studio 麦扣老师 勇士传说 19-野猪 - 撞墙判定和等候计时 人物与野猪 墙面检测点.png",
     "未命名 1.canvas",
     "未命名.canvas",
-    "Buffer",
-    "Area/Unity/勇士传说",
-    "Area/Unity",
-    "Area/Unity/僵尸围城",
-    "Buffer/其他/杂物/视频播放 常用操作系统对视频格式的支持.png",
-    "Buffer/其他/杂物/InputSystem 改键 UI 工程图片.png",
-    "Buffer/其他/杂物/改键UI.png",
-    "Buffer/其他/杂物/InputDebug 窗口参数.png",
-    "Buffer/其他/杂物/Lambad表达式进化.png",
-    "Buffer/其他/杂物/UGUI配合InputSystem参数相关.png",
     "未命名 3.canvas",
     "未命名 2.canvas",
     "Git 与 Github/未命名.canvas",

@@ -1,6 +1,4 @@
 [
-  "obsidian-outliner",
-  "pkmer",
   "calendar",
   "obsidian-kanban",
   "cm-editor-syntax-highlight-obsidian",
@@ -13,8 +11,11 @@
   "obsidian-memos",
   "obsidian-style-settings",
   "obsidian-excalidraw-plugin",
-  "better-export-pdf",
   "obsidian-advanced-uri",
   "cmdr",
+  "obsidian-booknote-plugin",
+  "pkmer",
+  "obsidian-outliner",
+  "better-export-pdf",
   "obsidian-hider"
 ]

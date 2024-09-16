@@ -19850,6 +19850,9 @@ function getHeadingTree(doc = document) {
   let prev = root;
   headings.forEach((heading) => {
     var _a;
+    if (heading.style.display == "none") {
+      return;
+    }
     const level = parseInt(heading.tagName.slice(1));
     const link = heading.querySelector("a.md-print-anchor");
     const regexMatch = /^af:\/\/(.+)$/.exec((_a = link == null ? void 0 : link.href) != null ? _a : "");
@@ -20374,10 +20377,24 @@ async function renderMarkdown(app, file, config, extra) {
     e.id = (_a2 = extra == null ? void 0 : extra.id) != null ? _a2 : "";
   });
   const cache = app.metadataCache.getFileCache(file);
-  const lines = (_g = data == null ? void 0 : data.split("\n")) != null ? _g : [];
-  Object.entries((_h = cache == null ? void 0 : cache.blocks) != null ? _h : {}).forEach(([key, c]) => {
-    const idx = c.position.end.line;
-    lines[idx] = `<span id="^${key}" class="blockid"></span>
+  const blocks = new Map(Object.entries((_g = cache == null ? void 0 : cache.blocks) != null ? _g : {}));
+  const lines = ((_h = data == null ? void 0 : data.split("\n")) != null ? _h : []).map((line, i) => {
+    for (const {
+      id,
+      position: { start, end }
+    } of blocks.values()) {
+      const blockid = `^${id}`;
+      if (line.includes(blockid) && i >= start.line && i <= end.line) {
+        blocks.delete(id);
+        return line.replace(blockid, `<span id="${blockid}" class="blockid"></span> ${blockid}`);
+      }
+    }
+    return line;
+  });
+  [...blocks.values()].forEach(({ id, position: { start, end } }) => {
+    const idx = start.line;
+    lines[idx] = `<span id="^${id}" class="blockid"></span>
+
 ` + lines[idx];
   });
   const fragment = {
@@ -20798,13 +20815,18 @@ ${px2mm(width)}\xD7${px2mm(height)}mm`;
     new import_obsidian3.Setting(contentEl).setName(this.i18n.exportDialog.filenameAsTitle).addToggle(
       (toggle) => toggle.setTooltip("Include file name as title").setValue(this.config["showTitle"]).onChange(async (value) => {
         this.config["showTitle"] = value;
-        this.webviews.forEach((wv) => {
+        this.webviews.forEach((wv, i) => {
+          var _a, _b;
           wv.executeJavaScript(`
               var _title = document.querySelector("h1.__title__");
               if (_title) {
-              	_title.style.display = "${value ? "block" : "none"}"
+              	_title.style.display = "${value ? "block" : "none"}";
               }
               `);
+          const _title = (_b = (_a = this.docs[i]) == null ? void 0 : _a.doc) == null ? void 0 : _b.querySelector("h1.__title__");
+          if (_title) {
+            _title.style.display = value ? "block" : "none";
+          }
         });
       })
     );

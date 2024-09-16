@@ -15,7 +15,7 @@ public enum TimerState
 
 #endregion
 
-public class GameTimer 
+public class GameTimer
 {
     #region 变量
 
@@ -33,7 +33,7 @@ public class GameTimer
     /// </summary>
     /// <param name="time">计时时长</param>
     /// <param name="task">调用任务</param>
-    public void StartTimer(float time,Action task)
+    public void StartTimer(float time, Action task)
     {
         //这个函数用来接受外部传入的数据 并将状态改为 工作中
         _startTime = time;
@@ -55,7 +55,7 @@ public class GameTimer
 
         _startTime -= Time.deltaTime;//计时时长减少
 
-        if(_startTime < 0f)
+        if (_startTime < 0f)
         {
             //如果_startTime < 0f 那么说明计时已经完成可以开始执行任务了
             _task?.Invoke();//检测是否为空，如果不为空就执行委托里面的函数
@@ -80,7 +80,7 @@ public class GameTimer
         _isStopTimer = true;
         _timerState = TimerState.NOTWORKING;
     }
-    
+
     public GameTimer()
     {
         //当new时，直接调用重置函数  相当于进行一次赋值

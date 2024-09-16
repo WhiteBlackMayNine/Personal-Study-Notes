@@ -29,6 +29,16 @@ public class GamePoolManager : Singleton<GamePoolManager>
 
     #endregion
 
+    private void Start()
+    {
+        _poolItemParent = new GameObject("对象池的父对象");
+        _poolItemParent.transform.SetParent(this.transform);
+        //如果希望更加细分，将不同的子对象分别放在其相应的父对象下
+        //按照这个逻辑写下去就行 —— 位置设置父对象SetParent，然后设置为隐藏SetActive(false)
+        InitPool();
+    }
+
+
     #region 初始化对象池
     private void InitPool()
     {
@@ -68,7 +78,7 @@ public class GamePoolManager : Singleton<GamePoolManager>
 
     #region 调用对象池
 
-    public void TryGetOnePoolItem(string name,Vector3 position,Quaternion roataion)
+    public void TryGetOnePoolItem(string name, Vector3 position, Quaternion roataion)
     {
         if (_poolItem.ContainsKey(name))//判断是否有这个名字的对象
         {
@@ -104,17 +114,5 @@ public class GamePoolManager : Singleton<GamePoolManager>
     }
 
     #endregion
-
-
-
-
-    private void Start()
-    {
-        _poolItemParent = new GameObject("对象池的父对象");
-        _poolItemParent.transform.SetParent(this.transform);
-        //如果希望更加细分，将不同的子对象分别放在其相应的父对象下
-        //按照这个逻辑写下去就行 —— 位置设置父对象SetParent，然后设置为隐藏SetActive(false)
-        InitPool();
-    }
 
 }

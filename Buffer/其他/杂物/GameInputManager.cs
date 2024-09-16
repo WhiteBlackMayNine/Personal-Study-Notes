@@ -24,6 +24,10 @@ public class GameInputManager : Singleton<GameInputManager>
 
     public bool RAttack => _gameInputAction.Player.RAttack.triggered;
 
+    public bool Finish => _gameInputAction.Player.Finish.triggered;
+
+    public bool TakeOut => _gameInputAction.Player.TakeOut.triggered;
+
     #region 生命周期函数
 
     protected override void Awake()

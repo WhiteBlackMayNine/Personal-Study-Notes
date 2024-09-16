@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,6 +36,8 @@ namespace Assest
                     return _configSound[2].AudioClip[Random.Range(0, _configSound[2].AudioClip.Length)];
                 case SoundType.FOOT:
                     return _configSound[3].AudioClip[Random.Range(0, _configSound[3].AudioClip.Length)];
+                default:
+                    break;
             }
             return null;
         }
