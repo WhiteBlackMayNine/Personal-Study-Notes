@@ -1,5 +1,5 @@
 {
-  "folder": "Buffer/Excalidraw",
+  "folder": "Buffer/001 Excalidraw",
   "cropFolder": "",
   "annotateFolder": "",
   "embedUseExcalidrawFolder": false,
@@ -83,7 +83,7 @@
   "fadeOutExcalidrawMarkup": false,
   "loadPropertySuggestions": true,
   "experimentalEnableFourthFont": true,
-  "experimantalFourthFont": "Buffer/Excalidraw/font/chinese.ttf",
+  "experimantalFourthFont": "Buffer/001 Excalidraw/font/chinese.ttf",
   "addDummyTextElement": false,
   "zoteroCompatibility": false,
   "fieldSuggester": true,

@@ -44,6 +44,7 @@ public enum SoundType//声音类型，为了更好的管理多种声音
 ## 播放声音 `PlaySound`
 
 - 根据不同的声音类型来播放不同的声音
+- 
 ```C#
 private void PlaySound()
 {

@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "e33ccf8189bac98e",
+        "id": "a5677a5b581d92f1",
         "type": "tabs",
         "children": [
           {
-            "id": "dc555c06839714f4",
+            "id": "fe8c10ed4d9c525d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Buffer/004 番剧/番剧.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -94,7 +99,7 @@
       {
         "id": "449558b51f27bbb3",
         "type": "tabs",
-        "dimension": 27.870461236506376,
+        "dimension": 40.09852216748768,
         "children": [
           {
             "id": "91c3f21e4d7f6ae3",
@@ -102,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Resources/005 编程/算法/排序/插入排序.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Resources/005 编程/算法/排序/插入排序.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +136,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Resources/005 编程/算法/排序/插入排序.md"
+                "file": "README.md"
               }
             }
           },
@@ -153,7 +158,7 @@
       {
         "id": "5a114dab30af4997",
         "type": "tabs",
-        "dimension": 33.46418056918547,
+        "dimension": 26.00985221674877,
         "children": [
           {
             "id": "db9ac2ef713afc84",
@@ -166,12 +171,12 @@
         ]
       },
       {
-        "id": "7baddb7cecae5189",
+        "id": "142c6e5b77278564",
         "type": "tabs",
-        "dimension": 38.66535819430815,
+        "dimension": 33.89162561576355,
         "children": [
           {
-            "id": "3aa935ee7399a1a2",
+            "id": "f32a3818f8f2ce60",
             "type": "leaf",
             "state": {
               "type": "thino_view",
@@ -198,54 +203,54 @@
       "obsidian-booknote-plugin:书库": false
     }
   },
-  "active": "3aa935ee7399a1a2",
+  "active": "f32a3818f8f2ce60",
   "lastOpenFiles": [
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/提前声明.md",
-    "Resources/001 唐老狮/003 Unity 数据持久化/Playerprefs/1 基础知识点/1 PlayerPrefs概述.md",
-    "Resources/001 唐老狮/005 Unity 程序基础框架/01 旧版/3 缓存池模块.md",
-    "Resources/001 唐老狮/005 Unity 程序基础框架/01 旧版/1 单例模式基类模块.md",
-    "Resources/005 编程/算法/排序/插入排序.md",
-    "Resources/001 唐老狮/005 Unity 程序基础框架/01 旧版/7 资源加载模块.md",
+    "Buffer/004 番剧/番剧.md",
     "README.md",
-    "Resources/001 唐老狮/005 Unity 程序基础框架/01 旧版/6 场景切换模块.md",
-    "Resources/001 唐老狮/005 Unity 程序基础框架/01 旧版/8 输入控制模块.md",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 InputMgr.cs",
-    "Resources/001 唐老狮/005 Unity 程序基础框架/01 旧版/5 公共Mono模块.md",
-    "Resources/001 唐老狮/005 Unity 程序基础框架/01 旧版/4 事件中心模块.md",
-    "Resources/001 唐老狮/005 Unity 程序基础框架/01 旧版/2 继承MonoBehaviour的单例模式基类.md",
-    "Resources/001 唐老狮/005 Unity 程序基础框架/01 旧版/0 提前声明.md",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 资源加载模块ResMgr.cs",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 场景切换模块作用简单理解.png",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 场景切换模块ScenesMgr.cs",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 场景切换模块 同步加载与异步加载 区别.png",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 事件中心模块EventCenter.cs",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 事件中心模块 简单理解原理.png",
-    "Buffer/其他/杂物/Unity程序基础框架 旧版 缓存池 基础 缓存池简单理解.png",
-    "Buffer/其他/杂物/Unity程序基础框架 旧版 缓存池 基础 GC垃圾回收.png",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 缓存池PoolMgr.cs",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 继承 Mono 的单例模式SingletonAutoMono.cs",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 继承 Mono 的单例模式 SingletonMono.cs",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 公共类Mono 模块 简单理解.png",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 公共类Mono 模块MonoController.cs",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 公共类Mono 模块MonoMgr.cs",
-    "Buffer/其他/杂物/Unity 程序基础框架 旧版 单例模式 BaseManager.cs",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/2 实践小项目/12 打包总结.md",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/2 实践小项目/11 加密思路.md",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/2 实践小项目/4 结合反射List数据类型存储.md",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/2 实践小项目/10 结合反射读取自定义数据类型.md",
-    "Buffer/其他/杂物/Unity数据持久化 PlayerPrefs 实践小项目 结合反射读取自定义数据类型大致思路一图流.png",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/2 实践小项目/9 结合反射读取Dictionary数据类型.md",
-    "Buffer/其他/杂物/Unity数据持久化 PlayerPrefs 实践小项目 结合反射读取Dictionary数据类型大致思路一图流.png",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/2 实践小项目/8 结合反射读取List数据类型.md",
-    "Buffer/其他/杂物/Unity数据持久化 PlayerPrefs 实践小项目 结合反射读取List数据类型大致思路一图流.png",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/2 实践小项目/7 结合反射读取常用数据类型.md",
-    "Buffer/其他/杂物/Unity数据持久化 PlayerPrefs 实践小项目 结合反射读取常用数据类型大致思路一图流.png",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/2 实践小项目/6 结合反射自定义类成员存储.md",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/2 实践小项目/5 结合反射Dictionary数据类型存储.md",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/2 实践小项目/3 结合反射常用数据类型存储.md",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/2 实践小项目/2 数据管理类创建.md",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/2 实践小项目/1 需求分析.md",
-    "Resources/001 唐老狮/003 Unity 数据持久化/01 Playerprefs/1 基础知识点/必备知识点/反射知识小补充.md",
+    "Resources/005 编程/算法/排序/选择排序.md",
+    "Resources/006 VipSkill 极世界/VipSkill/P2 课程/底层基础支持（一）/用户注册与登录.md",
+    "Resources/002 M_Studio/01 勇士传说/50-全部代码参考.md",
+    "Resources/006 VipSkill 极世界/VipSkill/P2 课程/底层基础支持（一）/基础场景与 UI.md",
+    "Buffer/003 Thino/2024-10-28.md",
+    "Buffer/003 Thino/2024-10-27.md",
+    "Resources/002 M_Studio/01 勇士传说/2-素材导入和整理.md",
+    "Projects/2024 TapTap 聚光灯/20241022-25.md",
+    "Projects/2024 TapTap 聚光灯/20241020-21.md",
+    "Buffer/003 Thino/2024-10-25.md",
+    "Projects/2024 TapTap 聚光灯/20241011.md",
+    "Buffer/001 Excalidraw/2024 聚光灯/20241008 商讨.md",
+    "Buffer/001 Excalidraw/其他/时间表/20241007.md",
+    "Buffer/001 Excalidraw/2024 聚光灯/20241009 核心玩法实现方案一.md",
+    "Resources/001 唐老狮/002 Unity 四部曲/02 Unity 基础/2 Mono中的重要内容/2 协同程序.md",
+    "Resources/001 唐老狮/002 Unity 四部曲/03 Unity 核心/2 2D相关/3 2D物理系统/2 2D碰撞器.md",
+    "Resources/001 唐老狮/002 Unity 四部曲/05 Unity 知识点/Unity 知识点.md",
+    "Resources/006 VipSkill 极世界/VipSkill/P1 课程/Unity基础/UGUI.md",
+    "Resources/005 编程/算法/解题.md",
+    "Buffer/003 Thino/2024-10-22.md",
+    "Buffer/003 Thino/2024-10-21.md",
+    "Projects/2024 TapTap 聚光灯/20241018-19.md",
+    "Resources/002 M_Studio/01 勇士传说/38-场景淡入淡出效果.md",
+    "Resources/001 唐老狮/002 Unity 四部曲/04 Unity 进阶/输入系统InputSystem/2 InputSystem知识点/1 导入InputSystem/导入InputSystem.md",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 Sign_E1 脚本挂载.png",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 Chest 脚本挂载.png",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 Sign 脚本挂载.png",
+    "Buffer/100 附件/杂物/GameSceneSO.cs",
+    "Buffer/100 附件/杂物/TeleportPoint.cs",
+    "Buffer/100 附件/杂物/SceneLoader.cs",
+    "Buffer/100 附件/杂物/InteractableSign.cs",
+    "Buffer/100 附件/杂物/InteractableChest.cs",
+    "Buffer/100 附件/杂物/IInteractable.cs",
+    "Buffer/100 附件/杂物/CanvasFade.cs",
+    "Buffer/100 附件/杂物/M_Studio 麦扣老师 勇士传说 34 人物可互动标识 Player 层级.png",
+    "Buffer/100 附件/杂物/M_Studio 麦扣老师 勇士传说 场景放到 Hierarchy.png",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 20241011  关于2D与3D 让物体始终朝向某一个方向.png",
+    "Projects/2024 TapTap 聚光灯",
+    "Resources/007 其他/02 Cinemachine",
+    "Resources/007 其他/01 DOTween",
+    "Buffer/100 附件/杂物/反向动力学参数相关.png",
+    "Buffer/100 附件/杂物/PSB图片骨骼编辑_参数相关.png",
+    "Buffer/100 附件/杂物/瓦片资源参数_相关.png",
+    "Buffer/100 附件/杂物/Sprite_Shape_Profile参数相关.png",
     "Resources/001 唐老狮/005 Unity程序基础框架/06 资源加载模块/5 Assetbundle加载模块/未命名.canvas",
     "Buffer/其他/白板/未命名.canvas",
     "未命名.canvas",

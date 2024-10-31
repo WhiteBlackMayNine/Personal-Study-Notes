@@ -88,8 +88,10 @@ sr.sprite = sqrs[10]; //取出索引为10 的小图
 }
 ```
 
+---
+# 源代码
 
-
-
+- ![[Sprite_Renderer参数相关.cs]]
+- ![[Sprite_Renderer参数相关.xmind]]
 
 ---

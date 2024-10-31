@@ -24,5 +24,10 @@ created: 2024-07-20
 
 - 在 Project 窗囗右键创建各种形状的 Sprite 精灵图片
 
+---
+# 源代码
+
+![[SpriteCreator 精灵创造者 知识点.cs]]
+
 
 ---

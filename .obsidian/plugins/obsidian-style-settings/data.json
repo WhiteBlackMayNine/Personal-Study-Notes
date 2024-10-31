@@ -52,7 +52,7 @@
   "blue-topaz-theme@@setting-etc-pane-style": "translucent-setting-panel",
   "blue-topaz-theme@@bt-colorful-titlebar": false,
   "blue-topaz-theme@@titlebar-close-button": "default-titlebar",
-  "blue-topaz-theme@@hide-titlebar-close-btn": true,
+  "blue-topaz-theme@@hide-titlebar-close-btn": false,
   "blue-topaz-theme@@background-image-settings-command-palette-same-as-workplace": false,
   "blue-topaz-theme@@bt-status-on": false,
   "blue-topaz-theme@@outline-style": "default-outline-style",

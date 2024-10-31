@@ -13,7 +13,8 @@ created: 2024-07-30
 ---
 # 备注
 
-- InputAction为一个挂载的脚本中声明的
+- InputAction为一个挂载的脚本中声明的对象
+	- 只有声明了之后，才能在 Inspector窗口 上看见 InputAction 
 	- `public InputAction inputAction;`
 - ![[InputAction.png]]
 - 由于声明的 InputAction 不会显示名字

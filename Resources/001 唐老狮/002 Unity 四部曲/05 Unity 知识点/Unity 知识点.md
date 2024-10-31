@@ -204,7 +204,7 @@ tags:
 	- 在 Unity 内部，会把 或运算 的结果，把每一层的二进制数进行 与运算
 		- 得到的结果只要不为 0，就会认为 **要检测** 这个层
 	- 也可以进行 异或运算 结果为 0 的为 **不要检测的层级**
-	  ```
+	  ```C#
 		// 创建一个LayerMask，包含所有你想要检测的层级
 		int layerMask = 1 << LayerMask.NameToLayer("层级名1") | 1 << LayerMask.NameToLayer("层级名2");
 		// 使用Physics.OverlapBox进行检测，传入你的LayerMask

@@ -767,7 +767,9 @@ var AppHelper = class {
     if (!f) {
       return null;
     }
-    return this.unsafeApp.metadataCache.getBacklinksForFile(f).data;
+    return Object.fromEntries(
+      this.unsafeApp.metadataCache.getBacklinksForFile(f).data
+    );
   }
   // noinspection FunctionWithMultipleLoopsJS
   /**
