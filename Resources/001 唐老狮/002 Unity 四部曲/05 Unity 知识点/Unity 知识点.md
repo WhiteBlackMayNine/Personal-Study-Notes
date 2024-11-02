@@ -14,39 +14,39 @@ tags:
 	- `Debug.Log();`
 - 继承了MonoBehavior有一个线程的方法可以使用
 	- `print(1234567);`
-
+---
 ## 通过 `.position` 得到的位置是相对于世界坐标系的原点位置
 
 - 可能和面板上显示的不一样
 	- 因为如果对象有父子关系并且父对象位置不在原点，那么面版上的信息肯定不一样
-
+---
 ## 面朝向
 
 - Z轴朝向 / Z轴与X轴朝向
 - 注意坐标系的不同，面朝向的方向可能也不同
-
+---
 ## 旋转轴
 
 - X轴 ——> 抬头低头
 - Y轴 ——> 转身
 - Z轴 ——> 偏头
-
+---
 ## 角度增量
 
 - 目标和物体位置向量差除以每帧转动速度就是该帧要转动的角度增量
-
+---
 ## Find 查找
 
 - Find 查找是可以找到失活对象的，但 GameObject 却不可以
-
+---
 ## 摄像机
 
 - 可以通过 **清除标志** 、**剔除遮罩** 、**深度** ，一起使用来使多个摄像机叠加显示
-
+---
 ## 物理帧与物理系统
 
 - 物理帧更新时间直接影响物理系统
-
+---
 ## 碰撞产生的必要条件
 
 ^5ece43
@@ -58,11 +58,11 @@ tags:
 - 刚体会利用体积进行碰撞计算，模拟真实的碰撞效果，产生力的作用
 	- 碰撞器的体积 与 模型体积 概念不同
 	- 碰撞为 碰撞器体积 进行计算，与模型体积无关
-
+---
 ## 刚体加力
 
 - 通过一个脚本里面去加一个方法，这个方法只会影响调用脚本的这个对象，不会影响全局
-
+---
 ## 动量
 
 - 力 * 时间 = 质量 * 速度
@@ -70,19 +70,19 @@ tags:
 - ![[当前物体.jpg]]
 
 - ![[运动的方向.jpg]]
-
+---
 ## 当得到一个物体时，只要得到任意一个信息就可以得到所有信息
 
 - `obj.collider.gameobject.name`
 	- 只得到了碰撞器信息，但依旧可以使用`gameboject`来`.name`获取名字
-
+---
 ## Transform 与 Vector3
 
 - `Transform`组件代表一个游戏对象在世界坐标系中的位置和方向
 - `Vector3`是一个三维向量，用于表示空间中的一个点或者一个方向
 - 游戏对象（ Gameobject）位移、旋转、缩放、父子关系、坐标转换等相关操作都由 Transform 处理，是一个极其重要的类
 - - `this.transform.position` 类型为 `Vector3` 即 一个点
-
+---
 ## 补充知识 调试画线 ^df038c
 
 ### 画线段 ^e8db75
@@ -93,13 +93,14 @@ tags:
 
 - `Debug.DrawRay(this.transform.position,this.transform.forward,Color.white);
 	- 起点 方向
-
+---
 ## 欧拉角不是运动是变换
 
 - [无伤理解欧拉角中的“万向死锁”现象\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1Nr4y1j7kn/)
 - [[1 为何使用四元数#^20329c|欧拉角]]
 - [[3 角度和旋转]]
 - [[2 四元数是什么#^02493d|弥补欧拉角的缺点]]
+---
 ## 协同程序
 
 - [[2 协同程序]]内可以写死循环
@@ -124,51 +125,13 @@ tags:
 		- 迭代器函数 当遇到`yield return`时
 		- 就会 停止执行之后的代码
 		- 然后 协程协调器 通过得到 返回的值 去判断 下一次执行后面的步骤 将会是何时
-## Resource
-### 文件夹可以有多个 
-
-- 在一个工程当中` Resources`文件夹 可以有多个 
-	- 通过API加载时 它会自己去这些同名的`Resources`文件夹中去找资源
-	- 打包时 `Resources` 文件夹 里的内容 都会打包在一起
-	- [[1 特殊文件夹]] [[2 Resources资源同步加载]]
-### 同一资源
-
-- [[2 Resources资源同步加载]] 同一资源
-	- 加载同一资源，不会造成内存浪费，但会造成性能浪费
-	- 当`Resources.Load` 发现是同一个资源后，就不会在加载了
-	- 加载过一次后，就会存在内存中
-	- Unity 中有一个缓存区，会先在缓存区里找，没找到才会进行加载并存在缓冲区中
-### 内存卡顿
-
-- [[2 Resources资源同步加载]] 内存卡顿
-	- 把硬盘上的一个资源的数据加载到内存当中来存储
-	- 就一定把这个资源所有内容加载到内存**过后才会继续执行
-		- 使用时直接拿来使用
-	- 这个过程可能会大于 16.66ms （60帧），便会造成卡顿
-### 原理
-
-- [[3 Resources资源异步加载]]原理 ^8ede27
-	- 在执行这个异步加载的这一瞬间，会新开一个线程
-	- 把要加载的资源告诉这个线程，这个线程有自己的一套逻辑，专门加载这个资源
-	- 新开线程加载完毕，会把资源放在一个公共的内存区
-	- 主线程只要检测到资源加载完毕，就会把资源拿出来使用
-	- 缺点
-		- 开始的一瞬间无法使用资源，必须等待加载完成
-### 易错点
-
-- [[3 Resources资源异步加载]] 易错点
-	- 代码
-		- `ResourceRequest rg = Resources.LoadAsync<Texture>("Tex/TestJPG");`
-		- `rq.completed += Loadover;`
-		- `rg.asset`
-	- 这样写时错的
-		-  刚刚执行了异步加载的 执行代码 资源还没有加载完毕 这样用 是不对的
-		- 一定要等加载结束过后 才能使用
+---
 ## 场景转换
 
 - `DontDestroyonLoad(this.game0bject);
 	- 该脚本依附的对象 过场景时 不会被 移除DontDestroyonLoad(this.game0bject);
 - [[场景异步加载]]
+---
 ## 物理系统碰撞检测
 
 ### 必要条件
@@ -180,6 +143,7 @@ tags:
 - 碰撞会产生实际的物理效果
 - 触发看起来不会产生碰撞但是可以通过函数监听触发
 - 碰撞检测主要用于实体物体之间产生物理效果时使用
+---
 ## 重要知识点：关于层级 ^bc8e6a
 
 - 通过名字得到层级编号 `LayerMask.NameToLayer`
@@ -216,6 +180,7 @@ tags:
 		// 再次进行检测，这次排除了"不要检测的层级"
 		hitColliders = Physics.OverlapBox(center, halfSize, transform.rotation, layerMask);
 		```
+---
 ## Unity 基础总结
 
 - 向量和四元数
@@ -227,11 +192,13 @@ tags:
 	- 交互功能必备
 - 资源场景的同步异步加载
 	- 所有功能必备
+---
 ## 对象间的父子关系
 
 - 在 Hierarchy 中将一个对象拖动到另一个对象上而形成的树形结构
 - **子对象会随着父对象的变化而变化**
 - **子对象的 Inspector 窗口中 Transform 信息是相对父对象的**
+---
 ## 值类型赋值相关
 
 - 用属性和方法返回的结构体是不能修改其字段的
@@ -241,6 +208,7 @@ tags:
 
 - 确保在将脚本附加到游戏对象时，该对象已经包含了脚本所需的特定组件
 	- `[RequireComponent( typeof ( CharacterController ) ) ]`
+---
 ## Mathf.Atan2(x,y)
 
 ^114e25
@@ -258,6 +226,7 @@ tags:
 - **导航系统**
 	- 在开发游戏的AI导航系统时
 	- `Mathf.Atan2`可以帮助AI确定其朝向目标的准确角度
+---
 ## Mathf.SmoothDampAngle
 
 ^42a029
@@ -267,6 +236,7 @@ tags:
 	- 使玩家体验更加自然流畅
 - 对于需要在用户输入和实际游戏响应之间进行平滑处理的情况
 	- 如缓慢移动角色或物体以响应玩家的指令
+---
 ## Animator / Animation
 
 - 设置参数 （`SetXX`）时
@@ -277,71 +247,28 @@ tags:
 			- （阻尼时间）
 		- 帧的增量时间
 			- （通常用于计算参数值的变化速率，以便在动画过渡中实现更平滑的效果）
+---
 ## Input Action Asset 
 
 - 在Unity中用于**管理和存储用户输入的绑定关系**
-
-## 属性与 =>
-### 属性
-
-- **用于游戏对象组件和资源的设置和选项**
-	- 可以在Inspector窗口中进行编辑
-- **引用属性**
-- **值属性**
-	- 通常用于设置组件的具体参数，如位置、速度、颜色等
-- **代码层面**
-	- 属性还可以有getter和setter方法
-### =>
-
-- 在C#中用于定义属性的getter方法，它简单地返回一个值或计算结果，提供了对类内部状态的只读访问
-- 就是将两个变量/表达式  **关联**  起来
-- ![[Lambad表达式进化.png]]
-#### AI
-
-想象一下你是一位餐厅的老板，你的餐厅提供各种各样的菜品。现在，你想要让顾客能够方便地了解每个菜品的信息，比如名字、价格和配料等。你可以创建一个菜单，上面列出了每个菜品的详细信息。在这个比喻中，菜单就像是C#中的属性（Property），而 `=>` 则是你用来制作菜单的方式。
-
-具体来说，假设你有一个菜品叫“宫保鸡丁”，它的价格是25元，配料有鸡肉、花生和辣椒。在这个例子中，你可以将“宫保鸡丁”的名字、价格和配料看作是私有变量（就像你厨房里的秘密配方）。然后，你可以使用 `=>` 来创建一个菜单项，让顾客能够看到这些信息。
-
-在C#中，你可以这样定义一个属性：
-
-`csharp复制代码运行  public string DishName => "宫保鸡丁";`
-
-这行代码的意思是，当别人想要知道这个菜品的名字时，你告诉他们“宫保鸡丁”。这里的 `=>` 就是用来连接菜品的实际信息（即私有变量）和你给顾客看的菜单项（即属性）的桥梁。
-
-同样地，你也可以为价格和配料创建属性：
-
-`public float Price => 25; public string[] Ingredients => new string[] { "鸡肉", "花生", "辣椒" };   `
-
-- 在C#中用于定义属性的getter方法，它简单地返回一个值或计算结果，提供了对类内部状态的只读访问
-- 简单理解就是
-	- 利用 => 连接了变量，让左侧的值等于右侧的值（但这么说并不准确）
-	- 例如：`public int b => a * 2;
-		- 使用 => 将 `b` 定义为一个属性（确切来说是只读属性）
-		- **每次访问**`b`时都会计算并返回 `a * 2` 的结果（即 `b` 的 值 = `a *2`）
-#### 注意
-
-- 可以与判断连用 
-	- `private bool _isDie => (_currentHP <= 0f);`
-	- 当前生命值小于0 就设置为 true 即死亡
-
-
+---
 ## Quaternion.identity
 
 - **一个没有应用任何旋转的四元数**
-### **旋转归零**
+### 旋转**
 
 - 通常用于将物体的旋转归零，即恢复到没有应用任何旋转的状态
 - 这在编程中常常用于初始化场景或者重置物体的旋转状态
-### **性能优化**
+### 性能优化
 
 - 可以避免不必要的计算
 - 特别是在不需要改变对象旋转的情况下
 - 直接应用`Quaternion.identity`可以保持当前的旋转状态不变
-### **父子层级关系**
+### 父子层级关系
 
 - 在处理带有父子层级关系的物体时，如果父物体不可见，子物体虽然可能activeSelf为true（自身可见），但activeHierarchy只能为false（层级不可见）
 - **在这种情况下，`Quaternion.identity`可以确保子物体的旋转状态不受父物体影响**
-### **确切的值类型**
+### 确切的值类型
 
 - 与transform.rotation属性不同，`Quaternion.identity`是一个确切的值，表示没有旋转
 - 而transform.rotation是物体当前的角度属性，其值随着物体旋转而变化
@@ -349,12 +276,13 @@ tags:
 ## `Quaternion.LookRotation` 
 
 - 用于**生成一个四元数，该四元数表示将给定的向量（通常是Z轴）对齐到另一个目标向量的过程所产生的旋转**
+---
 ## CreateAssetMenu
 
 - 用于在 右键菜单中 添加
 - `[CreateAssetMenu(fileName = "BaseHealthData", menuName = "Create/Character/HealthData/BaseData", order = 0)]`
 - ![[Unity右键菜单添加.png]]
-
+---
 ## Physics.Raycast 和Physics.CheckSphere 的区别
 
 - **Physics.Raycast
@@ -366,36 +294,44 @@ tags:
 	- 当需要检测一个区域内是否存在物体时
 	- 比如角色周围的敌人检测或触发某些事件，就可以使用这个方法
 - Physics.Raycast 用于**直线检测**，而 Physics.CheckSphere 用于 **球形区域** 的检测
+---
 ## Sprite
 
 - 2D游戏里面的图片，都和 Sprite 有关
+---
 ## Tilemap
 ### 等距瓦片地图
 
 - 想要轴心点单个排序，渲染模式为 Individual
 - 否则就是整体排序
+---
 ## .meta 配置文件
 
 - 里面保存着 文件的信息
 - 如果删除，那么这个文件的信息就会被删除
 	- 删除骨骼、动画
+---
 ## 2D骨骼
 
 - 在添加骨骼时，应当熟练使用隐藏图层功能
 - 蒙皮后细微调整时，建议使用 Bone Influence
+---
 ## 配置文件特点
 
 - 只会去用，不会去修改
+---
 ## SRGB
 
 - 是微软联合惠普、三菱、爱普生等厂商联合开发的通用色彩标准
 - 它的主要作用就是避免在不同设备出现色差般
+---
 ## Unity 旋转
 
 - Unity采用左手坐标系 ^b95203
 - 大拇指指向旋转轴的正方向时，其余四指的弯曲方向即为正旋转方向
 - Y轴旋转为例
 	- 拇指指Y轴正方向，四指 指的方向为正方向
+---
 ## ScriptableObject
 
 ^afe6ee
@@ -416,6 +352,7 @@ tags:
 - 便于后期维护、优化
 	- 需要加新的信息就去 `CharacterCombatBase` 和 `CharacterHealthBaseData` 里面加
 	- 需要加新的功能就去 `CharacterComboSO` 和 `CharacterHealthInfo` 里面加
+---
 ## 属性的书写
 
 ^14520f
@@ -438,6 +375,7 @@ public bool IsDie => _isDie;
 - 简而言之
 	- 通过属性，外部调用的时候，调用的是属性（`IsDie`，`CurrentHP`）而不是变量（`_isDie`，`_currentHP`）
 	- 在类的内部可以对变量进行一些处理，但外部的类调用属性时，不能直接修改变量
+---
 ## `MatchTarget` 与 `isMatchingTarget`
 
 - `Animator.MatchTarget`方法，它可以将指定身体部位的动画与位置和旋转进行匹配
@@ -457,12 +395,14 @@ public bool IsDie => _isDie;
 	- 匹配持续时间
 		- 以秒为单位
 		- 表示动画将持续匹配多少秒
+---
 ## 点乘与叉乘
 
 - 在Unity中，直接使用符号 `*` 的就是使用 [[3 向量点乘|点乘]]
 	- `Vector.Dot` 也是使用点乘
 - 如果需要使用 [[4 向量叉乘|叉乘]]
 	- 就需要 `Vector3.Cross`
+---
 ## Vector2 转 Vector3
 
 - 二维转三维
@@ -470,24 +410,28 @@ public bool IsDie => _isDie;
 - ——> 二维是 从上到下俯视看，中心点为原点的二维坐标系
 - ——> 在三维中，二维坐标系对应的就是 三维世界坐标系的 X轴 和 Z轴
 - ![[Unity知识点 二维转三维 坐标轴对应.png]]
+---
 ## 逐元素乘积
 
 - Vector2 乘以 Vector3 
 - 使用的不是点乘，而是 逐元素乘积
 - X轴 乘 X轴，Y轴 乘 Y轴，Z轴 乘 Z轴
 - `result = (x1 ​* x2​, y1 * y2​, z1 * z2​)`
+---
 ## Rigidbody 2D小知识点
 
 - Info 中的变量 Position、Rotation 都会重写 Transform 组件上的内容
 	- 可以通过 更改 Rigidbody 2D 的变量 来改变物体的位置
 
 - 一旦一个物体挂载了 Rigidbody 刚体，这个物体的坐标就由 Rigidbody 进行驱动了
+---
 ## 通配符 `_`
 
 - **用于匹配任何未明确列出的值**
 - 主要用于switch表达式中，它允许switch表达式匹配任何可能的值
 - 如果没有任何特定的case标签与switch表达式的值相匹配，程序将执行与 `_` 关联的代码块
 	- `_` 起到了一个“捕获所有其他情况”的作用
+---
 ## Unity2D 摄像机
 ### 方法一
 
@@ -501,6 +445,7 @@ public bool IsDie => _isDie;
 - 代码控制
 	- 只做个示例
 - ![[CameraPosition.cs]]
+---
 ## 碰撞器 Collider 代码获取
 
 - 任何类型的 Collider  碰撞器 都可以使用 Collider 类型进行实例化对象
@@ -510,6 +455,7 @@ public bool IsDie => _isDie;
 private Collider2D _collider
 private CapsuleCollider2D _ccollider
 ```
+---
 ## 碰撞器 Collider 中 Layer Overrides属性
 
 - CSDN 链接
@@ -553,12 +499,106 @@ private CapsuleCollider2D _ccollider
 	- 表示包围盒的最大坐标点
 - `_coll.bounds.min`
 	- 表示包围盒的最小坐标点
-## C#内建接口：IEnumerable 与 IEnumerator
+---
+## C# 内建接口：IEnumerable 与 IEnumerator
 
 - [C#内建接口：IEnumerable - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/444468135)
 - [2021年了，`IEnumerator`、`IEnumerable`接口还傻傻分不清楚？-腾讯云开发者社区-腾讯云 (tencent.com)](https://cloud.tencent.com/developer/article/1777094)
+---
+## 2024TapTap聚光灯知识点
+
+- `Input.mousePosition`
+	- 得到鼠标在屏幕的位置
+
+- `Camera.main.ScreenToWorldPoint(Input.mousePosition)`
+	- 将 鼠标在屏幕的位置 修改为 世界坐标系
+
+- `Debug.DrawRay(transform.position, direction * 10 , Color.red)`
+	- 从当前位置发射一条射线，方向为 `direction * 10`
+	- 颜色为 红色
+
+- `Quaternion.Euler(0, 0, 15)`
+	- 饶 Z轴 旋转 15度
+
+- 四元数 与 向量 相乘 = 被旋转后的向量
+
+	```C#
+	//一个向量 绕Z轴旋转 15度（也就是修改 rotation 上的 X 值）
+	
+	var direction = mousePosition - (Vector2)transform.position;
+	Vector2 rotatedVector = Quaternion.Euler(0, 0, 15) * direction;
+	```
+
+- 2D 游戏中
+	- `transform.forward = direction;`
+- 可以让物体一直朝向某个方向
+	- ![[2024TapTap聚光灯 20241011  关于2D与3D 让物体始终朝向某一个方向.png]]
+- 关于 让一个物体始终朝向鼠标
+	- 方法一：修改物体的面朝向
+	- 方法二：修改物体的 Rotation
+
+```C#
+//方法一
+//获取鼠标与物体位置之间的方向（返回一个 Vector 向量）
+var direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+
+transform.forward = direction;
+
+//方法二 ——> 选择 rotation
+//获取物体位置
+transform.position = player.position;  
+// 获取鼠标在世界空间中的位置  
+mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);  
+
+// 计算鼠标相对于手电筒的方向  
+direction = mousePosition - flashlightTransform.position;  
+
+// 计算手电筒旋转的角度  
+float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;  
+
+// 旋转手电筒  
+flashlightTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
+
+```
+
+- 关于 物理检测 返回的对象（例如`Physics2D.Raycast()`）
+	- 每次进行一次物理检测，都会返回一个新的实例对象
+	- 即使命中的为同一个对象，返回的 `RaycastHit2D` 对象 的引用也是不同的
+	- 因此，可以选择，比较两者的 `collider` 属性
+		- 如果命中了同一个物体，那么两者的 `collider` 属性 都应当指向同一个 `collider2D` 实例
+
+- `GetComponent<>()` 方法的本质是检索附加到与当前脚本关联的游戏对象上的组件
+	- （或者任何其他指定的游戏对象）
+	- **查找组件**：它在游戏对象的组件列表中查找指定类型的组件
+	- **返回组件**：如果找到了该类型的组件，它就返回该组件的实例；如果没有找到，它就返回 `null`
+	```C#
+	//如果一个物体上挂载的脚本，继承了一个接口
+	//那么也可以使用 GetComponent<>() 来获取接口对象
+	//但得到的对象，只能使用 接口里面所写的方法
+	```
+
+- 人物互动标识
+	- 可以通过控制 SpriteRender 的激活/失活，来控制图片是否显示出来
+	- 可以给一个图片添加 Animator，然后就可以播放动画了
+
+- `OnTriggerStay2D` （以及其他触发检测函数）
+	- 当碰撞触发时，就会调用相应的触发检测函数，并得到 被检测的对象
+	- 也就是说
+		- ——> 调用函数的对象 会得到 被检测到的对象
+	- 简单来说
+		- ——> A、B 两个物体都有 `OnTriggerStay2D`，那么当两者触发重叠时
+		- ——> 在 A 的脚本中，`other` 为 物体B，而在 B 的脚本中，`other` 则为 A
+		- ——> 如果 B 没有`OnTriggerStay2D`，那么只有 A 会调用这个函数
+	- ——> `other` 指对面
 
 
+---
+# 关于 `==`
+
+- 如果做比较的为 *值类型*，那么就比较两者的 **值的大小**
+- 如果做比较的为 *引用类型*，那么就比较两者的 **引用是否相同**
+	- ——> 对象的引用，即 两个比较对象 是否都指向同一个内存
+	- ——> 比较 引用指向 是否相同，而不是比较两者的 内容 是否相同
 
 
 

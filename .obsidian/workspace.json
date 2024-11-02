@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "a5677a5b581d92f1",
+        "id": "77e9544a9a423246",
         "type": "tabs",
         "children": [
           {
-            "id": "fe8c10ed4d9c525d",
+            "id": "3c3e52d8ccab5914",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Buffer/004 番剧/番剧.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -107,12 +102,12 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Archives/007 2024 TapTap 聚光灯/06 Addressable打包.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
+                "showSearch": true,
+                "searchQuery": "1452",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,8 +119,8 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
-                "linksCollapsed": false,
+                "file": "Archives/007 2024 TapTap 聚光灯/06 Addressable打包.md",
+                "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -136,7 +131,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "README.md"
+                "file": "Archives/007 2024 TapTap 聚光灯/06 Addressable打包.md"
               }
             }
           },
@@ -203,34 +198,42 @@
       "obsidian-booknote-plugin:书库": false
     }
   },
-  "active": "f32a3818f8f2ce60",
+  "active": "c7510e15f93d5e21",
   "lastOpenFiles": [
-    "Buffer/004 番剧/番剧.md",
     "README.md",
-    "Resources/005 编程/算法/排序/选择排序.md",
-    "Resources/006 VipSkill 极世界/VipSkill/P2 课程/底层基础支持（一）/用户注册与登录.md",
-    "Resources/002 M_Studio/01 勇士传说/50-全部代码参考.md",
-    "Resources/006 VipSkill 极世界/VipSkill/P2 课程/底层基础支持（一）/基础场景与 UI.md",
-    "Buffer/003 Thino/2024-10-28.md",
-    "Buffer/003 Thino/2024-10-27.md",
-    "Resources/002 M_Studio/01 勇士传说/2-素材导入和整理.md",
-    "Projects/2024 TapTap 聚光灯/20241022-25.md",
+    "Archives/007 2024 TapTap 聚光灯/06 Addressable打包.md",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 Addressable 打包 init初始化场景创建 挂载脚步 .png",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 Addressable 打包 生成默认代码.png",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 Addressable 打包 Use Existing Build 选择.png",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 Addressable 打包 Groups 界面打开方法 1.png",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 Addressable 打包 Groups 界面打开方法.png",
+    "Buffer/004 番剧/番剧.md",
     "Projects/2024 TapTap 聚光灯/20241020-21.md",
-    "Buffer/003 Thino/2024-10-25.md",
-    "Projects/2024 TapTap 聚光灯/20241011.md",
-    "Buffer/001 Excalidraw/2024 聚光灯/20241008 商讨.md",
-    "Buffer/001 Excalidraw/其他/时间表/20241007.md",
-    "Buffer/001 Excalidraw/2024 聚光灯/20241009 核心玩法实现方案一.md",
-    "Resources/001 唐老狮/002 Unity 四部曲/02 Unity 基础/2 Mono中的重要内容/2 协同程序.md",
-    "Resources/001 唐老狮/002 Unity 四部曲/03 Unity 核心/2 2D相关/3 2D物理系统/2 2D碰撞器.md",
+    "Projects/2024 TapTap 聚光灯/20241022-25.md",
+    "Archives/007 2024 TapTap 聚光灯/05 视差效果与无限地图.md",
+    "Buffer/100 附件/杂物/2024TapTapParallaxController.cs",
+    "Archives/007 2024 TapTap 聚光灯/04 主场景制作.md",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 主场景制作 UI 面板.png",
+    "Archives/007 2024 TapTap 聚光灯/03 灯光遮罩.md",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯灯光遮罩 灯光范围图片SpriteMask.png",
+    "Archives/007 2024 TapTap 聚光灯/02 场景切换.md",
+    "Archives/007 2024 TapTap 聚光灯/01 场景交互实现.md",
+    "Archives/007 2024 TapTap 聚光灯/00 备注说明.md",
+    "Projects/2024 TapTap 聚光灯/20241012.md",
     "Resources/001 唐老狮/002 Unity 四部曲/05 Unity 知识点/Unity 知识点.md",
-    "Resources/006 VipSkill 极世界/VipSkill/P1 课程/Unity基础/UGUI.md",
-    "Resources/005 编程/算法/解题.md",
-    "Buffer/003 Thino/2024-10-22.md",
-    "Buffer/003 Thino/2024-10-21.md",
-    "Projects/2024 TapTap 聚光灯/20241018-19.md",
-    "Resources/002 M_Studio/01 勇士传说/38-场景淡入淡出效果.md",
-    "Resources/001 唐老狮/002 Unity 四部曲/04 Unity 进阶/输入系统InputSystem/2 InputSystem知识点/1 导入InputSystem/导入InputSystem.md",
+    "Resources/001 唐老狮/001 CSharp 四部曲/03 CSharp 核心/1 面向对象三大特性/1 封装/5 成员属性.md",
+    "Resources/001 唐老狮/002 Unity 四部曲/02 Unity 基础/3 Resources动态加载/5 Resources资源加载补充.md",
+    "Resources/004 ARPG Unity 2022/Health/CharacterHealthInfo.md",
+    "Resources/001 唐老狮/001 CSharp 四部曲/03 CSharp 核心/1 面向对象三大特性/1 封装/1 类和对象.md",
+    "Resources/001 唐老狮/001 CSharp 四部曲/04 CSharp 进阶/4 委托和事件/4 Lambad表达式.md",
+    "Resources/001 唐老狮/002 Unity 四部曲/02 Unity 基础/3 Resources动态加载/2 Resources资源同步加载.md",
+    "Resources/001 唐老狮/002 Unity 四部曲/02 Unity 基础/3 Resources动态加载/4 Resources资源卸载.md",
+    "Resources/001 唐老狮/002 Unity 四部曲/02 Unity 基础/3 Resources动态加载/1 特殊文件夹.md",
+    "Projects/2024 TapTap 聚光灯/20241011.md",
+    "Buffer/002 模板/兔八哥 处世哲学.md",
+    "Buffer/002 模板/唐老狮.md",
+    "Buffer/002 模板/随记.md",
+    "Buffer/002 模板/算法.md",
     "Buffer/100 附件/杂物/2024TapTap聚光灯 Sign_E1 脚本挂载.png",
     "Buffer/100 附件/杂物/2024TapTap聚光灯 Chest 脚本挂载.png",
     "Buffer/100 附件/杂物/2024TapTap聚光灯 Sign 脚本挂载.png",
@@ -241,16 +244,8 @@
     "Buffer/100 附件/杂物/InteractableChest.cs",
     "Buffer/100 附件/杂物/IInteractable.cs",
     "Buffer/100 附件/杂物/CanvasFade.cs",
-    "Buffer/100 附件/杂物/M_Studio 麦扣老师 勇士传说 34 人物可互动标识 Player 层级.png",
-    "Buffer/100 附件/杂物/M_Studio 麦扣老师 勇士传说 场景放到 Hierarchy.png",
-    "Buffer/100 附件/杂物/2024TapTap聚光灯 20241011  关于2D与3D 让物体始终朝向某一个方向.png",
-    "Projects/2024 TapTap 聚光灯",
+    "Archives/007 2024 TapTap 聚光灯",
     "Resources/007 其他/02 Cinemachine",
-    "Resources/007 其他/01 DOTween",
-    "Buffer/100 附件/杂物/反向动力学参数相关.png",
-    "Buffer/100 附件/杂物/PSB图片骨骼编辑_参数相关.png",
-    "Buffer/100 附件/杂物/瓦片资源参数_相关.png",
-    "Buffer/100 附件/杂物/Sprite_Shape_Profile参数相关.png",
     "Resources/001 唐老狮/005 Unity程序基础框架/06 资源加载模块/5 Assetbundle加载模块/未命名.canvas",
     "Buffer/其他/白板/未命名.canvas",
     "未命名.canvas",
