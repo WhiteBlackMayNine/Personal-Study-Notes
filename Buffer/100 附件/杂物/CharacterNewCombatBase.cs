@@ -5,31 +5,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using static CharacterComboData;
 
-//ÐÂµÄ¹¥»÷ÊäÈë²ÉÓÃµÄÊÇ ½Ó¿Ú 
-//Èç¹ûÏ£ÍûÊ¹ÓÃÊÂ¼þµÄ»° ¾Í°´ÕÕÀÏµÄÈ¥ÐÞ¸Ä
+//ï¿½ÂµÄ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ ï¿½Ó¿ï¿½ 
+//ï¿½ï¿½ï¿½Ï£ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ä»ï¿½ ï¿½Í°ï¿½ï¿½ï¿½ï¿½Ïµï¿½È¥ï¿½Þ¸ï¿½
 public abstract class CharacterNewCombatBase : MonoBehaviour
 {
-    #region ±äÁ¿Ïà¹Ø
+    #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     protected Animator _animator;
 
     [SerializeField, Header("ComboData")] protected CharacterComboData _comboData;
 
-    protected Transform _me;//¹ÒÔØ½Å±¾µÄ¶ÔÏó
+    protected Transform _me;//ï¿½ï¿½ï¿½Ø½Å±ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
 
 
-    [SerializeField, Header("¹¥»÷¼ì²â")] protected float _detectionRang;//·¶Î§
+    [SerializeField, Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")] protected float _detectionRang;//ï¿½ï¿½Î§
 
-    [SerializeField] private LayerMask _enemyLayer;//µÐÈËµÄ²ã¼¶
+    [SerializeField] private LayerMask _enemyLayer;//ï¿½ï¿½ï¿½ËµÄ²ã¼¶
 
-    protected Transform _enemy;//µ±Ç°µÄµÐÈË
+    protected Transform _enemy;//ï¿½ï¿½Ç°ï¿½Äµï¿½ï¿½ï¿½
 
     protected float _attackColdTime;
     protected bool _applyAttackInput;
 
     #endregion
 
-    #region ÉúÃüÖÜÆÚº¯Êý
+    #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½
 
     private void Awake()
     {
@@ -40,19 +40,19 @@ public abstract class CharacterNewCombatBase : MonoBehaviour
 
     #endregion
 
-    #region º¯ÊýÏà¹Ø
+    #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    #region ¶¯»­ÊÂ¼þ
+    #region ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 
-    //²»Í¬ÓÚ ÀÏµÄ¶¯×÷ÊäÈë
-    //Õâ¸ö ÊÜÉËË÷Òý ¸ù¾Ý¶¯»­À´½øÐÐ¸üÐÂ£¨Í¨¹ý¶¯»­À´È¡£©
-    //±ÈÈçËµ Ò»¸ö¶¯»­ ÓÐ°Ë¸ö¹¥»÷¶¯×÷ ÄÇÃ´ÀÏ¹¥»÷¾ÍÐèÒªÕû°Ë¸öÊÜ»÷Óë¸ñµ²£¨¼ÙÉè°Ë¸öÈ«²»Í¬£©¶øÇÒÉËº¦¶¼ÏàÍ¬
-    //£¨¼ÙÉèÕâ°Ë¸ö¹¥»÷ÖÐ µÚÒ»¸ö µÚ¶þµ½Æß¸ö µÚ°Ë¸ö ·Ö±ðÐèÒªÒ»¸ö²»Í¬µÄÊÜ»÷Óë¸ñµ²µ±ºì£©
-    //ÄÇÃ´£¬ÐÂµÄ¹¥»÷ÊäÈë£¬Ö»ÐèÒªÐ´Èý¸ö¾ÍÐÐ µÚÒ»¸öµÄindexÎª0£¨¶¯»­Ìí¼ÓÊ±¾ÍÓÐ int£©
-    //µÚ¶þµ½µÚÆß¸öµÄindex Îª1 µÚ°Ë¸öÎª3
-    //¶ÔÓ¦µÄ¾ÍÐÐÐÂ¶¯×÷×é¼þ ÔÚ ComboDamageInfo Õâ¸ö List ÖÐÌí¼ÓÈý¸ö£¬·Ö±ð¶ÔÓ¦Õâ 0 1 2
-    //ÔÚ ComboDamageInfo ±àÐ´ÐÅÏ¢
-    //Í¨¹ý¶¯»­ÊÂ¼þ ATK µÄ index È¥ ComboDamageInfo ÖÐÄÃÏàÓ¦µÄÊÜÉË¶¯»­¡¢¸ñµ²¡¢ÉËº¦ 
+    //ï¿½ï¿½Í¬ï¿½ï¿½ ï¿½ÏµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ý¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½ï¿½Â£ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½
+    //ï¿½ï¿½ï¿½ï¿½Ëµ Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð°Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã´ï¿½Ï¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ë¸ï¿½ï¿½Ü»ï¿½ï¿½ï¿½ñµ²£ï¿½ï¿½ï¿½ï¿½ï¿½Ë¸ï¿½È«ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½Í¬
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò»ï¿½ï¿½ ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ß¸ï¿½ ï¿½Ú°Ë¸ï¿½ ï¿½Ö±ï¿½ï¿½ï¿½ÒªÒ»ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½Ü»ï¿½ï¿½ï¿½ñµ²µï¿½ï¿½ì£©
+    //ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ÂµÄ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬Ö»ï¿½ï¿½ÒªÐ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½indexÎª0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ intï¿½ï¿½
+    //ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¸ï¿½ï¿½ï¿½index Îª1 ï¿½Ú°Ë¸ï¿½Îª3
+    //ï¿½ï¿½Ó¦ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ComboDamageInfo ï¿½ï¿½ï¿½ List ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½Ó¦ï¿½ï¿½ 0 1 2
+    //ï¿½ï¿½ ComboDamageInfo ï¿½ï¿½Ð´ï¿½ï¿½Ï¢
+    //Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ ATK ï¿½ï¿½ index È¥ ComboDamageInfo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ñµ²¡ï¿½ï¿½Ëºï¿½ 
 
     public void NewATK(int index)
     {
@@ -61,11 +61,11 @@ public abstract class CharacterNewCombatBase : MonoBehaviour
 
     #endregion
 
-    #region ÉËº¦´¥·¢
+    #region ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½
 
     private void TriggerDamage(int index)
     {
-        //»ñÈ¡µ±Ç°Ò»¸öËø¶¨µÄµÐÈË
+        //ï¿½ï¿½È¡ï¿½ï¿½Ç°Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½
         if (GetUnits().Length != 0)
         {
             if (_enemy == null || _enemy != GetUnits()[0].transform)
@@ -80,12 +80,12 @@ public abstract class CharacterNewCombatBase : MonoBehaviour
         {
             foreach (var e in GetUnits())
             {
-                //ÅÐ¶ÏµÐÈËµÄ½Ç¶ÈÊÇ·ñÐ¡ÓÚ0.85
+                //ï¿½Ð¶Ïµï¿½ï¿½ËµÄ½Ç¶ï¿½ï¿½Ç·ï¿½Ð¡ï¿½ï¿½0.85
                 if (Vector3.Dot(DevelopmentToos.DirectionForTarget(e.transform, _me), _me.forward) > 0.85f)
                 {
                     continue;
                 }
-                //ÅÐ¶ÏµÐÈËµÄ¾àÀëÊÇ·ñÐ¡ÓÚ3
+                //ï¿½Ð¶Ïµï¿½ï¿½ËµÄ¾ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ð¡ï¿½ï¿½3
                 if (DevelopmentToos.DistanceForTarget(e.transform, _me) > 3f)
                 {
                     continue;
@@ -93,8 +93,8 @@ public abstract class CharacterNewCombatBase : MonoBehaviour
                 if (e.transform.TryGetComponent(out IDamaged damage))
                 {
                     //Mathf.Min(index, _comboData.ComboDamageInfos.Count - 1)
-                    //·ÀÖ¹¶¯»­µÄindexÊäÈë´íÎó ComboDamageInfos Ö»ÓÐÈý¸ö£¬µ«ÊäÈë 5
-                    //ÄÇÃ´¾ÍÈ¥×îÐ¡Öµ 3
+                    //ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½indexï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ComboDamageInfos Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 5
+                    //ï¿½ï¿½Ã´ï¿½ï¿½È¥ï¿½ï¿½Ð¡Öµ 3
                     damage.CharacterNormalDamaged(_comboData.ComboDamageInfos[Mathf.Min(index, _comboData.ComboDamageInfos.Count - 1)].HitName,
                         _comboData.ComboDamageInfos[Mathf.Min(index, _comboData.ComboDamageInfos.Count - 1)].ParryName,
                         _comboData.ComboDamageInfos[Mathf.Min(index, _comboData.ComboDamageInfos.Count - 1)].Damage,
@@ -107,7 +107,7 @@ public abstract class CharacterNewCombatBase : MonoBehaviour
 
     #endregion
 
-    #region µÃµ½µÐÈË
+    #region ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
 
     private Collider[] GetUnits()
     {
@@ -117,7 +117,7 @@ public abstract class CharacterNewCombatBase : MonoBehaviour
 
     #endregion
 
-    #region ÖØÐ´½Ó¿Ú
+    #region ï¿½ï¿½Ð´ï¿½Ó¿ï¿½
 
     //public void CharacterNormalDamaged(string hitName, string parryName, float damage, Transform attacker, DamageType damageType)
     //{
@@ -126,7 +126,7 @@ public abstract class CharacterNewCombatBase : MonoBehaviour
 
     #endregion
 
-    #region ¹¥»÷¶¯×÷µÄÖ´ÐÐ
+    #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½
 
     protected void ComboActionExecute()
     {
@@ -141,14 +141,14 @@ public abstract class CharacterNewCombatBase : MonoBehaviour
 
     #endregion
 
-    #region ¸üÐÂÏÂÒ»¸ö¶¯×÷
+    #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     protected void SetComboData(CharacterComboData comboData)
     {
-        //¿ÉÄÜÓÐµÄ¶¯×÷Ã»ÅÉÉú¶¯×÷
-        //ÔÚÖ´ÐÐÕâÐ©¶¯×÷Ê±ÓÐÊ§Îóµã»÷ÁËÓÒ¼ü
-        //ÄÇÃ´¾Í¿ÉÄÜÔì³É¿ÕÒýÓÃ
-        //ÕâÀïÅÐ¶ÏÒ»ÏÂ
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ¶ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¼ï¿½
+        //ï¿½ï¿½Ã´ï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½É¿ï¿½ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ò»ï¿½ï¿½
         if (comboData != null)
         {
             _comboData = comboData;
@@ -157,7 +157,7 @@ public abstract class CharacterNewCombatBase : MonoBehaviour
 
     #endregion
 
-    #region ¸üÐÂ¹¥»÷ÊäÈë
+    #region ï¿½ï¿½ï¿½Â¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     protected void ResetAttackInput()
     {

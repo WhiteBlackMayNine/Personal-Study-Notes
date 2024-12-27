@@ -8,7 +8,7 @@ namespace Health
     public class PlayerNewHealth : CharacterNewHealthBase
     {
 
-        #region 生命周期函数
+        #region ???????????
 
         protected override void Awake()
         {
@@ -24,14 +24,14 @@ namespace Health
 
         #endregion
 
-        #region 函数相关
+        #region ???????
 
-        #region 角色受击逻辑
+        #region ?????????
 
-        //敌人 相关脚本 也需要进行更改 EnemyHealthControl
+        //???? ????? ???????懈??? EnemyHealthControl
         protected override void CharacterHitAction(float damage, string hitName, string parryName)
         {
-            if (animator.AnimationAtTag("Finish"))//如果玩家在处决敌人，那么不接受任何伤害信息
+            if (animator.AnimationAtTag("Finish"))//??????????????????????????魏???????
             {
                 return;
             }
@@ -53,19 +53,19 @@ namespace Health
 
         #endregion
 
-        #region 格挡输入
+        #region ??????
 
         private void PlayerParryInput()
         {
             if (animator.AnimationAtTag("Hit") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.35f)
             {
-                return;//受击后，动画播放超过一定时间后才能允许格挡
+                return;//???????????????????????????????
             }
             if (animator.AnimationAtTag("FinishHit"))
             {
                 return;
             }
-            animator.SetBool(AnimationID.ParryID, GameInputManager.MainInstance.Parry);//按住空格为true
+            animator.SetBool(AnimationID.ParryID, GameInputManager.MainInstance.Parry);//???????true
         }
 
         #endregion

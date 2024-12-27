@@ -96,5 +96,9 @@
   "blue-topaz-theme@@external-link-color@@dark": "#70E0FF",
   "blue-topaz-theme@@unresolved-link@@dark": "#FF77C3",
   "blue-topaz-theme@@text-highlight@@dark": "#94C0FF",
-  "blue-topaz-theme@@file-bg-shape-option": "file-shape-default"
+  "blue-topaz-theme@@file-bg-shape-option": "file-shape-default",
+  "blue-topaz-theme@@left-ribbon-style": "default-left-ribbon-style",
+  "blue-topaz-theme@@folder-icons": true,
+  "blue-topaz-theme@@remove-first-folder-icon": true,
+  "blue-topaz-theme@@remove-arrow": false
 }

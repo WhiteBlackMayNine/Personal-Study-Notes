@@ -6,18 +6,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Combo Data", menuName = "Character/Combo/New ComboData")]
 public class CharacterNewComboData : ScriptableObject
 {
-    //ÀÏµÄ¶¯×÷´úÂë£¬ÉËº¦ÊÇ²»±äµÄ
-    //±ÈÈçËµÓĞÁ½¸ö¶¯×÷ ÔÚ Inspector ÉÏµÄ Damage ÉèÖÃÎª 25
-    //ÄÇÃ´ÕâÁ½¸ö¶¯×÷µÄÉËº¦¾Í¶¼ÊÇ 25
+    //è€çš„åŠ¨ä½œä»£ç ï¼Œä¼¤å®³æ˜¯ä¸å˜çš„
+    //æ¯”å¦‚è¯´æœ‰ä¸¤ä¸ªåŠ¨ä½œ åœ¨ Inspector ä¸Šçš„ Damage è®¾ç½®ä¸º 25
+    //é‚£ä¹ˆè¿™ä¸¤ä¸ªåŠ¨ä½œçš„ä¼¤å®³å°±éƒ½æ˜¯ 25
 
-    //Õâ¸öĞÂµÄ¶¯×÷´úÂë
-    //Ğ´³ÉÃ¿Ò»¶Î¹¥»÷¶¼¶ÔÓ¦Ò»¶ÎÉËº¦£¬¶ø²»ÊÇ¶à¸ö¶¯×÷Ò»¸öÉËº¦
-    //Ã¿Ò»¸ö¶¯×÷µÄÉËº¦Öµ¶¼²»Ò»Ñù
+    //è¿™ä¸ªæ–°çš„åŠ¨ä½œä»£ç 
+    //å†™æˆæ¯ä¸€æ®µæ”»å‡»éƒ½å¯¹åº”ä¸€æ®µä¼¤å®³ï¼Œè€Œä¸æ˜¯å¤šä¸ªåŠ¨ä½œä¸€ä¸ªä¼¤å®³
+    //æ¯ä¸€ä¸ªåŠ¨ä½œçš„ä¼¤å®³å€¼éƒ½ä¸ä¸€æ ·
 
     [System.Serializable]
     public class ComboDamageInfo
     {
-        //ÉËº¦£¬ÊÜÉË¶¯»­Ãû£¬¸ñµ²Ãû£¬»¹¿ÉÒÔ¼ÓÒ»¸öÉËº¦ÀàĞÍ
+        //ä¼¤å®³ï¼Œå—ä¼¤åŠ¨ç”»åï¼Œæ ¼æŒ¡åï¼Œè¿˜å¯ä»¥åŠ ä¸€ä¸ªä¼¤å®³ç±»å‹
         public DamageType _damageType;
         public float Damage;
         public string HitName;
@@ -26,18 +26,18 @@ public class CharacterNewComboData : ScriptableObject
 
     public enum DamageType
     {
-        //ÉËº¦ÀàĞÍ
-        WEAPON,//ÎäÆ÷
-        PUNCH//È­Í·
+        //ä¼¤å®³ç±»å‹
+        WEAPON,//æ­¦å™¨
+        PUNCH//æ‹³å¤´
     }
 
-    [SerializeField] private string _actionName;//Òª²¥·ÅµÄ¶¯×÷Ãû×Ö
+    [SerializeField] private string _actionName;//è¦æ’­æ”¾çš„åŠ¨ä½œåå­—
     [SerializeField] private List<ComboDamageInfo> _comboDamageInfo;
-    [SerializeField] private float _actionColdTime;//¶¯×÷µÄÀäÈ´Ê±¼ä£¬ÏÎ½ÓÏÂÒ»¶Î¶¯×÷Ç°ĞèÒªµÄµÈ´ıÊ±¼ä
-    [SerializeField] private CharacterComboData _nextCombo;//ÏÂÒ»¸ö¶¯×÷ £¬Ö´ĞĞÍêµ±Ç°¶¯×÷ºóµÄÏÂÒ»¸öÒªÖ´ĞĞµÄ¶¯×÷
-    [SerializeField] private CharacterComboData _childCombo;//×Ó¶¯×÷£¬¾ÍÊÇ±äÕĞ¶¯×÷
+    [SerializeField] private float _actionColdTime;//åŠ¨ä½œçš„å†·å´æ—¶é—´ï¼Œè¡”æ¥ä¸‹ä¸€æ®µåŠ¨ä½œå‰éœ€è¦çš„ç­‰å¾…æ—¶é—´
+    [SerializeField] private CharacterComboData _nextCombo;//ä¸‹ä¸€ä¸ªåŠ¨ä½œ ï¼Œæ‰§è¡Œå®Œå½“å‰åŠ¨ä½œåçš„ä¸‹ä¸€ä¸ªè¦æ‰§è¡Œçš„åŠ¨ä½œ
+    [SerializeField] private CharacterComboData _childCombo;//å­åŠ¨ä½œï¼Œå°±æ˜¯å˜æ‹›åŠ¨ä½œ
 
-    //·½±ãÍâ²¿×÷ÎªÅĞ¶ÏÌõ¼şÀ´ÅĞ¶ÏÊÇ·ñÓĞ×Ó¶¯×÷£¬»òÕßËµÊÇÅÉÉú¶¯×÷
+    //æ–¹ä¾¿å¤–éƒ¨ä½œä¸ºåˆ¤æ–­æ¡ä»¶æ¥åˆ¤æ–­æ˜¯å¦æœ‰å­åŠ¨ä½œï¼Œæˆ–è€…è¯´æ˜¯æ´¾ç”ŸåŠ¨ä½œ
     public bool HasChildCombo
     {
         get

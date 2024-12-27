@@ -593,16 +593,40 @@ flashlightTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
 
 
 ---
-# 关于 `==`
+## 关于 `==`
 
 - 如果做比较的为 *值类型*，那么就比较两者的 **值的大小**
 - 如果做比较的为 *引用类型*，那么就比较两者的 **引用是否相同**
 	- ——> 对象的引用，即 两个比较对象 是否都指向同一个内存
 	- ——> 比较 引用指向 是否相同，而不是比较两者的 内容 是否相同
+## 时缓效果
 
+- `Time.timeScale` 时间缩放比例
+	- 当其值为 0 时，为暂停效果
+	- 当其值为 1 时，为正常播放速度
+	- 当处于 0 ~ 1 之间时，就会按照一定比例的时缓进行播放
+## `Mathf.Sign()`
 
+- 在Unity中，`Mathf.Sign(direction.x)` 函数的作用是返回`direction.x`的符号。这个函数会检查`direction.x`的值，并返回三个可能的结果之一
+	- 如果`direction.x`大于0，`Mathf.Sign`返回1
+	- 如果`direction.x`等于0，`Mathf.Sign`返回0
+	- 如果`direction.x`小于0，`Mathf.Sign`返回-1
 
+- 这个函数常用于确定一个数值的正负，而不关心其具体的大小
+	- 可以用于判断物体的移动方向、确定力的作用方向等场景
+---
+## switch 表达式
 
+```C#
+//要赋值的变量 = 变量 switch { 条件 => 结果值, _ =>  }
+//_ 代表 如果以上所有条件都不符合时，走 这个条件
+string result = number switch
+{
+    < 0 => "Negative",
+    > 100 => "Hundred plus",
+    _ => "Between 0 and 100"
+};
+```
 
 
 

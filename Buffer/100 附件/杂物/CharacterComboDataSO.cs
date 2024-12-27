@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ComboData", menuName = "Create/Character/ComboData", order = 0)]
 public class CharacterComboDataSO : ScriptableObject
 {
-    #region 变量相关
+    #region 鍙橀噺鐩稿叧
 
     [SerializeField] private string _comboName;
     [SerializeField] private string[] _comboHitName;

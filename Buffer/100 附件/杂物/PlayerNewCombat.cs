@@ -4,21 +4,21 @@ using UnityEngine;
 using GGG.Tool;
 using Combat;
 
-//Õâ¸öÊÇ DLC ¶¯×÷½Å±¾
-//¸úÀÏµÄºÜÏñ
-//ÕâÀïĞ´µÄ¾ÍÊÇ¼ò»¯°æÁË ÀÏ°æµÄÒ»Ğ©¶«Î÷Ã»ÓĞĞ´ÉÏÈ¥
-//Èç¹ûÓĞĞèÒª¿ÉÒÔÍùÉÏĞ´
-//ĞèÒª°ÑÀÏµÄ½Å±¾ÒÆ³ıÁË£¬²»È»±¨´í
+//è¿™ä¸ªæ˜¯ DLC åŠ¨ä½œè„šæœ¬
+//è·Ÿè€çš„å¾ˆåƒ
+//è¿™é‡Œå†™çš„å°±æ˜¯ç®€åŒ–ç‰ˆäº† è€ç‰ˆçš„ä¸€äº›ä¸œè¥¿æ²¡æœ‰å†™ä¸Šå»
+//å¦‚æœæœ‰éœ€è¦å¯ä»¥å¾€ä¸Šå†™
+//éœ€è¦æŠŠè€çš„è„šæœ¬ç§»é™¤äº†ï¼Œä¸ç„¶æŠ¥é”™
 public class PlayerNewCombat : CharacterNewCombatBase
 {
-    #region ±äÁ¿Ïà¹Ø
+    #region å˜é‡ç›¸å…³
 
-    private bool _hasLastComboAction;//ÊÇ·ñÓĞÉÏÒ»¸ö¶¯×÷
+    private bool _hasLastComboAction;//æ˜¯å¦æœ‰ä¸Šä¸€ä¸ªåŠ¨ä½œ
 
     #endregion
 
 
-    #region ÉúÃüÖÜÆÚº¯Êı
+    #region ç”Ÿå‘½å‘¨æœŸå‡½æ•°
 
     private void Update()
     {
@@ -27,20 +27,20 @@ public class PlayerNewCombat : CharacterNewCombatBase
 
     #endregion
 
-    #region º¯ÊıÏà¹Ø
+    #region å‡½æ•°ç›¸å…³
 
 
-    #region ½ÇÉ«¹¥»÷ÊäÈë
+    #region è§’è‰²æ”»å‡»è¾“å…¥
 
     private void PlayerAttackInput()
     {
         if (_applyAttackInput)
         {
-            if (GameInputManager.MainInstance.LAttack)//°´µÄÊÇ×ó¼ü£¬×ó¼ü´ú±íÖ´ĞĞÕı³£µÄÁ¬ÕĞ
+            if (GameInputManager.MainInstance.LAttack)//æŒ‰çš„æ˜¯å·¦é”®ï¼Œå·¦é”®ä»£è¡¨æ‰§è¡Œæ­£å¸¸çš„è¿æ‹›
             {
                 UpdateNextLAttackCombo();
             }
-            else if (GameInputManager.MainInstance.RAttack)//°´µÄÊÇÓÒ¼ü£¬ÓÒ¼ü´ú±íÖ´ĞĞÅÉÉú¶¯×÷
+            else if (GameInputManager.MainInstance.RAttack)//æŒ‰çš„æ˜¯å³é”®ï¼Œå³é”®ä»£è¡¨æ‰§è¡Œæ´¾ç”ŸåŠ¨ä½œ
             {
                 if (!_comboData.HasChildCombo)
                 {
@@ -53,26 +53,26 @@ public class PlayerNewCombat : CharacterNewCombatBase
 
     #endregion
 
-    #region ¸üĞÂÏÂÒ»¸ö¶¯×÷£¨×ó¼ü£©
+    #region æ›´æ–°ä¸‹ä¸€ä¸ªåŠ¨ä½œï¼ˆå·¦é”®ï¼‰
 
     private void UpdateNextLAttackCombo()
     {
-        //¸üĞÂÏÂÒ»¸ö¶¯×÷
+        //æ›´æ–°ä¸‹ä¸€ä¸ªåŠ¨ä½œ
         if (_hasLastComboAction)
         {
             SetComboData(_comboData.NextCombo);
-        }//Èç¹ûÃ»ÓĞÕâ¸ö if Óï¾ä ÄÇÃ´µã»÷×ó¼ü µÚÒ»¸ö¶¯×÷ÓÀÔ¶²»»á´¥·¢ µã»÷×ó¼üºó¾ÍÖ±½Ó¸³ÖµÎªµÚ¶ş¸ö¶¯×÷
+        }//å¦‚æœæ²¡æœ‰è¿™ä¸ª if è¯­å¥ é‚£ä¹ˆç‚¹å‡»å·¦é”® ç¬¬ä¸€ä¸ªåŠ¨ä½œæ°¸è¿œä¸ä¼šè§¦å‘ ç‚¹å‡»å·¦é”®åå°±ç›´æ¥èµ‹å€¼ä¸ºç¬¬äºŒä¸ªåŠ¨ä½œ
         ComboActionExecute();
         _hasLastComboAction = true;
     }
 
     #endregion
 
-    #region ¸üĞÂÏÂÒ»¸ö¶¯×÷£¨ÓÒ¼ü£©
+    #region æ›´æ–°ä¸‹ä¸€ä¸ªåŠ¨ä½œï¼ˆå³é”®ï¼‰
 
     private void UpdateNextRAttackCombo()
     {
-        //¸üĞÂÏÂÒ»¸ö¶¯×÷
+        //æ›´æ–°ä¸‹ä¸€ä¸ªåŠ¨ä½œ
         if (_hasLastComboAction)
         {
             SetComboData(_comboData.ChildCombo);

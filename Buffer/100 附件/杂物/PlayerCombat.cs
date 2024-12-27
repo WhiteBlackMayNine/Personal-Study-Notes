@@ -7,31 +7,31 @@ using System;
 
 public class PlayerCombat : CharacterCombatBase
 {
-    #region ±äÁ¿Ïà¹Ø
+    #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    #region µÐÈË¼ì²âÏà¹Ø
+    #region ï¿½ï¿½ï¿½Ë¼ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    //µÐÈËÍ¨¹ý EnemyManager ½øÐÐ¼ì²âÍæ¼Ò
+    //ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ EnemyManager ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    private Vector3 _detectionDirection;//¼ì²â·½Ïò
-    [SerializeField, Header("¹¥»÷¼ì²â")] private float _detectionRang;//·¶Î§
-    [SerializeField] private float _detectionDistance;//³¤¶È
-    [SerializeField] private LayerMask _enemyLayer;//µÐÈËµÄ²ã¼¶
+    private Vector3 _detectionDirection;//ï¿½ï¿½â·½ï¿½ï¿½
+    [SerializeField, Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")] private float _detectionRang;//ï¿½ï¿½Î§
+    [SerializeField] private float _detectionDistance;//ï¿½ï¿½ï¿½ï¿½
+    [SerializeField] private LayerMask _enemyLayer;//ï¿½ï¿½ï¿½ËµÄ²ã¼¶
     private Collider[] units;
 
-    private Transform _cameraGameobject;//»ñÈ¡Ïà»úÎ»ÖÃ ÓÃÓÚµÐÈË¼ì²â(µÚÒ»ÖÖ)ÖÐ
+    private Transform _cameraGameobject;//ï¿½ï¿½È¡ï¿½ï¿½ï¿½Î»ï¿½ï¿½ ï¿½ï¿½ï¿½Úµï¿½ï¿½Ë¼ï¿½ï¿½(ï¿½ï¿½Ò»ï¿½ï¿½)ï¿½ï¿½
 
     #endregion
 
     #endregion
 
-    #region ÉúÃüÖÜÆÚº¯Êý
+    #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½
 
     protected override void Awake()
     {
         base.Awake();
 
-        //»ñÈ¡Ïà»úÎ»ÖÃ ÓÃÓÚµÐÈË¼ì²â(µÚÒ»ÖÖ)ÖÐ
+        //ï¿½ï¿½È¡ï¿½ï¿½ï¿½Î»ï¿½ï¿½ ï¿½ï¿½ï¿½Úµï¿½ï¿½Ë¼ï¿½ï¿½(ï¿½ï¿½Ò»ï¿½ï¿½)ï¿½ï¿½
         if (Camera.main != null)
         {
             _cameraGameobject = Camera.main.transform;
@@ -41,19 +41,19 @@ public class PlayerCombat : CharacterCombatBase
     protected override void Update()
     {
         base.Update();
-        //Ê¹ÓÃÁËµÚ¶þÖÖ·¶Î§¼ì²â£¬µÚÒ»ÖÖÇòÐÎ¼ì²âÏà¹Øº¯Êý¾Í×¢ÊÍÁË
+        //Ê¹ï¿½ï¿½ï¿½ËµÚ¶ï¿½ï¿½Ö·ï¿½Î§ï¿½ï¿½â£¬ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½ï¿½ï¿½ï¿½Øºï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½
         //UpdateDetectionDirection();
 
-        //·½·¨Ò»ºÍ·½·¨¶þÈÎÑ¡ÆäÒ»
+        //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ò»
         //GetOneEnemyUnitWayOne();
         GetOneEnemyUnitWayTwo();
         //ClearEnemyWayOne();
         ClearEnemyWayTwo();
 
         CharacterBaseAttackInput();
-        //¹ØÓÚ ÎªÊ²Ã´²»ÔÚ¸¸ÀàµÄ Updateµ÷ÓÃ ÊÇÒòÎªµÐÈËEnemyCombat µ÷ÓÃCharacterBaseAttackInput 
-        //ÔÚÐÐÎªÊ÷½ÚµãÈ¥µ÷ÓÃ£¬²»ÊÇÔÚ Mono ÖÐµÄ Update ÖÐµ÷ÓÃ Ò²¾Í²»ÄÜÐ´¸¸ÀàÖÐµÄ Update ÖÐ
-        //ÓÚÊÇ¾ÍÖ»ÄÜÐ´ÔÚ×ÓÀàµÄ Update ÖÐ
+        //ï¿½ï¿½ï¿½ï¿½ ÎªÊ²Ã´ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½ï¿½ï¿½ Updateï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½EnemyCombat ï¿½ï¿½ï¿½ï¿½CharacterBaseAttackInput 
+        //ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Úµï¿½È¥ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Mono ï¿½Ðµï¿½ Update ï¿½Ðµï¿½ï¿½ï¿½ Ò²ï¿½Í²ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ Update ï¿½ï¿½
+        //ï¿½ï¿½ï¿½Ç¾ï¿½Ö»ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Update ï¿½ï¿½
 
         //CheackEnemyIsDie();
         CharacterFinishAttackInput();
@@ -62,33 +62,33 @@ public class PlayerCombat : CharacterCombatBase
 
     private void OnEnable()
     {
-        GameEventManager.MainInstance.AddEventListening<bool>("¼¤»î´¦¾ö", EnableFinishEventHandle);
-        GameEventManager.MainInstance.AddEventListening<Transform>("µÐÈËËÀÍö", CheckRemoveEnemy);
+        GameEventManager.MainInstance.AddEventListening<bool>("ï¿½ï¿½ï¿½î´¦ï¿½ï¿½", EnableFinishEventHandle);
+        GameEventManager.MainInstance.AddEventListening<Transform>("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", CheckRemoveEnemy);
     }
 
     private void OnDisable()
     {
-        GameEventManager.MainInstance.RemoveEvent<bool>("¼¤»î´¦¾ö", EnableFinishEventHandle);
-        GameEventManager.MainInstance.RemoveEvent<Transform>("µÐÈËËÀÍö", CheckRemoveEnemy);
+        GameEventManager.MainInstance.RemoveEvent<bool>("ï¿½ï¿½ï¿½î´¦ï¿½ï¿½", EnableFinishEventHandle);
+        GameEventManager.MainInstance.RemoveEvent<Transform>("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", CheckRemoveEnemy);
     }
 
     private void FixedUpdate()
     {
-        //Ê¹ÓÃÁËµÚ¶þÖÖ·¶Î§¼ì²â£¬µÚÒ»ÖÖÇòÐÎ¼ì²âÏà¹Øº¯Êý¾Í×¢ÊÍÁË
+        //Ê¹ï¿½ï¿½ï¿½ËµÚ¶ï¿½ï¿½Ö·ï¿½Î§ï¿½ï¿½â£¬ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½ï¿½ï¿½ï¿½Øºï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½
         //DetectionTarget();
 
-        //·½·¨Ò»ºÍ·½·¨¶þÈÎÑ¡ÆäÒ»
+        //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ò»
         //GetNearUnitWayOne();
         GetNearUnitWayTwo();
     }
 
     #endregion
 
-    #region º¯ÊýÏà¹Ø
+    #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    #region ½ÇÉ«¹¥»÷
+    #region ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½
 
-    #region ÊÇ·ñÔÊÐí¹¥»÷ÊäÈë
+    #region ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private bool CanBaseAttackInput()
     {
         if (!_canAttackInput)
@@ -110,7 +110,7 @@ public class PlayerCombat : CharacterCombatBase
     }
     #endregion
 
-    #region ÆÕÍ¨¹¥»÷ÊäÈë
+    #region ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     protected override void CharacterBaseAttackInput()
     {
@@ -161,7 +161,7 @@ public class PlayerCombat : CharacterCombatBase
 
     #endregion
 
-    #region Î»ÖÃÍ¬²½
+    #region Î»ï¿½ï¿½Í¬ï¿½ï¿½
 
     protected override void MatchPosition()
     {
@@ -169,13 +169,13 @@ public class PlayerCombat : CharacterCombatBase
 
         if (_animator.AnimationAtTag("Finish"))
         {
-            //ÒòÎª´¦¾öÊÇÔÚµÐÈËµÄÇ°·½½øÐÐµÄ ËùÒÔ ¿´ÏòµÐÈËµÄºó·½
+            //ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½Ëµï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ËµÄºï¿½
             transform.rotation = Quaternion.LookRotation(-_currentEnemy.forward);
             RunningMatch(_finishCombo, _FinishComboIndex);
         }
         else if (_animator.AnimationAtTag("Assassination"))
         {
-            //ÒòÎª°µÉ±ÊÇÔÚµÐÈËµÄºó·½½øÐÐµÄ ËùÒÔ ¿´ÏòµÐÈËµÄÇ°·½
+            //ï¿½ï¿½Îªï¿½ï¿½É±ï¿½ï¿½ï¿½Úµï¿½ï¿½ËµÄºó·½½ï¿½ï¿½Ðµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½Ç°ï¿½ï¿½
             transform.rotation = Quaternion.LookRotation(_currentEnemy.forward);
             RunningMatch(_assassinationCombo, _FinishComboIndex);
         }
@@ -185,18 +185,18 @@ public class PlayerCombat : CharacterCombatBase
 
     #endregion
 
-    #region µÐÈË¼ì²â
+    #region ï¿½ï¿½ï¿½Ë¼ï¿½ï¿½
 
-    #region µÚÒ»ÖÖ¼ì²â ÇòÐÎ¼ì²â
+    #region ï¿½ï¿½Ò»ï¿½Ö¼ï¿½ï¿½ ï¿½ï¿½ï¿½Î¼ï¿½ï¿½
 
-    //»ñÈ¡Ò»¶¨·¶Î§ÄÚµÄËùÓÐµÐÈË È¡Ò»¸ö×î½üµÄµÐÈË×÷ÎªÄ¿±ê
+    //ï¿½ï¿½È¡Ò»ï¿½ï¿½ï¿½ï¿½Î§ï¿½Úµï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ È¡Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ÎªÄ¿ï¿½ï¿½
 
-    private void UpdateDetectionDirection()//¸üÐÂÇòÐÎ¼ì²â·½Ïò
+    private void UpdateDetectionDirection()//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½â·½ï¿½ï¿½
     {
         _detectionDirection = (_cameraGameobject.forward * GameInputManager.MainInstance.Movement.y) +
             (_cameraGameobject.right * GameInputManager.MainInstance.Movement.x);
 
-        //yÖáµÄÖµ¹éÁã·ÀÖ¹¸¡ÔÚ°ë¿ÕÖÐ
+        //yï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½ï¿½
         _detectionDirection.Set(_detectionDirection.x, 0f, _detectionDirection.z);
 
         _detectionDirection = _detectionDirection.normalized;
@@ -204,62 +204,62 @@ public class PlayerCombat : CharacterCombatBase
 
     private void DetectionTarget()
     {
-        //ÅÐ¶Ï¼ì²âÒ»ÏÂÓÐÃ»ÓÐ¼ì²âµ½µÐÈË   µÐÈËµÄÍ¼²ãÊÇµÚ¾Å²ã  ÕâÀïµÄ 1<<9 ¾ÍÊÇ¼ì²âµÐÈË²ã¼¶
+        //ï¿½Ð¶Ï¼ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð¼ï¿½âµ½ï¿½ï¿½ï¿½ï¿½   ï¿½ï¿½ï¿½Ëµï¿½Í¼ï¿½ï¿½ï¿½ÇµÚ¾Å²ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ 1<<9 ï¿½ï¿½ï¿½Ç¼ï¿½ï¿½ï¿½ï¿½Ë²ã¼¶
         if (Physics.SphereCast(transform.position + (transform.up * 0.7f), _detectionRang, _detectionDirection,
             out var hit, _detectionDistance, 1 << 9, QueryTriggerInteraction.Ignore))
         {
-            //½øÈë if ÄÚ²¿£¬ËµÃ÷ÒÑ¾­¼ì²âµ½ÁËµÐÈË
+            //ï¿½ï¿½ï¿½ï¿½ if ï¿½Ú²ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½âµ½ï¿½Ëµï¿½ï¿½ï¿½
             _currentEnemy = hit.collider.transform;
         }
     }
 
     #endregion
 
-    #region µÚ¶þÖÖ¼ì²â ·¶Î§¼ì²â
+    #region ï¿½Ú¶ï¿½ï¿½Ö¼ï¿½ï¿½ ï¿½ï¿½Î§ï¿½ï¿½ï¿½
 
-    //ÒÔÍæ¼ÒÎªÖÐÐÄ È¡×Ô¶¨ÒåµÄÒ»¸ö°ë¾¶Ô²µÄ·¶Î§ÄÚ »ñÈ¡ÆäÖÐµÄµÐÈË
-    //ÔÚµ±Ç°Íæ¼ÒÃ»ÓÐÄ¿±êÊ± È¡¾àÀëÍæ¼Ò×î½üµÄµÐÈËÎªÄ¿±ê
-    //(1)·½·¨Ò» £º»ñÈ¡Ò»¶¨·¶Î§ÄÚµÄËùÓÐµÐÈË£¬Ñ¡ÔñÒ»¸ö¾àÀë×î½üµÄ×÷ÎªÄ¿Ç°µÐÈË
-    //(2)·½·¨¶þ £ºÕÒÒ»¸ö¾àÀë×î½üµÄÄ¿±ê ÔÚ¾àÀëÒ»¶¨·¶Î§ÄÚÊ±²»»á¸Ä±äÄ¿±ê(¶¯Ì¬¸üÐÂ)
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ È¡ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ë¾¶Ô²ï¿½Ä·ï¿½Î§ï¿½ï¿½ ï¿½ï¿½È¡ï¿½ï¿½ï¿½ÐµÄµï¿½ï¿½ï¿½
+    //ï¿½Úµï¿½Ç°ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ä¿ï¿½ï¿½Ê± È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ÎªÄ¿ï¿½ï¿½
+    //(1)ï¿½ï¿½ï¿½ï¿½Ò» ï¿½ï¿½ï¿½ï¿½È¡Ò»ï¿½ï¿½ï¿½ï¿½Î§ï¿½Úµï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½Ë£ï¿½Ñ¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÄ¿Ç°ï¿½ï¿½ï¿½ï¿½
+    //(2)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ ï¿½Ú¾ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î§ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Ä¿ï¿½ï¿½(ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½)
 
-    #region ·½·¨Ò»
-    //»ñÈ¡Ò»¶¨·¶Î§ÄÚµÄËùÓÐµÐÈË£¬Ñ¡ÔñÒ»¸ö¾àÀë×î½üµÄ×÷ÎªÄ¿Ç°µÐÈË
-    //µ±ÒÆ¶¯Ê±£¬²»»á»ñÈ¡Ä¿±ê
-    //Ê¹ÓÃÊ± ½¨Òé°Ñ°ë¾¶ÉèÖÃ´óÒ»µã 
+    #region ï¿½ï¿½ï¿½ï¿½Ò»
+    //ï¿½ï¿½È¡Ò»ï¿½ï¿½ï¿½ï¿½Î§ï¿½Úµï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½Ë£ï¿½Ñ¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÄ¿Ç°ï¿½ï¿½ï¿½ï¿½
+    //ï¿½ï¿½ï¿½Æ¶ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡Ä¿ï¿½ï¿½
+    //Ê¹ï¿½ï¿½Ê± ï¿½ï¿½ï¿½ï¿½Ñ°ë¾¶ï¿½ï¿½ï¿½Ã´ï¿½Ò»ï¿½ï¿½ 
 
-    //µÃµ½¸½½üµÄËùÓÐµÐÈË
+    //ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½
     private void GetNearUnitWayOne()
     {
-        //Èç¹ûµ±Ç°µÄ Ä¿Ç°µÐÈË Îª²»¿Õ ´ú±íÒÑ¾­ÓÐµÐÈËÁË
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ Ä¿Ç°ï¿½ï¿½ï¿½ï¿½ Îªï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½
         if (_currentEnemy != null)
         {
             return;
         }
-        if (_animator.GetFloat(AnimationID.MovementID) > 0.7f)//ÒÆ¶¯Ê±²»È¥»ñÈ¡
+        if (_animator.GetFloat(AnimationID.MovementID) > 0.7f)//ï¿½Æ¶ï¿½Ê±ï¿½ï¿½È¥ï¿½ï¿½È¡
         {
             return;
         }
-        //»ñÈ¡Ò»¶¨·¶Î§ÄÚµÄµÐÈË
+        //ï¿½ï¿½È¡Ò»ï¿½ï¿½ï¿½ï¿½Î§ï¿½ÚµÄµï¿½ï¿½ï¿½
         units = Physics.OverlapSphere(transform.position + (transform.up * 0.7f), _detectionRang,
             _enemyLayer, QueryTriggerInteraction.Ignore);
     }
 
-    //Ñ¡Ôñ¾àÀë×î½üµÄµÐÈË
+    //Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½
     private void GetOneEnemyUnitWayOne()
     {
-        //Èç¹ûµÐÈËÊý×éÎª¿Õ Ò²¾ÍÊÇ³¤¶ÈÎª0 Ôò·µ»Ø
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ Ò²ï¿½ï¿½ï¿½Ç³ï¿½ï¿½ï¿½Îª0 ï¿½ò·µ»ï¿½
         if (units.Length == 0)
         {
             return;
         }
 
-        //Èç¹ûµ±Ç°µÄ Ä¿Ç°µÐÈË Îª²»¿Õ ´ú±íÒÑ¾­ÓÐµÐÈËÁË 
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ Ä¿Ç°ï¿½ï¿½ï¿½ï¿½ Îªï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ 
         if (_currentEnemy != null)
         {
             return;
         }
 
-        if (_animator.GetFloat(AnimationID.MovementID) > 0.7f)//ÒÆ¶¯Ê±²»È¥»ñÈ¡
+        if (_animator.GetFloat(AnimationID.MovementID) > 0.7f)//ï¿½Æ¶ï¿½Ê±ï¿½ï¿½È¥ï¿½ï¿½È¡
         {
             return;
         }
@@ -272,26 +272,26 @@ public class PlayerCombat : CharacterCombatBase
         //-----------------------------------------------------------------------
 
         Transform _temp_Enemy = null;
-        var _distance = Mathf.Infinity;//Mathf.Infinity ±íÊ¾ÕýÎÞÇî´ó
+        var _distance = Mathf.Infinity;//Mathf.Infinity ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
         foreach (var e in units)
         {
-            //ÒÀ´ÎÈ¥±éÀú¸½½üµÄµÐÈË²¢×ö±È½Ï£¬Ñ¡È¡¾àÀëÍæ¼Ò×î½üµÄÒ»¸öµÐÈË×÷Îªµ±Ç°Ä¿±ê
+            //ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½È½Ï£ï¿½Ñ¡È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ç°Ä¿ï¿½ï¿½
             var dis = DevelopmentToos.DistanceForTarget(e.transform, transform);
-            if (dis < _distance)//Ã°ÅÝÅÅÐò½øÐÐ±È½Ï
+            if (dis < _distance)//Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±È½ï¿½
             {
                 _temp_Enemy = e.transform;
                 _distance = dis;
             }
         }
 
-        //°Ñ×îºó±éÀú»ñÈ¡µ½¾àÀëÍæ¼Ò×î½üµÄÒ»¸öµÐÈËµ±×÷Ä¿±ê
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ä¿ï¿½ï¿½
         _currentEnemy = _temp_Enemy != null ? _temp_Enemy : _currentEnemy;
 
         //------------------------------------------------------------------------
     }
 
-    //Çå¿ÕµÐÈË
+    //ï¿½ï¿½Õµï¿½ï¿½ï¿½
     private void ClearEnemyWayOne()
     {
         if (_currentEnemy == null)
@@ -299,7 +299,7 @@ public class PlayerCombat : CharacterCombatBase
             return;
         }
 
-        if (_animator.GetFloat(AnimationID.MovementID) > 0.7f)//ÒÆ¶¯Ê±²»È¥»ñÈ¡
+        if (_animator.GetFloat(AnimationID.MovementID) > 0.7f)//ï¿½Æ¶ï¿½Ê±ï¿½ï¿½È¥ï¿½ï¿½È¡
         {
             _currentEnemy = null;
         }
@@ -307,34 +307,34 @@ public class PlayerCombat : CharacterCombatBase
 
     #endregion
 
-    #region ·½·¨¶þ
-    //ÕÒÒ»¸ö¾àÀë×î½üµÄÄ¿±ê ÔÚ¾àÀëÒ»¶¨·¶Î§ÄÚÊ±²»»á¸Ä±äÄ¿±ê
-    //ËæÊ±¸üÐÂ
+    #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ ï¿½Ú¾ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î§ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Ä¿ï¿½ï¿½
+    //ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
 
 
     private void GetNearUnitWayTwo()
     {
-        //Èç¹ûµ±Ç°µÄ Ä¿Ç°µÐÈË Îª²»¿Õ ´ú±íÒÑ¾­ÓÐµÐÈËÁË ÇÒ ¾àÀëÐ¡ÓÚ1.5 Ôò·µ»Ø ²»¸üÐÂÄ¿±ê
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ Ä¿Ç°ï¿½ï¿½ï¿½ï¿½ Îªï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½1.5 ï¿½ò·µ»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½
         if (_currentEnemy != null && DevelopmentToos.DistanceForTarget(_currentEnemy, transform) < 1.5f)
         {
             return;
         }
 
-        //»ñÈ¡Ò»¶¨·¶Î§ÄÚµÄµÐÈË
+        //ï¿½ï¿½È¡Ò»ï¿½ï¿½ï¿½ï¿½Î§ï¿½ÚµÄµï¿½ï¿½ï¿½
         units = Physics.OverlapSphere(transform.position + (transform.up * 0.7f), _detectionRang,
             _enemyLayer, QueryTriggerInteraction.Ignore);
     }
 
-    //Ñ¡Ôñ¾àÀë×î½üµÄµÐÈË
+    //Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½
     private void GetOneEnemyUnitWayTwo()
     {
-        //Èç¹ûµÐÈËÊý×éÎª¿Õ Ò²¾ÍÊÇ³¤¶ÈÎª0 Ôò·µ»Ø
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ Ò²ï¿½ï¿½ï¿½Ç³ï¿½ï¿½ï¿½Îª0 ï¿½ò·µ»ï¿½
         if (units.Length == 0)
         {
             return;
         }
 
-        //Èç¹ûµ±Ç°µÄ Ä¿Ç°µÐÈË Îª²»¿Õ ´ú±íÒÑ¾­ÓÐµÐÈËÁË ÇÒ ¾àÀëÐ¡ÓÚ1.5 Ôò·µ»Ø ²»¸üÐÂÄ¿±ê
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ Ä¿Ç°ï¿½ï¿½ï¿½ï¿½ Îªï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½1.5 ï¿½ò·µ»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½
         if (_currentEnemy != null && DevelopmentToos.DistanceForTarget(_currentEnemy, transform) < 1.5f)
         {
             return;
@@ -343,26 +343,26 @@ public class PlayerCombat : CharacterCombatBase
         //-----------------------------------------------------------------------
 
         Transform _temp_Enemy = null;
-        var _distance = Mathf.Infinity;//Mathf.Infinity ±íÊ¾ÕýÎÞÇî´ó
+        var _distance = Mathf.Infinity;//Mathf.Infinity ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
         foreach (var e in units)
         {
-            //ÒÀ´ÎÈ¥±éÀú¸½½üµÄµÐÈË²¢×ö±È½Ï£¬Ñ¡È¡¾àÀëÍæ¼Ò×î½üµÄÒ»¸öµÐÈË×÷Îªµ±Ç°Ä¿±ê
+            //ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½È½Ï£ï¿½Ñ¡È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ç°Ä¿ï¿½ï¿½
             var dis = DevelopmentToos.DistanceForTarget(e.transform, transform);
-            if (dis < _distance)//Ã°ÅÝÅÅÐò½øÐÐ±È½Ï
+            if (dis < _distance)//Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±È½ï¿½
             {
                 _temp_Enemy = e.transform;
                 _distance = dis;
             }
         }
 
-        //°Ñ×îºó±éÀú»ñÈ¡µ½¾àÀëÍæ¼Ò×î½üµÄÒ»¸öµÐÈËµ±×÷Ä¿±ê
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ä¿ï¿½ï¿½
         _currentEnemy = _temp_Enemy != null ? _temp_Enemy : _currentEnemy;
 
         //------------------------------------------------------------------------
     }
 
-    //Çå¿ÕµÐÈË
+    //ï¿½ï¿½Õµï¿½ï¿½ï¿½
     private void ClearEnemyWayTwo()
     {
         if (_currentEnemy == null)
@@ -383,18 +383,18 @@ public class PlayerCombat : CharacterCombatBase
 
     #endregion
 
-    #region »æÍ¼
+    #region ï¿½ï¿½Í¼
 
-    private void OnDrawGizmos()//»æÍ¼º¯Êý
+    private void OnDrawGizmos()//ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½
     {
         Gizmos.DrawWireSphere(transform.position + (transform.up * 0.7f) +
             (_detectionDirection * _detectionDistance), _detectionRang);
     }
     #endregion
 
-    #region ´¦¾ö
+    #region ï¿½ï¿½ï¿½ï¿½
 
-    private bool CanSpecialAttack()//ÊÇ·ñÔÊÐíÖ´ÐÐÌØÊâ¹¥»÷
+    private bool CanSpecialAttack()//ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½â¹¥ï¿½ï¿½
     {
         if (_animator.AnimationAtTag("Finish"))
         {
@@ -417,7 +417,7 @@ public class PlayerCombat : CharacterCombatBase
         }
 
 
-        if (_currentComboCount < 2) //µ±Ä¿Ç°¹¥»÷´ÎÊýÐ¡ÓÚ2Ê±£¬²»¿ÉÒÔ´¦¾ö
+        if (_currentComboCount < 2) //ï¿½ï¿½Ä¿Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½2Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½
         {
             return false;
         }
@@ -436,24 +436,24 @@ public class PlayerCombat : CharacterCombatBase
 
         if (GameInputManager.MainInstance.Finish)
         {
-            //È¥²¥·Å¶ÔÓ¦µÄ´¦¾ö¶¯»­
+            //È¥ï¿½ï¿½ï¿½Å¶ï¿½Ó¦ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             _FinishComboIndex = Random.Range(0, _finishCombo.TryGetComboMaxCount());
             _animator.Play(_finishCombo.TryGetOneComboAction(_FinishComboIndex));
 
-            //ºô½ÐÊÂ¼þÖÐÐÄ£¬µ÷ÓÃµÐÈË×¢²áµÄ´¦¾öÊÂ¼þ
-            GameEventManager.MainInstance.CallEvent("´¥·¢´¦¾ö", _finishCombo.TryGetOneHitAction(_FinishComboIndex,
+            //ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½×¢ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
+            GameEventManager.MainInstance.CallEvent("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", _finishCombo.TryGetOneHitAction(_FinishComboIndex,
                 0), transform, _currentEnemy);
 
             ResetComboInfo();
             EnemyManager.MainInstance.StopAllActiveUnit();
-            GameEventManager.MainInstance.CallEvent<Transform, float>("ÉèÖÃÏà»úÎ»ÖÃ", _currentEnemy,
+            GameEventManager.MainInstance.CallEvent<Transform, float>("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½", _currentEnemy,
                 _animator.GetCurrentAnimatorStateInfo(0).length - 1f);
             _currentComboCount = 0;
             _canFinish = false;
         }
     }
 
-    private void EnableFinishEventHandle(bool apply)//¼¤»î´¦¾ö
+    private void EnableFinishEventHandle(bool apply)//ï¿½ï¿½ï¿½î´¦ï¿½ï¿½
     {
         if (_canFinish)
         {
@@ -465,39 +465,39 @@ public class PlayerCombat : CharacterCombatBase
 
     #endregion
 
-    #region °µÉ±
+    #region ï¿½ï¿½É±
 
     /// <summary>
-    /// ÊÇ·ñÔÊÐí½øÐÐ°µÉ±
+    /// ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð°ï¿½É±
     /// </summary>
     /// <returns></returns>
     private bool CanAssassination()
     {
-        //µ±Ç°Ã»ÓÐÄ¿±ê
+        //ï¿½ï¿½Ç°Ã»ï¿½ï¿½Ä¿ï¿½ï¿½
         if (_currentEnemy == null)
         {
             return false;
         }
 
-        //¾àÀë
+        //ï¿½ï¿½ï¿½ï¿½
         if (DevelopmentToos.DistanceForTarget(_currentEnemy, transform) > 2f)
         {
             return false;
         }
 
-        //½Ç¶È
+        //ï¿½Ç¶ï¿½
         if (Vector3.Angle(transform.forward, _currentEnemy.transform.forward) > 30f)
         {
             return false;
         }
 
-        //µ±Ç°ÔÚ°µÉ±¶¯»­ÖÐ
+        //ï¿½ï¿½Ç°ï¿½Ú°ï¿½É±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (_animator.AnimationAtTag("Assassination"))
         {
             return false;
         }
 
-        //µ±Ç°ÔÚ´¦¾ö¶¯»­ÖÐ
+        //ï¿½ï¿½Ç°ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (_animator.AnimationAtTag("Finish"))
         {
             return false;
@@ -511,27 +511,27 @@ public class PlayerCombat : CharacterCombatBase
     {
         if (!CanAssassination())
         {
-            return;//¼ì²âÊÇ·ñ¿ÉÒÔ½øÐÐ°µÉ±
+            return;//ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ô½ï¿½ï¿½Ð°ï¿½É±
         }
 
         if (GameInputManager.MainInstance.TakeOut)
         {
-            //Ö´ÐÐ°µÉ±
-            _FinishComboIndex = Random.Range(0, _assassinationCombo.TryGetComboMaxCount());//Ëæ»úÈ¡Ò»¸öË÷ÒýÖµ
+            //Ö´ï¿½Ð°ï¿½É±
+            _FinishComboIndex = Random.Range(0, _assassinationCombo.TryGetComboMaxCount());//ï¿½ï¿½ï¿½È¡Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
             _animator.Play(_assassinationCombo.TryGetOneComboAction(_FinishComboIndex), 0, 0f);
 
-            //ºô½ÐµÐÈËµÄ±»°µÉ±ÊÂ¼þ
-            GameEventManager.MainInstance.CallEvent("´¥·¢´¦¾ö", _assassinationCombo.TryGetOneHitAction(_FinishComboIndex,
-               0), transform, _currentEnemy);//Õâ¸ö¸ú´¦¾öµÄÊÂ¼þÊÇÒ»ÑùµÄ
+            //ï¿½ï¿½ï¿½Ðµï¿½ï¿½ËµÄ±ï¿½ï¿½ï¿½É±ï¿½Â¼ï¿½
+            GameEventManager.MainInstance.CallEvent("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", _assassinationCombo.TryGetOneHitAction(_FinishComboIndex,
+               0), transform, _currentEnemy);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½
             ResetComboInfo();
         }
     }
     #endregion
 
-    #region Ä¿±êËÀÍö¼àÌý
+    #region Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    #region ·½·¨Ò»
-    //CharacterHealthBase ÖÐ µ±Ç°Ä¿±êËÀÍöºóÒÆ³ýµ±Ç°Ä¿±ê ÄÚÈÝ
+    #region ï¿½ï¿½ï¿½ï¿½Ò»
+    //CharacterHealthBase ï¿½ï¿½ ï¿½ï¿½Ç°Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ³ï¿½ï¿½ï¿½Ç°Ä¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     private void CheackEnemyIsDie()
     {
@@ -544,12 +544,12 @@ public class PlayerCombat : CharacterCombatBase
         {
             if (_animator.AnimationAtTag("Motion") && health.OnDie() && !_animator.IsInTransition(0))
             {
-                //.IsInTransition(0) ¼ì²é½ÇÉ«¶¯»­ÊÇ·ñ×ª»»
+                //.IsInTransition(0) ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½×ªï¿½ï¿½
 
-                //Èç¹ûÍæ¼ÒµÄ¶¯×÷Ö´ÐÐÍê±Ï£¬Í¬Ê±µÐÈËÒÑ¾­ËÀÍö£¬¶øÇÒ¶¯»­²»ÔÚ¹ý¶ÉÖÐ
-                //Èç¹û¶¯×÷»¹Ã»ÓÐÖ´ÐÐÍê±Ï£¬È»ºóÓÐÄ³Ð©¶¯×÷¿ÉÄÜÐèÒªÈ¥ÅÐ¶Ï»òÒÀÀµµ±Ç°Ä¿±ê
-                //ÄÇÃ´ÎÒÃÇÔÚµÐÈËËÀÍöºóÖ±½ÓÒÆ³ýµ±Ç°Ä¿±ê£¬Íæ¼Ò¾ÍÃ»°ì·¨»ñÈ¡µ½µ±Ç°Ä¿±ê
-                //¾Í»á±¨³ö ¿ÕÒýÓÃ
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ÒµÄ¶ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ï£ï¿½Í¬Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ï£ï¿½È»ï¿½ï¿½ï¿½ï¿½Ä³Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÈ¥ï¿½Ð¶Ï»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°Ä¿ï¿½ï¿½
+                //ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½Æ³ï¿½ï¿½ï¿½Ç°Ä¿ï¿½ê£¬ï¿½ï¿½Ò¾ï¿½Ã»ï¿½ì·¨ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ç°Ä¿ï¿½ï¿½
+                //ï¿½Í»á±¨ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 _currentEnemy = null;
             }
         }
@@ -557,18 +557,18 @@ public class PlayerCombat : CharacterCombatBase
 
     #endregion
 
-    #region ·½·¨¶þ
+    #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     private void CheckRemoveEnemy(Transform enemy)
     {
         if (_currentEnemy == enemy)
         {
-            //Èç¹ûÍæ¼ÒµÄ¶¯×÷Ö´ÐÐÍê±ÏÁË£¬Í¬Ê±£¬µÐÈËÒÑ¾­ËÀÍöÁË
-            //¶øÇÒ¶¯»­²»ÔÚ¹ý¶ÉÖÐ
-            //Èç¹û¶¯»­»¹Ã»ÓÐÖ´ÐÐÍê±Ï£¬È»ºóÎÒÃÇÄ³Ð©¶¯×÷¿ÉÄÜÐèÒªÈ¥ÅÐ¶Ï»òÕßÒÀÀµµ±Ç°Ä¿±ê
-            //ÄÇÃ´ÎÒÃÇÔÚµÐÈËËÀÍöºóÖ±½Ó¾ÍÒÆ³ýµ±Ç°Ä¿±ê
-            //ÄÇÃ´Íæ¼Ò¾ÍÃ»°ì·¨»ñÈ¡µ½µ±Ç°Ä¿±ê
-            //¾Í»á±¨¿ÕÒýÓÃ!
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ÒµÄ¶ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½Í¬Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            //ï¿½ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ï£ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÈ¥ï¿½Ð¶Ï»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°Ä¿ï¿½ï¿½
+            //ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó¾ï¿½ï¿½Æ³ï¿½ï¿½ï¿½Ç°Ä¿ï¿½ï¿½
+            //ï¿½ï¿½Ã´ï¿½ï¿½Ò¾ï¿½Ã»ï¿½ì·¨ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ç°Ä¿ï¿½ï¿½
+            //ï¿½Í»á±¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!
             _currentEnemy = null;
             _canFinish = false;
         }

@@ -13,9 +13,8 @@
   "obsidian-excalidraw-plugin",
   "obsidian-advanced-uri",
   "cmdr",
-  "obsidian-booknote-plugin",
-  "pkmer",
   "obsidian-outliner",
   "better-export-pdf",
-  "obsidian-hider"
+  "obsidian-hider",
+  "obsidian-booknote-plugin"
 ]

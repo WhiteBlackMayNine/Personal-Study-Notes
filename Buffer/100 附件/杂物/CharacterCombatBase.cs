@@ -7,55 +7,55 @@ namespace Combat
 {
     public class CharacterCombatBase : MonoBehaviour
     {
-        #region ×¢ÊÍ
+        #region ×¢ï¿½ï¿½
 
-        //Íæ¼ÒºÍAIËûÃÇµÄ¹¥»÷ÊÂ¼þ´¥·¢¡¢ÉËº¦´¥·¢Ò²ÊÇÏàÍ¬µÄ
-        //»ù´¡×éºÏ¼¼Ò²ÊÇ²î²»¶àµÄ
-        //×éºÏ¼¼ÐÅÏ¢Ò²ÊÇÏàËÆµÄ
-        //°Ñ²î²»¶àµÄ¶¼ÌáÈ¡µ½»ùÀàÀïÃæ
+        //ï¿½ï¿½Òºï¿½AIï¿½ï¿½ï¿½ÇµÄ¹ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½Ò²ï¿½Ç²î²»ï¿½ï¿½ï¿½
+        //ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½Ï¢Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½
+        //ï¿½Ñ²î²»ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
         #endregion
 
-        #region ±äÁ¿Ïà¹Ø
+        #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
         protected Animator _animator;
 
-        #region ¹¥»÷/ÊÜ»÷Ïà¹Ø
+        #region ï¿½ï¿½ï¿½ï¿½/ï¿½Ü»ï¿½ï¿½ï¿½ï¿½
 
-        [SerializeField, Header("½ÇÉ«Á¬ÕÐ±í")] protected CharacterComboSO _baseCombo;
-        [SerializeField, Header("½ÇÉ«±äÕÐ±í")] protected CharacterComboSO _changeCombo;
-        protected CharacterComboSO _currentCombo;//µ±Ç°Ê¹ÓÃµÄÁ¬ÕÐ
+        [SerializeField, Header("ï¿½ï¿½É«ï¿½ï¿½ï¿½Ð±ï¿½")] protected CharacterComboSO _baseCombo;
+        [SerializeField, Header("ï¿½ï¿½É«ï¿½ï¿½ï¿½Ð±ï¿½")] protected CharacterComboSO _changeCombo;
+        protected CharacterComboSO _currentCombo;//ï¿½ï¿½Ç°Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
 
-        protected int _currentComboIndex;//µ±Ç°Á¬ÕÐµÄË÷ÒýÖµ
-        protected float _maxColdTime;//Á¬ÕÐµÄ×î´óÀäÈ´Ê±¼ä
-        protected bool _canAttackInput;//ÊÇ·ñÔÊÐí½øÐÐ¹¥»÷ÊäÈë
-        protected int _hitIndex;//ÊÜ»÷Ë÷ÒýÖµ
+        protected int _currentComboIndex;//ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+        protected float _maxColdTime;//ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È´Ê±ï¿½ï¿½
+        protected bool _canAttackInput;//ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        protected int _hitIndex;//ï¿½Ü»ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
 
-        protected int _currentComboCount;//µ±Ç°Á¬ÕÐÊýÁ¿
-
-        #endregion
-
-        #region µÐÈË¼ì²â
-        //Ò»Ð©º¯ÊýÐèÒªÕâ¸ö±äÁ¿
-
-        [SerializeField, Header("µ±Ç°µÐÈË")] protected Transform _currentEnemy;//µ±Ç°µÐÈËÎ»ÖÃ ÓÃÓÚµÐÈË¼ì²âÖÐ
+        protected int _currentComboCount;//ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
         #endregion
 
-        #region ´¦¾ö °µÉ±
+        #region ï¿½ï¿½ï¿½Ë¼ï¿½ï¿½
+        //Ò»Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-        [SerializeField, Header("´¦¾ö")] protected CharacterComboSO _finishCombo;
-        [SerializeField, Header("°µÉ±")] protected CharacterComboSO _assassinationCombo;
+        [SerializeField, Header("ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½")] protected Transform _currentEnemy;//ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ ï¿½ï¿½ï¿½Úµï¿½ï¿½Ë¼ï¿½ï¿½ï¿½ï¿½
 
-        //´¦¾ö/°µÉ±  ·ÀÖ¹ÔÚÆÕÍ¨¹¥»÷Îª½áËãÇ°½øÐÐ´¦¾öÊ±Å×³öµÄ ³¬³öË÷ÒýÖµ ÎÊÌâ
-        protected int _FinishComboIndex;//´¦¾öµ¥¶ÀÓÃÕâ¸ö´¦Àí£¬¸÷¸É¸ö
-        protected bool _canFinish;//ÊÇ·ñ¿ÉÒÔ½øÐÐ´¦¾ö ±ÈÈçµ±ÉúÃüÖµ/ÌåÁ¦ÖµµÍÓÚÒ»¶¨ÖµÊ±
+        #endregion
+
+        #region ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½É±
+
+        [SerializeField, Header("ï¿½ï¿½ï¿½ï¿½")] protected CharacterComboSO _finishCombo;
+        [SerializeField, Header("ï¿½ï¿½É±")] protected CharacterComboSO _assassinationCombo;
+
+        //ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½É±  ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½Ê±ï¿½×³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ ï¿½ï¿½ï¿½ï¿½
+        protected int _FinishComboIndex;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¸ï¿½
+        protected bool _canFinish;//ï¿½Ç·ï¿½ï¿½ï¿½Ô½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½çµ±ï¿½ï¿½ï¿½ï¿½Öµ/ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ÖµÊ±
 
         #endregion
 
         #endregion
 
-        #region ÉúÃüÖÜÆÚº¯Êý
+        #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½
 
         protected virtual void Awake()
         {
@@ -78,9 +78,9 @@ namespace Combat
 
         #endregion
 
-        #region º¯ÊýÏà¹Ø
+        #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-        #region Î»ÖÃÍ¬²½
+        #region Î»ï¿½ï¿½Í¬ï¿½ï¿½
 
         protected virtual void MatchPosition()
         {
@@ -94,28 +94,28 @@ namespace Combat
                 return;
             }
 
-            //Èç¹ûµÐÈËÔÚ²¥·ÅËÀÍö¶¯»­Ê± Í»È»ÍùÇ°ÒÆ¶¯ÁË
-            //¾ÍÊÇÒòÎªÔÚ²¥·Å¹¥»÷¶¯»­Ê±£¬±»Íæ¼Ò¸ø´òËÀÁË£¬´¥·¢ÁË¹¥»÷ÊÂ¼þ£¬½øÐÐÁËÎ»ÖÃÆ¥Åä
-            //¿ÉÒÔ°Ñ _animator.MatchTarget ¸ø×¢ÊÍÁË
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê± Í»È»ï¿½ï¿½Ç°ï¿½Æ¶ï¿½ï¿½ï¿½
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Ú²ï¿½ï¿½Å¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¹ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½Æ¥ï¿½ï¿½
+            //ï¿½ï¿½ï¿½Ô°ï¿½ _animator.MatchTarget ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½
 
             if (_animator.AnimationAtTag("Attack"))
             {
-                //¶Ô¶¯»­Ê±¼ä¹éÒ»»¯ 0 ¡ª 1 µÄÒ»¸öÖµ
+                //ï¿½Ô¶ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ 0 ï¿½ï¿½ 1 ï¿½ï¿½Ò»ï¿½ï¿½Öµ
                 var timer = _animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
 
-                //²¥·Å½ø¶È´óÔ¼ 35% ·µ»Ø
+                //ï¿½ï¿½ï¿½Å½ï¿½ï¿½È´ï¿½Ô¼ 35% ï¿½ï¿½ï¿½ï¿½
                 if (timer > 0.35f)
                 {
                     return;
                 }
 
-                //¾àÀë¹ý´ó ·µ»Ø
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 if (DevelopmentToos.DistanceForTarget(_currentEnemy, transform) > 2f)
                 {
                     return;
                 }
 
-                //²»ÔÚÆ¥Åä×´Ì¬  Í¬Ê±²»ÔÚ¹ý¶ÉÖÐ
+                //ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½×´Ì¬  Í¬Ê±ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½
                 if (!_animator.isMatchingTarget && !_animator.IsInTransition(0))
                 {
                     _animator.MatchTarget(_currentEnemy.position + (-transform.forward * _currentCombo.TryGetComboPositionOffset(_currentComboIndex)),
@@ -127,7 +127,7 @@ namespace Combat
         protected void RunningMatch(CharacterComboSO comboSO, int index, float startTime = 0f,
             float endTime = 0.01f)
         {
-            //²»ÔÚÆ¥Åä×´Ì¬  Í¬Ê±²»ÔÚ¹ý¶ÉÖÐ
+            //ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½×´Ì¬  Í¬Ê±ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½
             if (!_animator.isMatchingTarget && !_animator.IsInTransition(0))
             {
                 _animator.MatchTarget(_currentEnemy.position +
@@ -138,10 +138,10 @@ namespace Combat
 
         #endregion
 
-        #region ¶¯»­ÊÂ¼þ
+        #region ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 
-        //Õâ¸öº¯ÊýÓÃÓÚ´¥·¢¶¯»­ÊÂ¼þ
-        //°üÀ¨ÇÒ²»ÏÞÓÚ ¶¯»­ÉùÒô²¥·Å¡¢ÉËº¦µÈ
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¡ï¿½ï¿½Ëºï¿½ï¿½ï¿½
         protected void ATK()
         {
             TriggerDamager();
@@ -151,63 +151,63 @@ namespace Combat
 
         #endregion
 
-        #region ÉËº¦´¥·¢
+        #region ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½
 
         protected void TriggerDamager()
         {
-            //ÒªÈ·±£ÓÐÄ¿±ê
+            //ÒªÈ·ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½
             if (_currentEnemy == null)
             {
                 return;
             }
-            //ÒªÈ·±£µÐÈË´¦ÓÚÎÒÃÇ¿É´¥·¢ÉËº¦µÄ¾àÀëºÍ½Ç¶È
-            //Õâ¸öÊÇ½Ç¶È
+            //ÒªÈ·ï¿½ï¿½ï¿½ï¿½ï¿½Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿É´ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½Ä¾ï¿½ï¿½ï¿½Í½Ç¶ï¿½
+            //ï¿½ï¿½ï¿½ï¿½Ç½Ç¶ï¿½
             if (Vector3.Dot(transform.forward, DevelopmentToos.DirectionForTarget(transform, _currentEnemy)) < 0.9f)
             {
                 return;
             }
-            //Õâ¸öÊÇ¾àÀë
+            //ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½
             if (DevelopmentToos.DistanceForTarget(_currentEnemy, transform) > 1.3f)
             {
                 return;
             }
-            //È¥ºô½ÐÊÂ¼þÖÐ£¬µ÷ÓÃ´¥·¢ÉËº¦Õâ¸öº¯Êý
+            //È¥ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             if (_animator.AnimationAtTag("Attack"))
             {
-                GameEventManager.MainInstance.CallEvent("´¥·¢ÉËº¦", _currentCombo.TryGetComboDamage(_currentComboIndex),
+                GameEventManager.MainInstance.CallEvent("ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½", _currentCombo.TryGetComboDamage(_currentComboIndex),
                     _currentCombo.TryGetOneHitAction(_currentComboIndex, _hitIndex),
                     _currentCombo.TryGetOneParryAction(_currentComboIndex, _hitIndex),
-                    transform, _currentEnemy);//ÉËº¦Öµ ÊÜÉË¶¯»­Ãû ¸ñµ²¶¯»­Ãû ¹¥»÷Õß µ±Ç°±»¹¥»÷Õß
-                                              //Õâ¸öÐ´Íê»ù±¾¾Í²»ÓÃ¶¯ÁË
-                                              //ÕâÀï´«ÈëµÄÊÜÉË¶¯»­ÊÇµ¥¸öÆ¬¶Î
+                    transform, _currentEnemy);//ï¿½Ëºï¿½Öµ ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ñµ²¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                                              //ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í²ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½
+                                              //ï¿½ï¿½ï¿½ï´«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½Æ¬ï¿½ï¿½
             }
             else
             {
-                //ÕâÀï¾ÍÊÇ´¦¾ö¡¢°µÉ±µÈÆäËû¶¯×÷  ÐèÒªµ÷ÓÃÁíÍâµÄº¯Êý
-                //´¦¾öÊÇÒ»¸öÍêÕûµÄ±»´¦¾ö¶¯×÷£¬µ¼ÖÂÔÚ¶¯×÷ÆÚ¼ä¿ÉÄÜ»áÓÐ¶à´Î´¥·¢ÉËº¦
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½Ü»ï¿½ï¿½Ð¶ï¿½Î´ï¿½ï¿½ï¿½ï¿½Ëºï¿½
 
-                GameEventManager.MainInstance.CallEvent("Éú³ÉÉËº¦", _finishCombo.TryGetComboDamage(_FinishComboIndex)
+                GameEventManager.MainInstance.CallEvent("ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½", _finishCombo.TryGetComboDamage(_FinishComboIndex)
                     , _currentEnemy);
             }
         }
 
         #endregion
 
-        #region ¹¥»÷¿´×ÅÄ¿±ê
+        #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½
 
         protected void LookTargetOnAttack()
         {
-            //ÒªÈ·±£ÓÐÒ»¸öµÐÈËÄ¿±ê
+            //ÒªÈ·ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½
             if (_currentEnemy == null)
             {
                 return;
             }
-            //È·±£Íæ¼ÒÓëÄ¿±êÖ®¼äµÄ¾àÀëÒªÐ¡ÓÚÒ»¶¨¾àÀë
+            //È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ö®ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ÒªÐ¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             if (DevelopmentToos.DistanceForTarget(_currentEnemy, transform) > 5f)
             {
                 return;
             }
-            //»ñÈ¡µ±Ç°¶¯»­×´Ì¬µÄÏêÏ¸ÐÅÏ¢
+            //ï¿½ï¿½È¡ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ï¢
             if (_animator.AnimationAtTag("Attack") && _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.5f)
             {
                 transform.Look(_currentEnemy.position, 1000f);
@@ -216,7 +216,7 @@ namespace Combat
 
         #endregion
 
-        #region »ù´¡¹¥»÷
+        #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
         protected virtual void CharacterBaseAttackInput()
         {
@@ -225,7 +225,7 @@ namespace Combat
 
         #endregion
 
-        #region ¸üÐÂÁ¬ÕÐ¶¯»­ÐÅÏ¢
+        #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 
         protected virtual void UpdataComboInfo()
         {
@@ -233,7 +233,7 @@ namespace Combat
 
             if (_currentComboIndex == _currentCombo.TryGetComboMaxCount())
             {
-                //Èç¹ûÖ´ÐÐµ½ÁË×îºóÒ»¸ö¶¯×÷
+                //ï¿½ï¿½ï¿½Ö´ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 _currentComboIndex = 0;
             }
             _maxColdTime = 0f;
@@ -251,7 +251,7 @@ namespace Combat
 
         #endregion
 
-        #region ÖØÖÃÁ¬ÕÐ¶¯»­ÐÅÏ¢
+        #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 
         protected void ResetComboInfo()
         {
@@ -262,7 +262,7 @@ namespace Combat
 
         protected void OnEndAttack()
         {
-            //ÒÆ¶¯ºó´ÓÍ·¿ªÊ¼½øÐÐ¹¥»÷
+            //ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½
             if (_animator.AnimationAtTag("Motion") && _canAttackInput)
             {
                 ResetComboInfo();
@@ -271,7 +271,7 @@ namespace Combat
 
         #endregion
 
-        #region ¸Ä±ä×éºÏ¼¼
+        #region ï¿½Ä±ï¿½ï¿½ï¿½Ï¼ï¿½
 
         protected void ChangeComboData(CharacterComboSO characterComboSO)
         {
@@ -284,14 +284,14 @@ namespace Combat
 
         #endregion
 
-        #region Ö´ÐÐ¶¯×÷
+        #region Ö´ï¿½Ð¶ï¿½ï¿½ï¿½
         protected virtual void ExecuteComboAction()
         {
             _currentComboCount += (_currentCombo == _baseCombo) ? 1 : 0;
             _hitIndex = 0;
             if (_currentComboIndex == _currentCombo.TryGetComboMaxCount())
             {
-                //Èç¹ûÖ´ÐÐµ½ÁË×îºóÒ»¸ö¶¯×÷
+                //ï¿½ï¿½ï¿½Ö´ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 _currentComboIndex = 0;
             }
 

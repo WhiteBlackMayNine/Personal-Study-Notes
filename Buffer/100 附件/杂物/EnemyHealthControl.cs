@@ -6,19 +6,19 @@ using Movement;
 
 namespace Health
 {
-    public class EnemyHealthControl : CharacterHealthBase //CharacterNewHealthBase ĞÂ¶¯×÷ÏµÍ³¼Ì³ĞĞÂµÄ
+    public class EnemyHealthControl : CharacterHealthBase //CharacterNewHealthBase ï¿½Â¶ï¿½ï¿½ï¿½ÏµÍ³ï¿½Ì³ï¿½ï¿½Âµï¿½
     {
-        //ÊÜµ½¹¥»÷ºó£¬ÏÈÅĞ¶ÏÄÜ²»ÄÜ¸ñµ²£¬ÔÙÈ¥ÅĞ¶ÏÊÇ·ñÊÜÉË
-        //Ò²¾ÍÊÇÏÈÅĞ¶Ï ÌåÁ¦Öµ ÊÇ·ñ×ã¹»È¥½øĞĞ¸ñµ²
-        //»òÕß Èç¹ûÒ»´ÎÉËº¦Öµ ¸ßÓÚÒ»¶¨ÊıÖµ ¾ÍÈÏÎªÊÇÆÆ·À¹¥»÷
-        #region ÉúÃüÖÜÆÚº¯Êı
+        //ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ü²ï¿½ï¿½Ü¸ñµ²£ï¿½ï¿½ï¿½È¥ï¿½Ğ¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½
+        //Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ ï¿½ï¿½ï¿½ï¿½Öµ ï¿½Ç·ï¿½ï¿½ã¹»È¥ï¿½ï¿½ï¿½Ğ¸ï¿½
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ëºï¿½Öµ ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Öµ ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½
+        #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½
 
         protected override void Awake()
         {
             base.Awake();
 
-            //ÀûÓÃ Instantiate ´´½¨Ò»¸öĞÂµÄ 
-            //Èç¹û²»ÕâÃ´×ö£¬¾Í»áµ¼ÖÂ¶à¸öµĞÈË¹²ÓÃÒ»¸öÉúÃüÅäÖÃÄ£°åÊ± ÉúÃüÖµ¡¢ÌåÁ¦Öµ ÊÇÏàÍ¨µÄ
+            //ï¿½ï¿½ï¿½ï¿½ Instantiate ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Âµï¿½ 
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½Í»áµ¼ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½Ë¹ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½Ê± ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½
             _characterHealthInfo = ScriptableObject.Instantiate(_healthInfo);
 
             EnemyManager.MainInstance.AddEnemyUnit(this.gameObject);
@@ -26,19 +26,19 @@ namespace Health
 
         #endregion
 
-        #region º¯ÊıÏà¹Ø
+        #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-        #region Ôì³ÉÉËº¦
+        #region ï¿½ï¿½ï¿½ï¿½Ëºï¿½
 
-        //ÕâÀï¶îÍâÌí¼ÓÁË¼ì²âµĞÈËÉúÃüÖµÊÇ·ñĞ¡ÓÚ0
-        //Èç¹ûĞ¡ÓÚ0 ºô½ĞÊÂ¼ş
-        //Ò²¿ÉÒÔ°Ñ if Óï¾ä ·Åµ½ ÏÂÃæµÄ½ÇÉ«ÊÜ»÷º¯ÊıÖĞ else ÖĞ TakeDamage ÏÂÃæ
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ç·ï¿½Ğ¡ï¿½ï¿½0
+        //ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½0 ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
+        //Ò²ï¿½ï¿½ï¿½Ô°ï¿½ if ï¿½ï¿½ï¿½ ï¿½Åµï¿½ ï¿½ï¿½ï¿½ï¿½Ä½ï¿½É«ï¿½Ü»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ else ï¿½ï¿½ TakeDamage ï¿½ï¿½ï¿½ï¿½
         protected override void TakeDamage(float damage, bool hasParry = false)
         {
             base.TakeDamage(damage, hasParry);
             if (_characterHealthInfo.CurrentHP <= 0)
             {
-                GameEventManager.MainInstance.CallEvent("µĞÈËËÀÍö", transform);
+                GameEventManager.MainInstance.CallEvent("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", transform);
                 PlayDeadAnimation();
                 EnemyManager.MainInstance.RemovedEnemyUnit(this.gameObject);
                 this.gameObject.GetComponent<EnemyMovementControl>().enabled = false;
@@ -47,40 +47,40 @@ namespace Health
 
         #endregion
 
-        #region ½ÇÉ«ÊÜ»÷
+        #region ï¿½ï¿½É«ï¿½Ü»ï¿½
 
         protected override void CharacterHitAction(float damage, string hitName, string parryName)
         {
             if (_characterHealthInfo.StrengthFull && damage < 30f)
             {
-                //¸ñµ²
-                //Èç¹ûµĞÈË²»ÔÚ¹¥»÷×´Ì¬ÏÂ
+                //ï¿½ï¿½
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½
                 if (!animator.AnimationAtTag("Attack"))
                 {
                     animator.Play(parryName, 0, 0f);
                     TakeDamage(damage, true);
-                    //²¥·ÅÒôĞ§
+                    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ§
                     GamePoolManager.MainInstance.TryGetOnePoolItem("BLOCKSound", this.transform.position, Quaternion.identity);
 
 
-                    //Èç¹û _characterHealthInfo.StrengthFull = false
-                    //¼´ÌåÁ¦Öµ±»Çå¿Õ ÄÇÃ´¾ÍĞèÒªÍ¨ÖªÍæ¼Ò£¬ÏÖÔÚ¿ÉÒÔ½øĞĞ´¦¾ö
+                    //ï¿½ï¿½ï¿½ _characterHealthInfo.StrengthFull = false
+                    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ÒªÍ¨Öªï¿½ï¿½Ò£ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½Ô½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½
                     if (!_characterHealthInfo.StrengthFull)
                     {
-                        GameEventManager.MainInstance.CallEvent<bool>("¼¤»î´¦¾ö", true);
+                        GameEventManager.MainInstance.CallEvent<bool>("ï¿½ï¿½ï¿½î´¦ï¿½ï¿½", true);
                     }
                 }
             }
             else
             {
-                //µ±ÉúÃüÖµµÍÓÚÒ»¶¨ÖµÊ±£¬ÄÇÃ´¾ÍĞèÒªÍ¨ÖªÍæ¼Ò£¬ÏÖÔÚ¿ÉÒÔ½øĞĞ´¦¾ö
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ÖµÊ±ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ÒªÍ¨Öªï¿½ï¿½Ò£ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½Ô½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½
                 if (_characterHealthInfo.CurrentHP < 20f)
                 {
-                    GameEventManager.MainInstance.CallEvent<bool>("¼¤»î´¦¾ö", true);
+                    GameEventManager.MainInstance.CallEvent<bool>("ï¿½ï¿½ï¿½î´¦ï¿½ï¿½", true);
                 }
-                //ÊÜ»÷
+                //ï¿½Ü»ï¿½
                 animator.Play(hitName, 0, 0f);
-                //²¥·ÅÒôĞ§
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ§
                 GamePoolManager.MainInstance.TryGetOnePoolItem("HITSound", this.transform.position, Quaternion.identity);
                 TakeDamage(damage);
             }
@@ -88,12 +88,12 @@ namespace Health
 
         #endregion
 
-        #region ËÀÍö¶¯»­
+        #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
         protected override void PlayDeadAnimation()
         {
             base.PlayDeadAnimation();
-            DevelopmentToos.WTF(this.gameObject.name + "ÒÑËÀÍö");
+            DevelopmentToos.WTF(this.gameObject.name + "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         }
 
         #endregion
