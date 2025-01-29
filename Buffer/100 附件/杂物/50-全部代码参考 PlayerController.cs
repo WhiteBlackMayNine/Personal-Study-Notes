@@ -231,7 +231,8 @@ public class PlayerController : MonoBehaviour
                 break;
             }
 
-            rb.MovePosition(new Vector2(transform.position.x + transform.localScale.x * slideSpeed, transform.position.y));
+            rb.MovePosition(new Vector2(transform.position.x + transform.localScale.x * slideSpeed, 
+                transform.position.y));
         } while (MathF.Abs(target.x - transform.position.x) > 0.1f);
 
         isSlide = false;

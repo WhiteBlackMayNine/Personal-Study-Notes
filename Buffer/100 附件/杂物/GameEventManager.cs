@@ -9,40 +9,40 @@ public class GameEventManager : SingletonNonMono<GameEventManager>
 
     private Dictionary<string, IEventHelp> _eventCenter = new Dictionary<string, IEventHelp>();
 
-    #region ½Ó¿ÚIEventHelp
+    #region ???IEventHelp
     private interface IEventHelp
     {
-        //ÏÈĞ´Ò»¸ö½Ó¿Ú ¹ÜÀí²»Í¬ÀàĞÍµÄÊÂ¼ş
-        //ÒòÎª²»Í¬µÄÊÂ¼şÀïÃæµÄ²ÎÊı¿ÉÄÜ²»Í¬
-        //Õâ¸ö½Ó¿Ú Ö÷ÒªÊÇÓÃÀ´ÀûÓÃ×Öµä¹ÜÀí²»Í¬²ÎÊıµÄÀà£¬ÀïÃæ²»ĞèÒªĞ´Ê²Ã´Âß¼­
-        //Ö»ĞèÒªÈÃÀà¼Ì³ĞÕâ¸ö½Ó¿Ú
+        //??Ğ´?????? ???????????????
+        //?????????????????????????
+        //?????? ?????????????????????????????????æ²»???Ğ´?????
+        //????????????????
     }
 
     #endregion
 
     #region EventHelp
 
-    //ÕâÊÇÎŞ²ÎµÄ
-    private class EventHelp : IEventHelp
+    //??????Îµ?
+     class EventHelp : IEventHelp
     {
-        private event Action _action;//Ö»ÄÜÔÚÄÚ²¿µ÷ÓÃ£¬Íâ²¿ÎŞ·¨µ÷ÓÃ
-        public EventHelp(Action action)//¹¹Ôìº¯Êı
+        private event Action _action;//??????????????????????
+        public EventHelp(Action action)//??????
         {
-            //ÕâÊÇµÚÒ»´ÎÊµÀıµÄÊ±ºò£¬Ò²¾ÍÊÇËµÖ»»áÖ´ĞĞÕâÒ»´Î
+            //?????????????????????????????????
             _action = action;
         }
 
         /// <summary>
-        /// Ôö¼Ó×¢²áµÄÊÂ¼ş
+        /// ???????????
         /// </summary>
         /// <param name="action"></param>
-        public void AddCall(Action action)//µ±ĞèÒª×¢²á¶à¸öº¯ÊıµÄÊ±ºò£¬Ê¹ÓÃÕâ¸ö·½·¨£¬¶ø²»ÊÇÖØĞÂNewÒ»¸ö
+        public void AddCall(Action action)//?????????????????????????????????????????New???
         {
             _action += action;
         }
 
         /// <summary>
-        /// µ÷ÓÃÊÂ¼ş
+        /// ???????
         /// </summary>
         public void Call()
         {
@@ -50,7 +50,7 @@ public class GameEventManager : SingletonNonMono<GameEventManager>
         }
 
         /// <summary>
-        /// ÒÆ³ıÊÂ¼ş
+        /// ??????
         /// </summary>
         /// <param name="action"></param>
         public void Remove(Action action)
@@ -58,88 +58,88 @@ public class GameEventManager : SingletonNonMono<GameEventManager>
             _action -= action;
         }
     }
-    //ÓĞÒ»¸ö²ÎÊıµÄ
+    //???????????
     private class EventHelp<T> : IEventHelp
     {
-        private event Action<T> _action;//Ö»ÄÜÔÚÄÚ²¿µ÷ÓÃ£¬Íâ²¿ÎŞ·¨µ÷ÓÃ
+        private event Action<T> _action;//??????????????????????
 
         public EventHelp(Action<T> action)
         {
-            //ÕâÊÇµÚÒ»´ÎÊµÀıµÄÊ±ºò£¬Ò²¾ÍÊÇËµÖ»»áÖ´ĞĞÕâÒ»´Î
+            //?????????????????????????????????
             _action = action;
         }
 
-        //Ôö¼ÓÊÂ¼şµÄ×¢²áº¯Êı
-        public void AddCall(Action<T> action)//µ±ĞèÒª×¢²á¶à¸öº¯ÊıµÄÊ±ºò£¬Ê¹ÓÃÕâ¸ö·½·¨£¬¶ø²»ÊÇÖØĞÂNewÒ»¸ö
+        //??????????????
+        public void AddCall(Action<T> action)//?????????????????????????????????????????New???
         {
             _action += action;
         }
 
-        //µ÷ÓÃÊÂ¼ş
+        //???????
         public void Call(T value)
         {
             _action?.Invoke(value);
         }
 
-        //ÒÆ³ıÊÂ¼ş
+        //??????
         public void Remove(Action<T> action)
         {
             _action -= action;
         }
     }
-    //ÓĞÁ½¸ö²ÎÊıµÄ
+    //????????????
     private class EventHelp<T1, T2> : IEventHelp
     {
-        private event Action<T1, T2> _action;//Ö»ÄÜÔÚÄÚ²¿µ÷ÓÃ£¬Íâ²¿ÎŞ·¨µ÷ÓÃ
+        private event Action<T1, T2> _action;//??????????????????????
 
         public EventHelp(Action<T1, T2> action)
         {
-            //ÕâÊÇµÚÒ»´ÎÊµÀıµÄÊ±ºò£¬Ò²¾ÍÊÇËµÖ»»áÖ´ĞĞÕâÒ»´Î
+            //?????????????????????????????????
             _action = action;
         }
 
-        //Ôö¼ÓÊÂ¼şµÄ×¢²áº¯Êı
-        public void AddCall(Action<T1, T2> action)//µ±ĞèÒª×¢²á¶à¸öº¯ÊıµÄÊ±ºò£¬Ê¹ÓÃÕâ¸ö·½·¨£¬¶ø²»ÊÇÖØĞÂNewÒ»¸ö
+        //??????????????
+        public void AddCall(Action<T1, T2> action)//?????????????????????????????????????????New???
         {
             _action += action;
         }
 
-        //µ÷ÓÃÊÂ¼ş
+        //???????
         public void Call(T1 value, T2 value1)
         {
             _action?.Invoke(value, value1);
         }
 
-        //ÒÆ³ıÊÂ¼ş
+        //??????
         public void Remove(Action<T1, T2> action)
         {
             _action -= action;
         }
     }
-    //Èç¹ûÓĞ¶à¸ö²ÎÊı£¬ÄÇÃ´ÒÀ´ÎÀàÍÆ
+    //????Ğ¶???????????????????
     private class EventHelp<T1, T2, T3> : IEventHelp
     {
-        private event Action<T1, T2, T3> _action;//Ö»ÄÜÔÚÄÚ²¿µ÷ÓÃ£¬Íâ²¿ÎŞ·¨µ÷ÓÃ
+        private event Action<T1, T2, T3> _action;//??????????????????????
 
         public EventHelp(Action<T1, T2, T3> action)
         {
-            //ÕâÊÇµÚÒ»´ÎÊµÀıµÄÊ±ºò£¬Ò²¾ÍÊÇËµÖ»»áÖ´ĞĞÕâÒ»´Î
+            //?????????????????????????????????
             _action = action;
         }
 
-        //Ôö¼ÓÊÂ¼şµÄ×¢²áº¯Êı
-        public void AddCall(Action<T1, T2, T3> action)//µ±ĞèÒª×¢²á¶à¸öº¯ÊıµÄÊ±ºò£¬Ê¹ÓÃÕâ¸ö·½·¨£¬¶ø²»ÊÇÖØĞÂNewÒ»¸ö
+        //??????????????
+        public void AddCall(Action<T1, T2, T3> action)//?????????????????????????????????????????New???
         {
             _action += action;
         }
 
-        //µ÷ÓÃÊÂ¼ş
+        //???????
         public void Call(T1 value, T2 value1, T3 value2)
         {
             _action?.Invoke(value, value1, value2);
         }
 
-        //ÒÆ³ıÊÂ¼ş
+        //??????
         public void Remove(Action<T1, T2, T3> action)
         {
             _action -= action;
@@ -147,27 +147,27 @@ public class GameEventManager : SingletonNonMono<GameEventManager>
     }
     private class EventHelp<T1, T2, T3, T4> : IEventHelp
     {
-        private event Action<T1, T2, T3, T4> _action;//Ö»ÄÜÔÚÄÚ²¿µ÷ÓÃ£¬Íâ²¿ÎŞ·¨µ÷ÓÃ
+        private event Action<T1, T2, T3, T4> _action;//??????????????????????
 
         public EventHelp(Action<T1, T2, T3, T4> action)
         {
-            //ÕâÊÇµÚÒ»´ÎÊµÀıµÄÊ±ºò£¬Ò²¾ÍÊÇËµÖ»»áÖ´ĞĞÕâÒ»´Î
+            //?????????????????????????????????
             _action = action;
         }
 
-        //Ôö¼ÓÊÂ¼şµÄ×¢²áº¯Êı
-        public void AddCall(Action<T1, T2, T3, T4> action)//µ±ĞèÒª×¢²á¶à¸öº¯ÊıµÄÊ±ºò£¬Ê¹ÓÃÕâ¸ö·½·¨£¬¶ø²»ÊÇÖØĞÂNewÒ»¸ö
+        //??????????????
+        public void AddCall(Action<T1, T2, T3, T4> action)//?????????????????????????????????????????New???
         {
             _action += action;
         }
 
-        //µ÷ÓÃÊÂ¼ş
+        //???????
         public void Call(T1 value, T2 value1, T3 value2, T4 value3)
         {
             _action?.Invoke(value, value1, value2, value3);
         }
 
-        //ÒÆ³ıÊÂ¼ş
+        //??????
         public void Remove(Action<T1, T2, T3, T4> action)
         {
             _action -= action;
@@ -175,27 +175,27 @@ public class GameEventManager : SingletonNonMono<GameEventManager>
     }
     private class EventHelp<T1, T2, T3, T4, T5> : IEventHelp
     {
-        private event Action<T1, T2, T3, T4, T5> _action;//Ö»ÄÜÔÚÄÚ²¿µ÷ÓÃ£¬Íâ²¿ÎŞ·¨µ÷ÓÃ
+        private event Action<T1, T2, T3, T4, T5> _action;//??????????????????????
 
         public EventHelp(Action<T1, T2, T3, T4, T5> action)
         {
-            //ÕâÊÇµÚÒ»´ÎÊµÀıµÄÊ±ºò£¬Ò²¾ÍÊÇËµÖ»»áÖ´ĞĞÕâÒ»´Î
+            //?????????????????????????????????
             _action = action;
         }
 
-        //Ôö¼ÓÊÂ¼şµÄ×¢²áº¯Êı
-        public void AddCall(Action<T1, T2, T3, T4, T5> action)//µ±ĞèÒª×¢²á¶à¸öº¯ÊıµÄÊ±ºò£¬Ê¹ÓÃÕâ¸ö·½·¨£¬¶ø²»ÊÇÖØĞÂNewÒ»¸ö
+        //??????????????
+        public void AddCall(Action<T1, T2, T3, T4, T5> action)//?????????????????????????????????????????New???
         {
             _action += action;
         }
 
-        //µ÷ÓÃÊÂ¼ş
+        //???????
         public void Call(T1 value, T2 value1, T3 value2, T4 value3, T5 value4)
         {
             _action?.Invoke(value, value1, value2, value3, value4);
         }
 
-        //ÒÆ³ıÊÂ¼ş
+        //??????
         public void Remove(Action<T1, T2, T3, T4, T5> action)
         {
             _action -= action;
@@ -204,25 +204,25 @@ public class GameEventManager : SingletonNonMono<GameEventManager>
 
     #endregion
 
-    #region Ìí¼Ó¼àÌı
+    #region ???????
 
     public void AddEventListening(string eventName, Action action)
     {
-        //ÏÈ´Ó×ÖµäÖĞÕÒÒ»ÏÂ ¼üÎªeventName ¶ÔÓ¦µÄ Öµ  ²¢·µ»ØÕâ¸ö Öµ (¼Ç×÷ e )
+        //????????????? ???eventName ????? ?  ????????? ? (???? e )
         if (_eventCenter.TryGetValue(eventName, out var e))
         {
-            //Èç¹ûÕÒµ½ÁË£¬ÄÇÃ´°Ñ e ×ª»»Îª EventHelp ÀàĞÍ ²¢µ÷ÓÃÆäÖĞµÄ AddCall º¯Êı Ìí¼Ó½øÈ¥
+            //?????????????? e ???? EventHelp ???? ?????????Ğµ? AddCall ???? ??????
             (e as EventHelp)?.AddCall(action);
         }
         else
         {
-            //Èç¹ûÃ»ÓĞ£¬ÄÇÃ´¾ÍÏò ×Öµä ÖĞÌí¼ÓÕâ¸öÎ¯ÍĞ (new Ò»¸ö)
+            //?????Ğ£???????? ??? ???????????? (new ???)
             _eventCenter.Add(eventName, new EventHelp(action));
         }
     }
     public void AddEventListening<T>(string eventName, Action<T> action)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T>)?.AddCall(action);
         }
@@ -233,7 +233,7 @@ public class GameEventManager : SingletonNonMono<GameEventManager>
     }
     public void AddEventListening<T1, T2>(string eventName, Action<T1, T2> action)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T1, T2>)?.AddCall(action);
         }
@@ -244,7 +244,7 @@ public class GameEventManager : SingletonNonMono<GameEventManager>
     }
     public void AddEventListening<T1, T2, T3>(string eventName, Action<T1, T2, T3> action)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T1, T2, T3>)?.AddCall(action);
         }
@@ -255,7 +255,7 @@ public class GameEventManager : SingletonNonMono<GameEventManager>
     }
     public void AddEventListening<T1, T2, T3, T4>(string eventName, Action<T1, T2, T3, T4> action)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T1, T2, T3, T4>)?.AddCall(action);
         }
@@ -266,7 +266,7 @@ public class GameEventManager : SingletonNonMono<GameEventManager>
     }
     public void AddEventListening<T1, T2, T3, T4, T5>(string eventName, Action<T1, T2, T3, T4, T5> action)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T1, T2, T3, T4, T5>)?.AddCall(action);
         }
@@ -278,141 +278,141 @@ public class GameEventManager : SingletonNonMono<GameEventManager>
 
     #endregion
 
-    #region µ÷ÓÃÊÂ¼ş
+    #region ???????
     public void CallEvent(string eventName)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp)?.Call();
         }
         else
         {
-            DevelopmentToos.WTF($"µ±Ç°Î´ÕÒµ½{eventName}µÄÊÂ¼ş£¬ÎŞ·¨Ö´ĞĞ¸ÃÊÂ¼ş");
+            DevelopmentToos.WTF($"???Î´???{eventName}????????????Ğ¸????");
         }
     }
     public void CallEvent<T>(string eventName, T value)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T>)?.Call(value);
         }
         else
         {
-            DevelopmentToos.WTF($"µ±Ç°Î´ÕÒµ½{eventName}µÄÊÂ¼ş£¬ÎŞ·¨Ö´ĞĞ¸ÃÊÂ¼ş");
+            DevelopmentToos.WTF($"???Î´???{eventName}????????????Ğ¸????");
         }
     }
     public void CallEvent<T1, T2>(string eventName, T1 value, T2 value1)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T1, T2>)?.Call(value, value1);
         }
         else
         {
-            DevelopmentToos.WTF($"µ±Ç°Î´ÕÒµ½{eventName}µÄÊÂ¼ş£¬ÎŞ·¨Ö´ĞĞ¸ÃÊÂ¼ş");
+            DevelopmentToos.WTF($"???Î´???{eventName}????????????Ğ¸????");
         }
     }
     public void CallEvent<T1, T2, T3>(string eventName, T1 value, T2 value1, T3 value2)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T1, T2, T3>)?.Call(value, value1, value2);
         }
         else
         {
-            DevelopmentToos.WTF($"µ±Ç°Î´ÕÒµ½{eventName}µÄÊÂ¼ş£¬ÎŞ·¨Ö´ĞĞ¸ÃÊÂ¼ş");
+            DevelopmentToos.WTF($"???Î´???{eventName}????????????Ğ¸????");
         }
     }
     public void CallEvent<T1, T2, T3, T4>(string eventName, T1 value, T2 value1, T3 value2, T4 value3)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T1, T2, T3, T4>)?.Call(value, value1, value2, value3);
         }
         else
         {
-            DevelopmentToos.WTF($"µ±Ç°Î´ÕÒµ½{eventName}µÄÊÂ¼ş£¬ÎŞ·¨Ö´ĞĞ¸ÃÊÂ¼ş");
+            DevelopmentToos.WTF($"???Î´???{eventName}????????????Ğ¸????");
         }
     }
     public void CallEvent<T1, T2, T3, T4, T5>(string eventName, T1 value, T2 value1, T3 value2, T4 value3, T5 value4)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T1, T2, T3, T4, T5>)?.Call(value, value1, value2, value3, value4);
         }
         else
         {
-            DevelopmentToos.WTF($"µ±Ç°Î´ÕÒµ½{eventName}µÄÊÂ¼ş£¬ÎŞ·¨Ö´ĞĞ¸ÃÊÂ¼ş");
+            DevelopmentToos.WTF($"???Î´???{eventName}????????????Ğ¸????");
         }
     }
 
     #endregion
 
-    #region ÒÆ³ıÊÂ¼ş
+    #region ??????
     public void RemoveEvent(string eventName, Action action)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp)?.Remove(action);
         }
         else
         {
-            DevelopmentToos.WTF($"µ±Ç°Î´ÕÒµ½{eventName}µÄÊÂ¼ş£¬ÎŞ·¨ÒÆ³ı¸ÃÊÂ¼ş");
+            DevelopmentToos.WTF($"???Î´???{eventName}??????????????????");
         }
     }
     public void RemoveEvent<T>(string eventName, Action<T> action)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T>)?.Remove(action);
         }
         else
         {
-            DevelopmentToos.WTF($"µ±Ç°Î´ÕÒµ½{eventName}µÄÊÂ¼ş£¬ÎŞ·¨ÒÆ³ı¸ÃÊÂ¼ş");
+            DevelopmentToos.WTF($"???Î´???{eventName}??????????????????");
         }
     }
     public void RemoveEvent<T1, T2>(string eventName, Action<T1, T2> action)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T1, T2>)?.Remove(action);
         }
         else
         {
-            DevelopmentToos.WTF($"µ±Ç°Î´ÕÒµ½{eventName}µÄÊÂ¼ş£¬ÎŞ·¨ÒÆ³ı¸ÃÊÂ¼ş");
+            DevelopmentToos.WTF($"???Î´???{eventName}??????????????????");
         }
     }
     public void RemoveEvent<T1, T2, T3>(string eventName, Action<T1, T2, T3> action)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T1, T2, T3>)?.Remove(action);
         }
         else
         {
-            DevelopmentToos.WTF($"µ±Ç°Î´ÕÒµ½{eventName}µÄÊÂ¼ş£¬ÎŞ·¨ÒÆ³ı¸ÃÊÂ¼ş");
+            DevelopmentToos.WTF($"???Î´???{eventName}??????????????????");
         }
     }
     public void RemoveEvent<T1, T2, T3, T4>(string eventName, Action<T1, T2, T3, T4> action)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T1, T2, T3, T4>)?.Remove(action);
         }
         else
         {
-            DevelopmentToos.WTF($"µ±Ç°Î´ÕÒµ½{eventName}µÄÊÂ¼ş£¬ÎŞ·¨ÒÆ³ı¸ÃÊÂ¼ş");
+            DevelopmentToos.WTF($"???Î´???{eventName}??????????????????");
         }
     }
     public void RemoveEvent<T1, T2, T3, T4, T5>(string eventName, Action<T1, T2, T3, T4, T5> action)
     {
-        if (_eventCenter.TryGetValue(eventName, out var e))//¿´º¯ÊıÊÇ·ñ´æÔÚ
+        if (_eventCenter.TryGetValue(eventName, out var e))//????????????
         {
             (e as EventHelp<T1, T2, T3, T4, T5>)?.Remove(action);
         }
         else
         {
-            DevelopmentToos.WTF($"µ±Ç°Î´ÕÒµ½{eventName}µÄÊÂ¼ş£¬ÎŞ·¨ÒÆ³ı¸ÃÊÂ¼ş");
+            DevelopmentToos.WTF($"???Î´???{eventName}??????????????????");
         }
     }
 

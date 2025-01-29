@@ -4,41 +4,26 @@
     "type": "split",
     "children": [
       {
-        "id": "05f4b45e395a7d3c",
+        "id": "ac7e1337c2a3f203",
         "type": "tabs",
         "children": [
           {
-            "id": "97f3ed4f2f5c6d6a",
+            "id": "7ba4a63c65b51865",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/猎魔人/代办事项/20241130致20241231代办事项.md",
+                "file": "Projects/地下城与剑与饭/代办事项/2025年寒假.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "20241130致20241231代办事项"
+              "title": "2025年寒假"
             }
           },
           {
-            "id": "0da00378a60edcb0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Resources/001 唐老狮/009 Unity移动平台相关/02 Android/3 进阶知识点/1 Java语法/2 IDEA语言设置、注释和字体设置等.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2 IDEA语言设置、注释和字体设置等"
-            }
-          },
-          {
-            "id": "5ae347b42dd7431d",
+            "id": "92e68b10bb136bc3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -50,6 +35,21 @@
               },
               "icon": "lucide-file",
               "title": "番剧"
+            }
+          },
+          {
+            "id": "3885a5404f292f5d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Resources/002 M_Studio/01 勇士传说/50-全部代码参考.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "50-全部代码参考"
             }
           }
         ],
@@ -181,10 +181,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Buffer/004 番剧/番剧.md"
+                "file": "Resources/002 M_Studio/01 勇士传说/50-全部代码参考.md"
               },
               "icon": "lucide-info",
-              "title": "番剧的笔记属性"
+              "title": "50-全部代码参考的笔记属性"
             }
           },
           {
@@ -255,34 +255,35 @@
       "obsidian-booknote-plugin:书库": false
     }
   },
-  "active": "5ae347b42dd7431d",
+  "active": "3885a5404f292f5d",
   "lastOpenFiles": [
-    "Projects/猎魔人/代办事项/20241130致20241231代办事项.md",
+    "Resources/002 M_Studio/01 勇士传说/49-课程知识点总结.md",
+    "Resources/002 M_Studio/01 勇士传说/30-滑铲的逻辑和动画的实现.md",
+    "Archives/009 ARPG Unity 2022/AnimationStringToHash/AnimationID.md",
     "Buffer/004 番剧/番剧.md",
-    "Area/003 编程/C与C++/引用.md",
-    "Resources/001 唐老狮/009 Unity移动平台相关/02 Android/3 进阶知识点/1 Java语法/2 IDEA语言设置、注释和字体设置等.md",
-    "Resources/001 唐老狮/009 Unity移动平台相关/02 Android/3 进阶知识点/1 Java语法/23 Java 方法的引用和Function接口.md",
-    "Resources/001 唐老狮/009 Unity移动平台相关/02 Android/3 进阶知识点/1 Java语法/49  Java 常用类库.md",
-    "Resources/001 唐老狮/009 Unity移动平台相关/02 Android/3 进阶知识点/1 Java语法/4 Java 运算符.md",
-    "Resources/001 唐老狮/009 Unity移动平台相关/02 Android/3 进阶知识点/1 Java语法/3 Java 变量相关.md",
-    "Projects/猎魔人/项目总结/20241208 滑铲取消动画.md",
-    "Projects/猎魔人/项目总结/20241207 攻击动画事件ATK.md",
-    "Projects/猎魔人/项目总结/20241206 PolygonCollider2D.md",
-    "Area/003 编程/C与C++/类和对象.md",
-    "Area/003 编程/C与C++/函数语句、操作符、运算符、关键字.md",
-    "Area/003 编程/C与C++/指针.md",
-    "Area/003 编程/C与C++/转义字符.md",
-    "Area/003 编程/C与C++/C++必写框架.md",
-    "Area/003 编程/C与C++/其他.md",
-    "Area/003 编程/C与C++/结构体.md",
-    "Area/003 编程/C与C++/程序内存分区类型.md",
     "README.md",
-    "Archives/009 ARPG Unity 2022/DLC/CharacterNewHealthBase.md",
-    "Archives/009 ARPG Unity 2022/DLC/PlayerNewHealth.md",
-    "Archives/009 ARPG Unity 2022/总结/造成伤害总结.md",
-    "Resources/002 M_Studio/01 勇士传说/16-三段攻击动画的实现.md",
+    "Resources/002 M_Studio/01 勇士传说/13-实现人物下蹲逻辑和动画.md",
+    "Resources/002 M_Studio/01 勇士传说/12-创建人物跳跃动画.md",
+    "Projects/地下城与剑与饭/代办事项/2025年寒假.md",
+    "Resources/003 Unity 常用API/赋值顺序.md",
+    "Projects/地下城与剑与饭/项目总结/0001 项目所有事件监听调用.md",
+    "Resources/002 M_Studio/01 勇士传说/50-全部代码参考.md",
+    "Resources/002 M_Studio/01 勇士传说/5-设置人物及基本组件.md",
+    "Resources/002 M_Studio/01 勇士传说/4-有规则和动态的瓦片.md",
+    "Resources/002 M_Studio/01 勇士传说/10-创建人物基本动画.md",
+    "Archives/009 ARPG Unity 2022/Manager/GameInputManager.md",
     "Resources/005 其他/02 Cinemachine/魔法学堂 快速入门/4 小知识点.md",
-    "Resources/002 M_Studio/01 勇士传说/17-实装攻击判定.md",
+    "Buffer/003 Thino/2025-01-25.md",
+    "Archives/009 ARPG Unity 2022/Unilts/Tools/Singleton/Singleton.md",
+    "Archives/009 ARPG Unity 2022/Manager/GameTimerManager.md",
+    "Resources/001 唐老狮/002 Unity 四部曲/02 Unity 基础/6 物理系统/1 范围检测.md",
+    "Projects/地下城与剑与饭/项目总结/20241125.md",
+    "Buffer/003 Thino/2025-01-23.md",
+    "Projects/地下城与剑与饭/项目总结/未命名.md",
+    "Projects/地下城与剑与饭/项目总结/20241126.md",
+    "Resources/002 M_Studio/01 勇士传说/9-物理环境监测及绘制.md",
+    "Resources/004 VipSkill 极世界/VipSkill/P2 课程/底层基础支持（一）/用户注册与登录.md",
+    "Buffer/001 Excalidraw/2025剑与饭与地下城",
     "Projects/猎魔人/项目总结",
     "Projects/地下城与剑与饭/项目总结",
     "Projects/地下城与剑与饭/代办事项",
@@ -292,7 +293,6 @@
     "Buffer/100 附件/杂物/Unity UGUI 实践小项目 注册面板 LoginPanel.cs",
     "Buffer/100 附件/杂物/Unity UGUI 实践小项目 注册面板 RegisterPanel.cs",
     "Buffer/100 附件/杂物/Unity UGUI 实践小项目 面板基类 BasePanel_1.cs",
-    "Buffer/100 附件/杂物/Unity UGUI 实践小项目 UI管理器 UIManager_1.cs",
     "Buffer/100 附件/杂物/Unity UGUI 实践小项目 需求分析 流程图.png",
     "Buffer/100 附件/杂物/RectTransfrom 参数图片2.png",
     "Buffer/100 附件/杂物/RectTransform 矩形变化 参数图片1.png",
