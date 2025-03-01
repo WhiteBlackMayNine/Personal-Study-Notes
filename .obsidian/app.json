@@ -6,6 +6,5 @@
   "promptDelete": false,
   "newFileLocation": "current",
   "showUnsupportedFiles": false,
-  "propertiesInDocument": "hidden",
-  "showRibbon": true
+  "propertiesInDocument": "hidden"
 }

@@ -4,56 +4,45 @@
     "type": "split",
     "children": [
       {
-        "id": "ac7e1337c2a3f203",
+        "id": "59937b0f16f596e3",
         "type": "tabs",
         "children": [
           {
-            "id": "7ba4a63c65b51865",
+            "id": "0ea425c749ef038e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Projects/地下城与剑与饭/代办事项/2025年寒假.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
+                "file": "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250227 - 2.md"
               },
-              "icon": "lucide-file",
-              "title": "2025年寒假"
+              "icon": "excalidraw-icon",
+              "title": "20250227 - 2"
             }
           },
           {
-            "id": "92e68b10bb136bc3",
+            "id": "573daa81204750fc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Buffer/004 番剧/番剧.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
+                "file": "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250215.md"
               },
-              "icon": "lucide-file",
-              "title": "番剧"
+              "icon": "excalidraw-icon",
+              "title": "20250215"
             }
           },
           {
-            "id": "3885a5404f292f5d",
+            "id": "2841c6262b08b982",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Resources/002 M_Studio/01 勇士传说/50-全部代码参考.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "50-全部代码参考"
+              "title": "新标签页"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -82,7 +71,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -95,7 +85,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "标签"
@@ -108,7 +100,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -181,10 +173,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Resources/002 M_Studio/01 勇士传说/50-全部代码参考.md"
+                "file": "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250215.md"
               },
               "icon": "lucide-info",
-              "title": "50-全部代码参考的笔记属性"
+              "title": "20250215的笔记属性"
             }
           },
           {
@@ -244,55 +236,62 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "obsidian-memos:Thino": false,
       "graph:查看关系图谱": false,
       "templates:插入模板": false,
       "workspaces:管理工作区布局": false,
       "daily-notes:打开/创建今天的日记": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "canvas:新建白板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-booknote-plugin:书库": false
+      "obsidian-booknote-plugin:书库": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "3885a5404f292f5d",
+  "active": "573daa81204750fc",
   "lastOpenFiles": [
-    "Resources/002 M_Studio/01 勇士传说/49-课程知识点总结.md",
-    "Resources/002 M_Studio/01 勇士传说/30-滑铲的逻辑和动画的实现.md",
-    "Archives/009 ARPG Unity 2022/AnimationStringToHash/AnimationID.md",
-    "Buffer/004 番剧/番剧.md",
-    "README.md",
-    "Resources/002 M_Studio/01 勇士传说/13-实现人物下蹲逻辑和动画.md",
-    "Resources/002 M_Studio/01 勇士传说/12-创建人物跳跃动画.md",
-    "Projects/地下城与剑与饭/代办事项/2025年寒假.md",
-    "Resources/003 Unity 常用API/赋值顺序.md",
-    "Projects/地下城与剑与饭/项目总结/0001 项目所有事件监听调用.md",
-    "Resources/002 M_Studio/01 勇士传说/50-全部代码参考.md",
-    "Resources/002 M_Studio/01 勇士传说/5-设置人物及基本组件.md",
-    "Resources/002 M_Studio/01 勇士传说/4-有规则和动态的瓦片.md",
-    "Resources/002 M_Studio/01 勇士传说/10-创建人物基本动画.md",
-    "Archives/009 ARPG Unity 2022/Manager/GameInputManager.md",
-    "Resources/005 其他/02 Cinemachine/魔法学堂 快速入门/4 小知识点.md",
-    "Buffer/003 Thino/2025-01-25.md",
-    "Archives/009 ARPG Unity 2022/Unilts/Tools/Singleton/Singleton.md",
-    "Archives/009 ARPG Unity 2022/Manager/GameTimerManager.md",
-    "Resources/001 唐老狮/002 Unity 四部曲/02 Unity 基础/6 物理系统/1 范围检测.md",
-    "Projects/地下城与剑与饭/项目总结/20241125.md",
-    "Buffer/003 Thino/2025-01-23.md",
-    "Projects/地下城与剑与饭/项目总结/未命名.md",
-    "Projects/地下城与剑与饭/项目总结/20241126.md",
-    "Resources/002 M_Studio/01 勇士传说/9-物理环境监测及绘制.md",
-    "Resources/004 VipSkill 极世界/VipSkill/P2 课程/底层基础支持（一）/用户注册与登录.md",
-    "Buffer/001 Excalidraw/2025剑与饭与地下城",
-    "Projects/猎魔人/项目总结",
-    "Projects/地下城与剑与饭/项目总结",
-    "Projects/地下城与剑与饭/代办事项",
-    "Projects/猎魔人/代办事项",
-    "Buffer/100 附件/杂物/Unity UGUI 实践小项目 注册面板 RegisterData.cs",
-    "Buffer/100 附件/杂物/Unity UGUI 实践小项目 注册面板 LoginMgr.cs",
-    "Buffer/100 附件/杂物/Unity UGUI 实践小项目 注册面板 LoginPanel.cs",
-    "Buffer/100 附件/杂物/Unity UGUI 实践小项目 注册面板 RegisterPanel.cs",
-    "Buffer/100 附件/杂物/Unity UGUI 实践小项目 面板基类 BasePanel_1.cs",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250214 - 2.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250211.md",
+    "Resources/005 其他/02 Unity 知识点/Unity 知识点.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250227 - 2.md",
+    "Resources/001 唐老狮/004 UI/01 UGUI/1 基础知识点/6 进阶/7 自动布局组件.md",
+    "Projects/01 地下城与剑与饭/待办事项/02 经营部分.md",
+    "Projects/01 地下城与剑与饭/待办事项/01 战斗部分.md",
+    "Projects/01 地下城与剑与饭/待办事项/03 其他部分.md",
+    "Projects/01 地下城与剑与饭/项目总结/20241125.md",
+    "Projects/01 地下城与剑与饭/项目总结/20241126.md",
+    "Projects/01 地下城与剑与饭/项目总结/20250227 - 轮播图.md",
+    "Projects/01 地下城与剑与饭/项目总结/20250227 - 时钟指针UI跟随玩家.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250228.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202501/20250121.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202501/未命名",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202501/20250119.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202501/20250118.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202501/20250115.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/未命名",
+    "Resources/005 其他/04 Cinemachine/魔法学堂 快速入门/4 小知识点.md",
+    "Buffer/003 Thino/2025-02-28.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250227.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250226.md",
+    "Projects/01 地下城与剑与饭/项目总结/未命名",
+    "Resources/001 唐老狮/004 UI/01 UGUI/1 基础知识点/1 六大基础组件/04 Graphic Raycaster/图形射线投射器组件.md",
+    "Resources/001 唐老狮/004 UI/01 UGUI/1 基础知识点/1 六大基础组件/03 CanvasScaler/2 恒定像素模式.md",
+    "Resources/001 唐老狮/004 UI/01 UGUI/1 基础知识点/1 六大基础组件/03 CanvasScaler/1 必备知识.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250225.md",
+    "Resources/005 其他/04 Cinemachine/魔法学堂 快速入门/3 影视运镜.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202501",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/未命名.canvas",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 Addressable 打包 生成默认代码.png",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 20241011  关于2D与3D 让物体始终朝向某一个方向.png",
+    "Archives/001 书库/Unity面试手册.pdf",
+    "Archives/001 书库/游戏开发面试经验.pdf",
+    "Projects/02 黄大仙的炼丹炉/项目总结",
+    "Projects/02 黄大仙的炼丹炉/靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷看看看看酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷看看看看看看靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠哪怕【‘怕【ppkljujkj",
+    "未命名.canvas",
+    "未命名 1.canvas",
+    "Projects/02 黄大仙的炼丹炉/待办事项",
+    "Buffer/100 附件/杂物/2024TapTap聚光灯 Addressable 打包 Groups 界面打开方法.png",
     "Buffer/100 附件/杂物/Unity UGUI 实践小项目 需求分析 流程图.png",
     "Buffer/100 附件/杂物/RectTransfrom 参数图片2.png",
     "Buffer/100 附件/杂物/RectTransform 矩形变化 参数图片1.png",
@@ -300,18 +299,12 @@
     "Buffer/100 附件/杂物/Unity UI UGUI 恒定物理模式 物理单位 与 1英寸的关系 .png",
     "Buffer/100 附件/杂物/Unity UI UGUI CanvasScaler Match Width Or Height 计算公式描述.png",
     "Buffer/100 附件/杂物/Unity UI UGUI CanvasScaler Shrink 收缩模式举例说明.png",
-    "Buffer/100 附件/杂物/Unity UI UGUI CanvasScaler Expand拓展模式举例说明.png",
-    "Buffer/100 附件/杂物/Unity UI UGUI CanvasScaler 必备知识点 学期准备 画布宽高与缩放与屏幕分辨率.png",
-    "Buffer/100 附件/杂物/Unity数据持久化 Json 基础语法 实例.png",
     "Resources/001 唐老狮/005 Unity程序基础框架/06 资源加载模块/5 Assetbundle加载模块/未命名.canvas",
     "Buffer/其他/白板/未命名.canvas",
-    "未命名.canvas",
     "Resources/唐老狮/002 Unity 四部曲/03 Unity 核心/未命名.canvas",
-    "未命名 1.canvas",
     "未命名 3.canvas",
     "未命名 2.canvas",
     "Git 与 Github/未命名.canvas",
-    "看板/未命名.canvas",
-    "CSharp/唐老狮/核心/面向对象/未命名.canvas"
+    "看板/未命名.canvas"
   ]
 }

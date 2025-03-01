@@ -40,7 +40,7 @@ created: 2024-11-13
 - Graphic
 	- 用于表示选中状态的图片
 
-- Group
+- Group（多个 Toggle 放到一个 挂载 Toggle Group 的父物体下）
 	- 单选框分组
 		- Allow Switch Off
 			- 是否允许不选中任何一个单选框
