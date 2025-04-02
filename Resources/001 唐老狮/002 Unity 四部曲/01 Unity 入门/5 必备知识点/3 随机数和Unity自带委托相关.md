@@ -15,7 +15,7 @@ created: ""
 
 - Unity中的随机数
 	- Unity当中的 Random 类
-	- 此Random(Unity)非彼Random(C#)
+	- 此Random（Unity）非彼Random（C#）
 
 - Unity专门有一个类 Random，在 UnityEngine 命名空间中
 - 这个类的使用，跟 CSharp 就不一样了

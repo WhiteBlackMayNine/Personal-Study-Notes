@@ -6,15 +6,17 @@
         "type": "split",
         "children": [
           {
-            "id": "c80f945912424f11",
+            "id": "ddcbeb5d21695cda",
             "type": "tabs",
             "children": [
               {
-                "id": "1ed1622db9f4024d",
+                "id": "ad51ab24134d54b2",
                 "type": "leaf",
                 "state": {
                   "type": "empty",
-                  "state": {}
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "新标签页"
                 }
               }
             ]
@@ -35,7 +37,9 @@
                 "type": "leaf",
                 "state": {
                   "type": "bookmarks",
-                  "state": {}
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "书签"
                 }
               },
               {
@@ -44,8 +48,11 @@
                 "state": {
                   "type": "file-explorer",
                   "state": {
-                    "sortOrder": "alphabetical"
-                  }
+                    "sortOrder": "alphabetical",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "文件列表"
                 }
               },
               {
@@ -55,8 +62,12 @@
                   "type": "tag",
                   "state": {
                     "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "标签"
                 }
               },
               {
@@ -65,13 +76,15 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "类和对象",
-                    "matchingCase": false,
+                    "query": "",
+                    "matchingCase": true,
                     "explainSearch": false,
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical"
-                  }
+                  },
+                  "icon": "lucide-search",
+                  "title": "搜索"
                 }
               },
               {
@@ -79,7 +92,9 @@
                 "type": "leaf",
                 "state": {
                   "type": "book-explorer-view",
-                  "state": {}
+                  "state": {},
+                  "icon": "bold-glyph",
+                  "title": "Book Explorer"
                 }
               }
             ],
@@ -96,7 +111,7 @@
           {
             "id": "449558b51f27bbb3",
             "type": "tabs",
-            "dimension": 35.2306182531894,
+            "dimension": 26.005888125613346,
             "children": [
               {
                 "id": "91c3f21e4d7f6ae3",
@@ -111,7 +126,9 @@
                     "searchQuery": "",
                     "backlinkCollapsed": false,
                     "unlinkedCollapsed": true
-                  }
+                  },
+                  "icon": "links-coming-in",
+                  "title": "反向链接"
                 }
               },
               {
@@ -122,7 +139,9 @@
                   "state": {
                     "linksCollapsed": false,
                     "unlinkedCollapsed": true
-                  }
+                  },
+                  "icon": "links-going-out",
+                  "title": "出链"
                 }
               },
               {
@@ -130,7 +149,9 @@
                 "type": "leaf",
                 "state": {
                   "type": "file-properties",
-                  "state": {}
+                  "state": {},
+                  "icon": "lucide-info",
+                  "title": "笔记属性"
                 }
               },
               {
@@ -142,7 +163,9 @@
                     "sortOrder": "frequency",
                     "showSearch": false,
                     "searchQuery": ""
-                  }
+                  },
+                  "icon": "lucide-archive",
+                  "title": "添加笔记属性"
                 }
               }
             ],
@@ -151,14 +174,16 @@
           {
             "id": "5a114dab30af4997",
             "type": "tabs",
-            "dimension": 30.42198233562316,
+            "dimension": 31.79587831207066,
             "children": [
               {
                 "id": "db9ac2ef713afc84",
                 "type": "leaf",
                 "state": {
                   "type": "quiet-outline",
-                  "state": {}
+                  "state": {},
+                  "icon": "lines-of-text",
+                  "title": "Quiet Outline"
                 }
               }
             ]
@@ -166,14 +191,16 @@
           {
             "id": "7baddb7cecae5189",
             "type": "tabs",
-            "dimension": 34.34739941118744,
+            "dimension": 42.198233562316,
             "children": [
               {
                 "id": "3aa935ee7399a1a2",
                 "type": "leaf",
                 "state": {
                   "type": "thino_view",
-                  "state": {}
+                  "state": {},
+                  "icon": "Memos",
+                  "title": "Thino"
                 }
               }
             ]
@@ -184,20 +211,20 @@
       },
       "left-ribbon": {
         "hiddenItems": {
+          "obsidian-excalidraw-plugin:新建绘图文件": false,
           "obsidian-memos:Thino": false,
-          "pkmer:Open Pkmer Market": false,
           "graph:查看关系图谱": false,
           "templates:插入模板": false,
           "workspaces:管理工作区布局": false,
           "daily-notes:打开/创建今天的日记": false,
-          "obsidian-excalidraw-plugin:新建绘图文件": false,
           "canvas:新建白板": false,
           "command-palette:打开命令面板": false,
-          "obsidian-booknote-plugin:书库": false
+          "obsidian-booknote-plugin:书库": false,
+          "templater-obsidian:Templater": false
         }
       },
-      "active": "676af546d78f23b0",
-      "mtime": "2024-08-12T22:30:01+08:00"
+      "active": "c7510e15f93d5e21",
+      "mtime": "2025-03-14T12:56:30+08:00"
     },
     "读书笔记": {
       "main": {

@@ -4,45 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "59937b0f16f596e3",
+        "id": "ddcbeb5d21695cda",
         "type": "tabs",
         "children": [
           {
-            "id": "0ea425c749ef038e",
+            "id": "5cd50f3eefb0eb2c",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250227 - 2.md"
+                "file": "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/20250402.md"
               },
               "icon": "excalidraw-icon",
-              "title": "20250227 - 2"
-            }
-          },
-          {
-            "id": "573daa81204750fc",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250215.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "20250215"
-            }
-          },
-          {
-            "id": "2841c6262b08b982",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "20250402"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -134,7 +111,7 @@
       {
         "id": "449558b51f27bbb3",
         "type": "tabs",
-        "dimension": 35.2306182531894,
+        "dimension": 26.005888125613346,
         "children": [
           {
             "id": "91c3f21e4d7f6ae3",
@@ -173,10 +150,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250215.md"
+                "file": "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/20250402.md"
               },
               "icon": "lucide-info",
-              "title": "20250215的笔记属性"
+              "title": "20250402的笔记属性"
             }
           },
           {
@@ -199,7 +176,7 @@
       {
         "id": "5a114dab30af4997",
         "type": "tabs",
-        "dimension": 30.42198233562316,
+        "dimension": 31.79587831207066,
         "children": [
           {
             "id": "db9ac2ef713afc84",
@@ -216,7 +193,7 @@
       {
         "id": "7baddb7cecae5189",
         "type": "tabs",
-        "dimension": 34.34739941118744,
+        "dimension": 42.198233562316,
         "children": [
           {
             "id": "3aa935ee7399a1a2",
@@ -248,57 +225,57 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "573daa81204750fc",
+  "active": "5cd50f3eefb0eb2c",
   "lastOpenFiles": [
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250214 - 2.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250211.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/20200401.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/20250402.md",
+    "Resources/001 唐老狮/003 Unity 数据持久化/03 Json/1 基础知识点/7 JsonUtlity反序列化.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250331 - 2 - Buff相关.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250331 - 1 - 阶段性总结.md",
     "Resources/005 其他/02 Unity 知识点/Unity 知识点.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250227 - 2.md",
-    "Resources/001 唐老狮/004 UI/01 UGUI/1 基础知识点/6 进阶/7 自动布局组件.md",
-    "Projects/01 地下城与剑与饭/待办事项/02 经营部分.md",
-    "Projects/01 地下城与剑与饭/待办事项/01 战斗部分.md",
-    "Projects/01 地下城与剑与饭/待办事项/03 其他部分.md",
-    "Projects/01 地下城与剑与饭/项目总结/20241125.md",
-    "Projects/01 地下城与剑与饭/项目总结/20241126.md",
-    "Projects/01 地下城与剑与饭/项目总结/20250227 - 轮播图.md",
-    "Projects/01 地下城与剑与饭/项目总结/20250227 - 时钟指针UI跟随玩家.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250228.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202501/20250121.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202501/未命名",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202501/20250119.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202501/20250118.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202501/20250115.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/未命名",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/未命名",
+    "Buffer/003 Thino/2025-04-01.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504",
     "Resources/005 其他/04 Cinemachine/魔法学堂 快速入门/4 小知识点.md",
-    "Buffer/003 Thino/2025-02-28.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250227.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250226.md",
-    "Projects/01 地下城与剑与饭/项目总结/未命名",
-    "Resources/001 唐老狮/004 UI/01 UGUI/1 基础知识点/1 六大基础组件/04 Graphic Raycaster/图形射线投射器组件.md",
-    "Resources/001 唐老狮/004 UI/01 UGUI/1 基础知识点/1 六大基础组件/03 CanvasScaler/2 恒定像素模式.md",
-    "Resources/001 唐老狮/004 UI/01 UGUI/1 基础知识点/1 六大基础组件/03 CanvasScaler/1 必备知识.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502/20250225.md",
-    "Resources/005 其他/04 Cinemachine/魔法学堂 快速入门/3 影视运镜.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202502",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202501",
+    "Resources/001 唐老狮/003 Unity 数据持久化/03 Json/1 基础知识点/6 JsonUtlity序列化.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250321 - 3 -如何使用.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250321 - 2 - 存储系统.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250321.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250320.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250319.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250318 - 3 - TipPanel 的调用.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250318 - 2 - 关于 Model 数据的唯一.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250318.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250317.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250316.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250315 - 2 - 阶段性总结.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250315.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250314 - 3 - 变形剑状态机衔接逻辑.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250314 - 2 - 单手剑状态机衔接逻辑 V1.0.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250314.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250313 - 3 - 攻击范围.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250313 - 2 - 角色基础信息.md",
+    "Buffer/100 附件/杂物/Unity MVC 框架（思想） PureMVC总结 Command.png",
+    "Buffer/100 附件/杂物/Unity MVC 框架（思想） PureMVC总结 Mediator.png",
+    "Buffer/100 附件/杂物/Unity MVC 框架（思想） PureMVC总结 Facade.png",
+    "Buffer/100 附件/杂物/Unity MVC 框架（思想）通知名类 PureNotification.cs",
+    "Buffer/100 附件/杂物/Unity MVC 框架（思想）更新通知和升级命令 LevUpCommand.cs",
+    "Buffer/100 附件/杂物/Unity MVC 框架（思想）显隐面板命令 ShowPanelCommand.cs",
+    "Buffer/100 附件/杂物/Unity MVC 框架（思想）显隐面板命令 HidePanelCommand.cs",
+    "Buffer/100 附件/杂物/Unity MVC 框架（思想）PureMVC Facade和Command执行流程 Main.cs",
+    "Buffer/100 附件/杂物/Unity MVC 框架（思想）PureMVC Facade和Command执行流程 StartUpCommand.cs",
+    "Buffer/100 附件/杂物/Unity MVC 框架（思想）PureMVC Facade和Command执行流程 GameFacade.cs",
+    "Buffer/100 附件/杂物/Unity MVC 框架（思想）PureMVC 角色面板View和Mediator NewRoleViewMediator.cs",
+    "Buffer/100 附件/杂物/Unity MVC 思想框架 PureMVC 基本结构.png",
+    "Buffer/100 附件/杂物/Unity MVC 思想（框架）关于UI中背包格子、怪物血条相关问题处理 1.png",
+    "Buffer/100 附件/杂物/Unity MVC 思想框架 MVE 大概流程.png",
+    "Buffer/100 附件/杂物/Unity MVC 思想框架 MVVM 数据绑定.png",
+    "Buffer/100 附件/杂物/Unity MVC 思想框架 MVVM和 MVP 的对比.png",
+    "Buffer/100 附件/杂物/Unity MVC 框架思想 MVP的作用.png",
+    "Buffer/100 附件/杂物/Unity MVC 框架思想 如何理解MVC中V会从M中读取数据.png",
     "Buffer/001 Excalidraw/03 2025剑与饭与地下城/未命名.canvas",
-    "Buffer/100 附件/杂物/2024TapTap聚光灯 Addressable 打包 生成默认代码.png",
-    "Buffer/100 附件/杂物/2024TapTap聚光灯 20241011  关于2D与3D 让物体始终朝向某一个方向.png",
-    "Archives/001 书库/Unity面试手册.pdf",
-    "Archives/001 书库/游戏开发面试经验.pdf",
-    "Projects/02 黄大仙的炼丹炉/项目总结",
-    "Projects/02 黄大仙的炼丹炉/靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷看看看看酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷看看看看看看靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠靠哪怕【‘怕【ppkljujkj",
     "未命名.canvas",
     "未命名 1.canvas",
-    "Projects/02 黄大仙的炼丹炉/待办事项",
-    "Buffer/100 附件/杂物/2024TapTap聚光灯 Addressable 打包 Groups 界面打开方法.png",
-    "Buffer/100 附件/杂物/Unity UGUI 实践小项目 需求分析 流程图.png",
-    "Buffer/100 附件/杂物/RectTransfrom 参数图片2.png",
-    "Buffer/100 附件/杂物/RectTransform 矩形变化 参数图片1.png",
-    "Buffer/100 附件/杂物/Pasted image 20241111201548.png",
-    "Buffer/100 附件/杂物/Unity UI UGUI 恒定物理模式 物理单位 与 1英寸的关系 .png",
-    "Buffer/100 附件/杂物/Unity UI UGUI CanvasScaler Match Width Or Height 计算公式描述.png",
-    "Buffer/100 附件/杂物/Unity UI UGUI CanvasScaler Shrink 收缩模式举例说明.png",
     "Resources/001 唐老狮/005 Unity程序基础框架/06 资源加载模块/5 Assetbundle加载模块/未命名.canvas",
     "Buffer/其他/白板/未命名.canvas",
     "Resources/唐老狮/002 Unity 四部曲/03 Unity 核心/未命名.canvas",
