@@ -4,22 +4,51 @@
     "type": "split",
     "children": [
       {
-        "id": "ddcbeb5d21695cda",
+        "id": "a9661322f61ecd7d",
         "type": "tabs",
         "children": [
           {
-            "id": "5cd50f3eefb0eb2c",
+            "id": "2e4cec71c18f6c12",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/20250402.md"
+                "file": "Resources/002 第三方插件使用/第三方插件使用.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "excalidraw-icon",
-              "title": "20250402"
+              "icon": "lucide-file",
+              "title": "第三方插件使用"
+            }
+          },
+          {
+            "id": "161db883cb17f6e3",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          },
+          {
+            "id": "85d6d6b4d2937f2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -63,8 +92,8 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
+                "showSearch": true,
+                "searchQuery": "#科学/Uniity "
               },
               "icon": "lucide-tags",
               "title": "标签"
@@ -76,7 +105,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#科学/Uniity",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -150,10 +179,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/20250402.md"
+                "file": "README.md"
               },
               "icon": "lucide-info",
-              "title": "20250402的笔记属性"
+              "title": "README的笔记属性"
             }
           },
           {
@@ -225,54 +254,55 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "5cd50f3eefb0eb2c",
+  "active": "c7510e15f93d5e21",
   "lastOpenFiles": [
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/20200401.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/20250402.md",
-    "Resources/001 唐老狮/003 Unity 数据持久化/03 Json/1 基础知识点/7 JsonUtlity反序列化.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250331 - 2 - Buff相关.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250331 - 1 - 阶段性总结.md",
-    "Resources/005 其他/02 Unity 知识点/Unity 知识点.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/未命名",
-    "Buffer/003 Thino/2025-04-01.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504",
-    "Resources/005 其他/04 Cinemachine/魔法学堂 快速入门/4 小知识点.md",
-    "Resources/001 唐老狮/003 Unity 数据持久化/03 Json/1 基础知识点/6 JsonUtlity序列化.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250321 - 3 -如何使用.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250321 - 2 - 存储系统.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250321.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250320.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250319.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250318 - 3 - TipPanel 的调用.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250318 - 2 - 关于 Model 数据的唯一.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250318.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250317.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250316.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250315 - 2 - 阶段性总结.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250315.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250314 - 3 - 变形剑状态机衔接逻辑.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250314 - 2 - 单手剑状态机衔接逻辑 V1.0.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250314.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250313 - 3 - 攻击范围.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250313 - 2 - 角色基础信息.md",
+    "Resources/003 编程/算法/解题.md",
+    "README.md",
+    "Resources/005 Git 与 Github/GitHub.md",
+    "Resources/005 Git 与 Github/建议直接看B站视频.md",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250330.md",
+    "Area/2 UE/000 写在最前面/000 写在最前面 - 必看.md",
+    "Area/1 Unity/001 唐老狮/003 Unity 数据持久化/04 二进制/1 基础知识点/7 文件操作相关练习题类对象的读写.md",
+    "Resources/002 第三方插件使用/第三方插件使用.md",
+    "Resources/001 MarkDown语法/MarkDown超级教程 Obsidian版 2022.1.12.md",
+    "Archives/005 MarkDown语法/MOC Mermiad 教程 Obsidian版.md",
+    "Resources/001 MarkDown语法/MarkDown常用语法.md",
+    "Archives/001 书库/游戏开发面试经验.pdf",
+    "Area/1 Unity/001 唐老狮/001 CSharp 四部曲/03 CSharp 核心/2 面向对象相关知识点/5 结构体和类的区别.md",
+    "Archives/009 ARPG Unity 2022/Untitled.md",
+    "Archives/处世哲学/超感官世界/生命与孤独.md",
+    "Archives/处世哲学/2024-05-01.md",
+    "Archives/处世哲学/2023-12-29.md",
+    "Archives/处世哲学/高学历特点.md",
+    "Archives/处世哲学/SMART原则.md",
+    "Archives/处世哲学/热爱、擅长与工作.md",
+    "Area/004 代码随想录/01 数组/1 数组理论基础.md",
+    "Area/004 代码随想录/00 提前声明/提前声明.md",
+    "Area/2 UE/000 写在最前面",
+    "Area/2 UE/001 唐老狮",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/20250411 - 2 - 关卡陷阱.md",
+    "Area/2 UE",
+    "Area/1 Unity",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/Drawing 2025-04-11 13.05.00.excalidraw.md",
+    "Projects/猎魔人/项目总结/20241208 滑铲取消动画.md",
+    "Projects/猎魔人/项目总结/20241207 攻击动画事件ATK.md",
+    "Projects/猎魔人/项目总结/20241206 PolygonCollider2D.md",
+    "Area/3 算法",
+    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/未命名.canvas",
+    "Buffer/100 附件/杂物/2025CSUGA 无限列表 轮播图 20250227 - 轮播图 执行顺序.png",
+    "Buffer/100 附件/杂物/2025CSUGA 无限列表 轮播图SelectHorizontalScroll.cs",
+    "Buffer/100 附件/杂物/2025CSUGA 无限列表 轮播图 SelectHorizontalScrollItem.cs",
+    "Buffer/100 附件/杂物/07 CSDN Behavior Designer详解 自定义修饰节点 使用行为树.png",
+    "Buffer/100 附件/杂物/07 CSDN Behavior Designer详解 行为树执行顺序流程图.png",
+    "Resources/005 其他/05 BehaviorTress/未命名",
+    "Area/1 Unity/003 其他/05 BehaviorTress",
     "Buffer/100 附件/杂物/Unity MVC 框架（思想） PureMVC总结 Command.png",
     "Buffer/100 附件/杂物/Unity MVC 框架（思想） PureMVC总结 Mediator.png",
     "Buffer/100 附件/杂物/Unity MVC 框架（思想） PureMVC总结 Facade.png",
-    "Buffer/100 附件/杂物/Unity MVC 框架（思想）通知名类 PureNotification.cs",
-    "Buffer/100 附件/杂物/Unity MVC 框架（思想）更新通知和升级命令 LevUpCommand.cs",
-    "Buffer/100 附件/杂物/Unity MVC 框架（思想）显隐面板命令 ShowPanelCommand.cs",
-    "Buffer/100 附件/杂物/Unity MVC 框架（思想）显隐面板命令 HidePanelCommand.cs",
-    "Buffer/100 附件/杂物/Unity MVC 框架（思想）PureMVC Facade和Command执行流程 Main.cs",
-    "Buffer/100 附件/杂物/Unity MVC 框架（思想）PureMVC Facade和Command执行流程 StartUpCommand.cs",
-    "Buffer/100 附件/杂物/Unity MVC 框架（思想）PureMVC Facade和Command执行流程 GameFacade.cs",
-    "Buffer/100 附件/杂物/Unity MVC 框架（思想）PureMVC 角色面板View和Mediator NewRoleViewMediator.cs",
     "Buffer/100 附件/杂物/Unity MVC 思想框架 PureMVC 基本结构.png",
     "Buffer/100 附件/杂物/Unity MVC 思想（框架）关于UI中背包格子、怪物血条相关问题处理 1.png",
     "Buffer/100 附件/杂物/Unity MVC 思想框架 MVE 大概流程.png",
     "Buffer/100 附件/杂物/Unity MVC 思想框架 MVVM 数据绑定.png",
-    "Buffer/100 附件/杂物/Unity MVC 思想框架 MVVM和 MVP 的对比.png",
-    "Buffer/100 附件/杂物/Unity MVC 框架思想 MVP的作用.png",
-    "Buffer/100 附件/杂物/Unity MVC 框架思想 如何理解MVC中V会从M中读取数据.png",
     "Buffer/001 Excalidraw/03 2025剑与饭与地下城/未命名.canvas",
     "未命名.canvas",
     "未命名 1.canvas",
@@ -281,7 +311,6 @@
     "Resources/唐老狮/002 Unity 四部曲/03 Unity 核心/未命名.canvas",
     "未命名 3.canvas",
     "未命名 2.canvas",
-    "Git 与 Github/未命名.canvas",
-    "看板/未命名.canvas"
+    "Git 与 Github/未命名.canvas"
   ]
 }

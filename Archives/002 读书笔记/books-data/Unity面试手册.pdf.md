@@ -1,20 +1,3 @@
----
-title: 
-author: 
-publish date: 
-lang: 
-booktype: 
-publisher: 
-journal: 
-citekey: 
-doi: 
-description: 
-abstract: 
-rating: 
-cover: 
-url: 
-tags: 
----
 # 2024/11/8
 
 - 腾讯公开课过来看一遍
@@ -31,7 +14,7 @@ tags:
 
 - [Unity3d脚本从唤醒到销毁有着一套比较完善的生命周期，请举几个例子](obsidian://booknote?type=annotation&book=Unity%E9%9D%A2%E8%AF%95%E6%89%8B%E5%86%8C.pdf&id=a74cd6da-5e49-0904-7c26-e32f5bdb190a&page=3&rect=63.690,80.874,446.910,93.246)
 
-- [物理更新一般放在那个系统函数里物理更新一般放在那个系统函数里0 0 0 rg /Helvetica 12 Tffont: Helvetica 12pt; text-align: left; color: #E44234](obsidian://booknote?type=annotation&book=Unity%E9%9D%A2%E8%AF%95%E6%89%8B%E5%86%8C.pdf&id=f78dfc14-243a-62ae-4330-1db186929a4f&page=4&rect=80.910,690.276,270.967,705.180)
+- [物理更新一般放在那个系统函数里物理更新一般放在那个系统函数里0 0 0 rg /Helvetica 12 Tffont: Helvetica 12pt; text-align: left; color: # E44234](obsidian://booknote?type=annotation&book=Unity%E9%9D%A2%E8%AF%95%E6%89%8B%E5%86%8C.pdf&id=f78dfc14-243a-62ae-4330-1db186929a4f&page=4&rect=80.910,690.276,270.967,705.180)
 
 - [移动摄像机的动作放在那个系统函数中，为啥](obsidian://booknote?type=annotation&book=Unity%E9%9D%A2%E8%AF%95%E6%89%8B%E5%86%8C.pdf&id=2b4c46ba-798e-06dc-e097-ef8b3a9447a7&page=4&rect=63.690,547.374,305.400,559.734)
 
