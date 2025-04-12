@@ -6,11 +6,11 @@
         "type": "split",
         "children": [
           {
-            "id": "ddcbeb5d21695cda",
+            "id": "fefed46ac7a512bd",
             "type": "tabs",
             "children": [
               {
-                "id": "ad51ab24134d54b2",
+                "id": "168d55468f3880ec",
                 "type": "leaf",
                 "state": {
                   "type": "empty",
@@ -63,8 +63,8 @@
                   "state": {
                     "sortOrder": "frequency",
                     "useHierarchy": true,
-                    "showSearch": false,
-                    "searchQuery": ""
+                    "showSearch": true,
+                    "searchQuery": "#科学/Uniity "
                   },
                   "icon": "lucide-tags",
                   "title": "标签"
@@ -76,7 +76,7 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "",
+                    "query": "tag:#科学/Uniity",
                     "matchingCase": true,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -224,7 +224,7 @@
         }
       },
       "active": "c7510e15f93d5e21",
-      "mtime": "2025-03-14T12:56:30+08:00"
+      "mtime": "2025-04-11T16:16:27+08:00"
     },
     "读书笔记": {
       "main": {

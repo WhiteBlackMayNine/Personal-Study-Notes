@@ -3,5 +3,8 @@
   "baseFontSize": 17,
   "theme": "obsidian",
   "cssTheme": "Blue Topaz",
-  "showRibbon": true
+  "showRibbon": true,
+  "interfaceFontFamily": "Microsoft JhengHei",
+  "monospaceFontFamily": "",
+  "textFontFamily": ""
 }

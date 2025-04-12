@@ -4,51 +4,46 @@
     "type": "split",
     "children": [
       {
-        "id": "a9661322f61ecd7d",
+        "id": "fefed46ac7a512bd",
         "type": "tabs",
         "children": [
           {
-            "id": "2e4cec71c18f6c12",
+            "id": "168d55468f3880ec",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Resources/002 第三方插件使用/第三方插件使用.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "第三方插件使用"
-            }
-          },
-          {
-            "id": "161db883cb17f6e3",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
+              "type": "pkmer-downloader",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "icon": "bookmark",
+              "title": "Pkmer Market"
             }
           },
           {
-            "id": "85d6d6b4d2937f2c",
+            "id": "e57162b3f9fa9395",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Area/3 算法/001 小武老师/01 C++语法/01 L1+L2 C++编程/015  L1  Day05 一维数组（下）.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "015  L1  Day05 一维数组（下）"
+            }
+          },
+          {
+            "id": "c3efa7ae43f8541e",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +88,7 @@
                 "sortOrder": "frequency",
                 "useHierarchy": true,
                 "showSearch": true,
-                "searchQuery": "#科学/Uniity "
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "标签"
@@ -179,10 +174,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "README.md"
+                "file": "Area/3 算法/001 小武老师/01 C++语法/01 L1+L2 C++编程/015  L1  Day05 一维数组（下）.md"
               },
               "icon": "lucide-info",
-              "title": "README的笔记属性"
+              "title": "015  L1  Day05 一维数组（下）的笔记属性"
             }
           },
           {
@@ -242,11 +237,12 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "workspaces:管理工作区布局": false,
+      "pkmer:Open Pkmer Market": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "obsidian-memos:Thino": false,
       "graph:查看关系图谱": false,
       "templates:插入模板": false,
-      "workspaces:管理工作区布局": false,
       "daily-notes:打开/创建今天的日记": false,
       "canvas:新建白板": false,
       "command-palette:打开命令面板": false,
@@ -254,48 +250,48 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c7510e15f93d5e21",
+  "active": "e57162b3f9fa9395",
   "lastOpenFiles": [
-    "Resources/003 编程/算法/解题.md",
-    "README.md",
-    "Resources/005 Git 与 Github/GitHub.md",
-    "Resources/005 Git 与 Github/建议直接看B站视频.md",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202503/20250330.md",
-    "Area/2 UE/000 写在最前面/000 写在最前面 - 必看.md",
-    "Area/1 Unity/001 唐老狮/003 Unity 数据持久化/04 二进制/1 基础知识点/7 文件操作相关练习题类对象的读写.md",
-    "Resources/002 第三方插件使用/第三方插件使用.md",
-    "Resources/001 MarkDown语法/MarkDown超级教程 Obsidian版 2022.1.12.md",
-    "Archives/005 MarkDown语法/MOC Mermiad 教程 Obsidian版.md",
     "Resources/001 MarkDown语法/MarkDown常用语法.md",
-    "Archives/001 书库/游戏开发面试经验.pdf",
-    "Area/1 Unity/001 唐老狮/001 CSharp 四部曲/03 CSharp 核心/2 面向对象相关知识点/5 结构体和类的区别.md",
-    "Archives/009 ARPG Unity 2022/Untitled.md",
-    "Archives/处世哲学/超感官世界/生命与孤独.md",
-    "Archives/处世哲学/2024-05-01.md",
-    "Archives/处世哲学/2023-12-29.md",
-    "Archives/处世哲学/高学历特点.md",
-    "Archives/处世哲学/SMART原则.md",
-    "Archives/处世哲学/热爱、擅长与工作.md",
-    "Area/004 代码随想录/01 数组/1 数组理论基础.md",
-    "Area/004 代码随想录/00 提前声明/提前声明.md",
-    "Area/2 UE/000 写在最前面",
-    "Area/2 UE/001 唐老狮",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/20250411 - 2 - 关卡陷阱.md",
-    "Area/2 UE",
-    "Area/1 Unity",
-    "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/Drawing 2025-04-11 13.05.00.excalidraw.md",
-    "Projects/猎魔人/项目总结/20241208 滑铲取消动画.md",
-    "Projects/猎魔人/项目总结/20241207 攻击动画事件ATK.md",
-    "Projects/猎魔人/项目总结/20241206 PolygonCollider2D.md",
-    "Area/3 算法",
+    "Buffer/002 模板/笔记模板.md",
+    "Area/3 算法/001 小武老师/01 C++语法/01 L1+L2 C++编程/015  L1  Day05 一维数组（下）.md",
+    "Resources/007 ARPG Unity 2022/更新说明.md",
+    "README.md",
+    "Area/3 算法/001 小武老师/01 C++语法/01 L1+L2 C++编程",
+    "Buffer/002 模板/未命名.md",
+    "Buffer/002 模板/周报.md",
+    "Buffer/002 模板/随记.md",
+    "Buffer/002 模板/兔八哥 处世哲学.md",
+    "Buffer/002 模板/代码随想录.md",
+    "Buffer/002 模板/笔试.md",
+    "Buffer/002 模板/视频.md",
+    "Buffer/002 模板/面试.md",
+    "Buffer/003 Thino/2025-04-11.md",
+    "Area/3 算法/001 小武老师/02 算法/02 Excalidraw",
+    "Area/3 算法/001 小武老师/02 算法/01 Obsidian",
+    "Area/3 算法/001 小武老师/02 算法",
+    "Area/3 算法/001 小武老师/01 C++语法",
+    "Projects/01 地下城与剑与饭/01 项目总结/01 Obsidian/20241125.md",
+    "Projects/01 地下城与剑与饭/01 项目总结/02 Excalidraw",
+    "Area/1 Unity/001 唐老狮/006 Unity MVC思想（框架）/100 Excalidraw/MVC 一般流程 - 用户交互逻辑.md",
+    "Projects/01 地下城与剑与饭/01 项目总结/01 Obsidian",
+    "Area/1 Unity/001 唐老狮/006 Unity MVC思想（框架）/100 Excalidraw/MVC 一般流程.md",
+    "Area/1 Unity/001 唐老狮/006 Unity MVC思想（框架）/100 Excalidraw",
+    "Buffer/001 Excalidraw/01 Unity/003 Unity 数据持久化/1 PlayerPrefs/提前声明.md",
+    "Buffer/001 Excalidraw/其他/时间表/20241007.md",
+    "Resources/006 2024 TapTap 聚光灯/02 Excalidraw/20241009 核心玩法实现方案一.md",
+    "Resources/006 2024 TapTap 聚光灯/01 Obsidian/00 备注说明.md",
+    "Resources/006 2024 TapTap 聚光灯/02 Excalidraw",
+    "Resources/006 2024 TapTap 聚光灯/01 Obsidian",
+    "Area/3 算法/001 小武老师/02 Excalidraw/Drawing 2025-04-11 16.08.04.excalidraw.md",
+    "Area/3 算法/001 小武老师/未命名.md",
+    "Area/2 UE/000 写在最前面/000 写在最前面 - 必看.md",
+    "Resources/002 第三方插件使用/第三方插件使用.md",
+    "Resources/003 编程/算法/解题.md",
     "Buffer/001 Excalidraw/03 2025剑与饭与地下城/202504/未命名.canvas",
     "Buffer/100 附件/杂物/2025CSUGA 无限列表 轮播图 20250227 - 轮播图 执行顺序.png",
-    "Buffer/100 附件/杂物/2025CSUGA 无限列表 轮播图SelectHorizontalScroll.cs",
-    "Buffer/100 附件/杂物/2025CSUGA 无限列表 轮播图 SelectHorizontalScrollItem.cs",
     "Buffer/100 附件/杂物/07 CSDN Behavior Designer详解 自定义修饰节点 使用行为树.png",
     "Buffer/100 附件/杂物/07 CSDN Behavior Designer详解 行为树执行顺序流程图.png",
-    "Resources/005 其他/05 BehaviorTress/未命名",
-    "Area/1 Unity/003 其他/05 BehaviorTress",
     "Buffer/100 附件/杂物/Unity MVC 框架（思想） PureMVC总结 Command.png",
     "Buffer/100 附件/杂物/Unity MVC 框架（思想） PureMVC总结 Mediator.png",
     "Buffer/100 附件/杂物/Unity MVC 框架（思想） PureMVC总结 Facade.png",
