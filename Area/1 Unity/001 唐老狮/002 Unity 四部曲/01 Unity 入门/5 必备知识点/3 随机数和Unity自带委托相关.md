@@ -59,7 +59,6 @@ System.Func<int,float> func = (i)=>{
 
 - 无参无返回
 - 跟 Action 使用方法类似
-- 备注： [[15-受伤和死亡的逻辑和动画|麦扣老师 勇士传说]] 中使用了 Unity自带委托
 
 ```C#
 UnityAction uc = ()=>{

@@ -6,9 +6,8 @@ tags:
 ---
 
 ---
-# 知识点
 
-## Unity中打印信息的两种方式
+##Unity中打印信息的两种方式
 
 - 没有继承MonoBehavior类的时候
 	- `Debug.Log();`
@@ -779,12 +778,56 @@ string result = number switch
 	- 序列化限制
 		- Unity 的序列化系统无法将 `Component`（如 Collider）的实例直接保存到 ScriptableObject 中
 		- 即使强行存储，引用也会在场景重载或退出后丢失
+## 鼠标光标自定义
 
+`Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);`
 
+* *`cursorTexture`（Texture2D 类型）**
+    - **作用**：设置光标的贴图（即光标显示的图像）
+    - **注意事项**：
+        - 需要确保纹理的 **导入设置** 中勾选 `Read/Write Enabled`（在 Inspector 面板中设置）
+        - 建议使用小尺寸纹理（如 32x32 或 64x64），避免性能问题
+        - 若需透明光标，需使用支持透明通道的格式（如 PNG）
+            
+- **`Vector2.zero`（热点坐标）**
+    - **作用**：定义光标的 **“热点”**（即光标的实际作用点，例如箭头的尖端位置）
+    - **坐标系**：以纹理的 **左上角为原点 `(0,0)`**，向右为 X 轴正方向，向下为 Y 轴正方向
+    - **示例**：
+        - 若光标贴图大小为 64x64，将热点设为 `new Vector2(32, 32)` 表示中心点
+        - 对于手型光标，可能需要设为指尖位置（如 `(16, 48)`）
+            
+- **`CursorMode.Auto`（光标模式）**
+    - **作用**：控制光标的渲染方式。可选值：
+        - **`CursorMode.Auto`**：由 Unity 自动选择硬件或软件光标（推荐默认值）
+        - **`CursorMode.ForceSoftware`**：强制使用软件渲染光标（适用于某些平台如 WebGL）
+        - **`CursorMode.Hardware`**：强制使用硬件光标（性能更好，但功能受限）
+---
+## 如何遍历 Scroll 的子物体
 
+```C++
+//将对应的 Scroll View 拖到脚本的 scrollRect 引用处
+public ScrollRect scrollRect;
 
+var content = shopCellPanel.transform;  
 
+foreach (Transform cell in content)  
+{  
+	Destroy(cell.gameObject);
+}
 
+//脱离子物体
+//如果只是想让 Content 下的子物体脱离其父物体，可使用 ScrollRect 的 DetachChildren 方法
+//这种方法只是将子物体脱离 Content 容器，并不会销毁它们，若要彻底删除，还需结合 Destroy 方法
+scrollRect.content.DetachChildren();
+
+```
+## 父子物体的碰撞器
+
+如果父物体 A 没有碰撞器，但子物体 B 有碰撞器组件，有希望当子物体发生碰撞时调用父物体 A 的 `OnTriggerEnter` 方法
+那么此时可以往父物体添加一个刚体 Rigidbody 组件
+添加后，子物体的碰撞器会被视为父物体的复合碰撞器，当玩家与子物体B发生碰撞时，父物体A的脚本中的 `OnTriggerEnter2D()` 会被触发，因为物理事件由父物体的刚体处理
+无论事后是否再往父物体添加碰撞器，子物体发生碰撞时都会调用父类的 `OnTriggerEnter2D()`
+但，**子物体B不能有自己的 `Rigidbody2D`**
 
 
 

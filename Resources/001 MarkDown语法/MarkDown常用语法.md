@@ -114,7 +114,13 @@
 ```
 <font color = orange>内容</font>  orange 可以换成其他颜色的英文
 ```
+# 数学公式
 
+ [Latex详细教程](https://www.wolai.com/wolai/egjDbHiAfGfJmwR972fcEW)
+
+`$$` 必须书写在公式符号内
+
+$\times \pm a^b A_{5}^{3} C_{5}^{3} \sqrt 3  \log_a b$
 
 
 

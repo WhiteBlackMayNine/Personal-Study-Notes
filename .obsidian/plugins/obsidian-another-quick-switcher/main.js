@@ -4956,6 +4956,10 @@ var AppHelper = class {
     const editor = activeMarkdownView.editor;
     editor.replaceSelection(str);
   }
+  /**
+   * Insert a link to the active file.
+   * @param file The file to be linked.
+   */
   insertLinkToActiveFileBy(file, opts) {
     var _a;
     const activeMarkdownView = this.unsafeApp.workspace.getActiveViewOfType(import_obsidian.MarkdownView);
@@ -4992,9 +4996,10 @@ var AppHelper = class {
         );
       }
       linkText = text === dispTxt ? `[[${text}]]` : `[[${text}|${dispTxt}]]`;
-    }
-    if (opts == null ? void 0 : opts.phantom) {
-      linkText = linkText.replace(/\[\[.*\/([^\]]+)]]/, "[[$1]]");
+      if (opts == null ? void 0 : opts.phantom) {
+        const phantomLinkText = linkText.replace("[[", "").replace("]]", "").split("|").map((x) => x.replace(/.*\/([^\]]+)/, "$1")).unique().join("|");
+        linkText = `[[${phantomLinkText}]]`;
+      }
     }
     const editor = activeMarkdownView.editor;
     editor.replaceSelection(
@@ -5354,7 +5359,7 @@ function matchQuery(item, query, options) {
 function matchQueryAll(item, queries, options) {
   return queries.flatMap((q) => {
     var _a;
-    const [query, negative] = q.startsWith("-") ? [q.slice(1), true] : [q, false];
+    const [query, negative] = options.excludePrefix && q.startsWith(options.excludePrefix) ? [q.slice(options.excludePrefix.length), true] : [q, false];
     const matched = matchQuery(item, query, options);
     if (((_a = matched[0]) == null ? void 0 : _a.type) === "not found") {
       return negative ? [] : matched;
@@ -5773,6 +5778,7 @@ var createDefaultSearchCommand = () => ({
   allowFuzzySearchForSearchTarget: false,
   minFuzzyMatchScore: 0.5,
   targetExtensions: [],
+  includeCurrentFile: false,
   floating: false,
   showFrontMatter: false,
   excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
@@ -5797,6 +5803,7 @@ var createDefaultLinkSearchCommand = () => ({
   allowFuzzySearchForSearchTarget: false,
   minFuzzyMatchScore: 0.5,
   targetExtensions: [],
+  includeCurrentFile: false,
   floating: false,
   showFrontMatter: false,
   excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
@@ -5821,6 +5828,7 @@ var createDefaultBacklinkSearchCommand = () => ({
   allowFuzzySearchForSearchTarget: false,
   minFuzzyMatchScore: 0.5,
   targetExtensions: ["md"],
+  includeCurrentFile: false,
   floating: false,
   showFrontMatter: false,
   excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
@@ -5845,6 +5853,7 @@ var createDefault2HopLinkSearchCommand = () => ({
   allowFuzzySearchForSearchTarget: false,
   minFuzzyMatchScore: 0.5,
   targetExtensions: [],
+  includeCurrentFile: false,
   floating: false,
   showFrontMatter: false,
   excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
@@ -5876,6 +5885,7 @@ var createPreSettingSearchCommands = () => [
     allowFuzzySearchForSearchTarget: false,
     minFuzzyMatchScore: 0.5,
     targetExtensions: [],
+    includeCurrentFile: false,
     floating: false,
     showFrontMatter: false,
     excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
@@ -5900,6 +5910,7 @@ var createPreSettingSearchCommands = () => [
     allowFuzzySearchForSearchTarget: false,
     minFuzzyMatchScore: 0.5,
     targetExtensions: [],
+    includeCurrentFile: false,
     floating: false,
     showFrontMatter: false,
     excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
@@ -5930,6 +5941,7 @@ var createPreSettingSearchCommands = () => [
     allowFuzzySearchForSearchTarget: true,
     minFuzzyMatchScore: 0.5,
     targetExtensions: [],
+    includeCurrentFile: false,
     floating: false,
     showFrontMatter: false,
     excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
@@ -5960,6 +5972,7 @@ var createPreSettingSearchCommands = () => [
     allowFuzzySearchForSearchTarget: false,
     minFuzzyMatchScore: 0.5,
     targetExtensions: [],
+    includeCurrentFile: false,
     floating: false,
     showFrontMatter: false,
     excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
@@ -5993,6 +6006,7 @@ var createPreSettingSearchCommands = () => [
     allowFuzzySearchForSearchTarget: false,
     minFuzzyMatchScore: 0.5,
     targetExtensions: [],
+    includeCurrentFile: false,
     floating: false,
     showFrontMatter: false,
     excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
@@ -6004,7 +6018,6 @@ var createPreSettingSearchCommands = () => [
     excludePrefixPathPatterns: [],
     expand: false
   },
-  createDefaultLinkSearchCommand(),
   createDefault2HopLinkSearchCommand()
 ];
 var DEFAULT_SETTINGS = {
@@ -6028,6 +6041,7 @@ var DEFAULT_SETTINGS = {
   hotkeys: createDefaultHotkeys(),
   // Searches
   searchCommands: createPreSettingSearchCommands(),
+  searchesExcludePrefix: "-",
   searchesAutoAliasTransform: {
     enabled: false,
     aliasPattern: "",
@@ -6367,6 +6381,16 @@ ${invalidValues.map((x) => `- ${x}`).join("\n")}
         btn.setCta();
       }
     });
+    new import_obsidian3.Setting(containerEl).setName("Exclude prefix").setDesc(
+      "Adding this at the beginning of a query excludes matching results."
+    ).addText((cb) => {
+      cb.setValue(this.plugin.settings.searchesExcludePrefix).onChange(
+        async (value) => {
+          this.plugin.settings.searchesExcludePrefix = value;
+          await this.plugin.saveSettings();
+        }
+      );
+    });
     new import_obsidian3.Setting(containerEl).setName("Auto alias transform").setDesc(
       "Transforms a selected link candidate into an internal link with an aliase based on a regex-defined rule when using the insert to editor command."
     ).addToggle((tc) => {
@@ -6527,6 +6551,11 @@ ${invalidValues.map((x) => `- ${x}`).join("\n")}
         command.targetExtensions = smartCommaSplit(value);
       })
     );
+    new import_obsidian3.Setting(div).setName("Include current file").addToggle((cb) => {
+      cb.setValue(command.includeCurrentFile).onChange(async (value) => {
+        command.includeCurrentFile = value;
+      });
+    });
     new import_obsidian3.Setting(div).setName("Floating").addToggle((cb) => {
       cb.setValue(command.floating).onChange(async (value) => {
         command.floating = value;
@@ -7172,7 +7201,7 @@ var AnotherQuickSwitcherModal = class _AnotherQuickSwitcherModal extends import_
     const originFilePath = (_a = this.originFile) == null ? void 0 : _a.path;
     let start = performance.now();
     const fileItems = this.app.vault.getFiles().filter(
-      (x) => x.path !== originFilePath && this.app.metadataCache.getFileCache(x)
+      (x) => (this.command.includeCurrentFile || x.path !== originFilePath) && this.app.metadataCache.getFileCache(x)
     ).map((x) => {
       var _a2, _b, _c, _d, _e, _f;
       const cache = this.app.metadataCache.getFileCache(x);
@@ -7320,7 +7349,8 @@ var AnotherQuickSwitcherModal = class _AnotherQuickSwitcherModal extends import_
         searchByTags: this.command.searchBy.tag,
         keysOfPropertyToSearch: this.command.searchBy.property ? this.command.keysOfPropertyToSearch : [],
         fuzzyTarget: this.command.allowFuzzySearchForSearchTarget,
-        minFuzzyScore: this.command.minFuzzyMatchScore
+        minFuzzyScore: this.command.minFuzzyMatchScore,
+        excludePrefix: this.settings.searchesExcludePrefix
       })
     ).filter((x) => x.matchResults.every((x2) => x2.type !== "not found"));
     const items = sort(
@@ -7675,10 +7705,22 @@ var AnotherQuickSwitcherModal = class _AnotherQuickSwitcherModal extends import_
         aliasTranformer: saat.enabled ? { pattern: saat.aliasPattern, format: saat.aliasFormat } : void 0
       });
     };
+    const insertPhantomLinkToActiveMarkdownFile = (text) => {
+      const saat = this.settings.searchesAutoAliasTransform;
+      this.appHelper.insertLinkToActiveFileBy(
+        this.appHelper.createPhantomFile(text),
+        {
+          phantom: true,
+          aliasTranformer: saat.enabled ? { pattern: saat.aliasPattern, format: saat.aliasFormat } : void 0
+        }
+      );
+    };
     this.registerKeys("insert to editor", async () => {
       var _a;
       const item = (_a = this.chooser.values) == null ? void 0 : _a[this.chooser.selectedItem];
       if (!item) {
+        insertPhantomLinkToActiveMarkdownFile(this.searchQuery);
+        await this.safeClose();
         return;
       }
       const file = item.file;

@@ -11,7 +11,7 @@
   "ChineseEnglishSpace": true,
   "ChineseNumberSpace": true,
   "EnglishNumberSpace": true,
-  "ChineseNoSpace": true,
+  "ChineseNoSpace": false,
   "QuoteSpace": true,
   "PunctuationSpace": true,
   "AutoCapital": true,
@@ -50,7 +50,7 @@
       "😀|"
     ]
   ],
-  "userSelRuleSettingsOpen": false,
+  "userSelRuleSettingsOpen": true,
   "userDelRuleSettingsOpen": false,
   "userCvtRuleSettingsOpen": false,
   "StrictModeEnter": false,
